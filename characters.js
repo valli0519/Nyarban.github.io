@@ -22,55 +22,103 @@ document.addEventListener("DOMContentLoaded", () => {
     "char04": {
       name: "キャラ名4",
       img: "img/char04.jpg",
-      description: "キャラクターの説明がここに入ります。",
-      campaign: "所属キャンペーン名"
+      description: "止まらねぇ男",
+      campaign: "CoC"
     },
     "char03": {
       name: "キャラ名3",
       img: "img/char03.jpg",
-      description: "キャラクターの説明がここに入ります。文章量が増えることを想定しているため、長文でもスクロールで対応可能。",
+      description: "キャラクターの説明",
       campaign: "所属キャンペーン名"
     },
     "char04": {
       name: "キャラ名4",
       img: "img/char04.jpg",
-      description: "キャラクターの説明がここに入ります。",
+      description: "キャラクターの説明",
       campaign: "所属キャンペーン名"
     },
     "char03": {
       name: "キャラ名3",
       img: "img/char03.jpg",
-      description: "キャラクターの説明がここに入ります。文章量が増えることを想定しているため、長文でもスクロールで対応可能。",
+      description: "キャラクターの説明",
       campaign: "所属キャンペーン名"
     },
     "char04": {
       name: "キャラ名4",
       img: "img/char04.jpg",
-      description: "キャラクターの説明がここに入ります。",
+      description: "キャラクターの説明",
       campaign: "所属キャンペーン名"
     },
     "char03": {
       name: "キャラ名3",
       img: "img/char03.jpg",
-      description: "キャラクターの説明がここに入ります。文章量が増えることを想定しているため、長文でもスクロールで対応可能。",
+      description: "キャラクターの説明",
       campaign: "所属キャンペーン名"
     },
     "char04": {
       name: "キャラ名4",
       img: "img/char04.jpg",
-      description: "キャラクターの説明がここに入ります。",
+      description: "キャラクターの説明",
       campaign: "所属キャンペーン名"
     },
     "char03": {
       name: "キャラ名3",
       img: "img/char03.jpg",
-      description: "キャラクターの説明がここに入ります。文章量が増えることを想定しているため、長文でもスクロールで対応可能。",
+      description: "キャラクターの説明",
       campaign: "所属キャンペーン名"
     },
     "char04": {
       name: "キャラ名4",
       img: "img/char04.jpg",
-      description: "キャラクターの説明がここに入ります。",
+      description: "キャラクターの説明",
+      campaign: "所属キャンペーン名"
+    },
+    "char03": {
+      name: "キャラ名3",
+      img: "img/char03.jpg",
+      description: "キャラクターの説明",
+      campaign: "所属キャンペーン名"
+    },
+    "char04": {
+      name: "キャラ名4",
+      img: "img/char04.jpg",
+      description: "キャラクターの説明",
+      campaign: "所属キャンペーン名"
+    },
+    "char03": {
+      name: "キャラ名3",
+      img: "img/char03.jpg",
+      description: "キャラクターの説明",
+      campaign: "所属キャンペーン名"
+    },
+    "char04": {
+      name: "キャラ名4",
+      img: "img/char04.jpg",
+      description: "キャラクターの説明",
+      campaign: "所属キャンペーン名"
+    },
+    "char03": {
+      name: "キャラ名3",
+      img: "img/char03.jpg",
+      description: "キャラクターの説明",
+      campaign: "所属キャンペーン名"
+    },
+    "char04": {
+      name: "キャラ名4",
+      img: "img/char04.jpg",
+      description: "キャラクターの説明",
+      campaign: "所属キャンペーン名"
+    },
+    "char03": {
+      name: "キャラ名3",
+      img: "img/char03.jpg",
+      description: "キャラクターの説明",
+      campaign: "所属キャンペーン名"
+    },
+    "char04": {
+      name: "キャラ名4",
+      img: "img/char04.jpg",
+      description: "キャラクターの説明",
       campaign: "所属キャンペーン名"
     },
   };
