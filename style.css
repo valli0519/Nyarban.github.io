@@ -25,7 +25,6 @@
     color: inherit;
     text-decoration: none;
   }
-  
   .campaign-card-link:visited,
   .campaign-card-link:hover,
   .campaign-card-link:active {
@@ -33,8 +32,6 @@
     text-decoration: none;
   }
   
-  
-
   /* カラーパレット */
   :root {
     --primary-bg: #0d0d0d;
@@ -59,26 +56,21 @@
     /* ナビゲーションに軽いシャドウを追加 */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
   }
-  
   nav .logo img {
     height: 50px; /* 適宜調整 */
   }
-  
   nav ul {
     list-style: none;
     display: flex;
   }
-  
   nav ul li {
     margin-left: 20px;
   }
-  
   nav ul li a {
     text-decoration: none;
     color: var(--text-color);
     transition: color 0.3s;
   }
-  
   nav ul li a:hover {
     color: var(--accent-green);
   }
@@ -94,7 +86,6 @@
     text-align: center;
     animation: fadeIn 1.5s ease-out;
   }
-  
   header::before {
     content: "";
     position: absolute;
@@ -104,24 +95,20 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
   }
-  
   header .hero-content {
     position: relative;
     z-index: 1;
   }
-  
   header h1 {
     font-size: 3em;
     color: var(--accent-purple);
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.7), 0 0 8px rgba(255,255,255,0.5);
   }
-  
   header p {
     font-size: 1.2em;
     margin-bottom: 30px;
   }
-  
   header .btn {
     padding: 15px 30px;
     background: var(--accent-green);
@@ -131,7 +118,6 @@
     border-radius: 4px;
     transition: background 0.3s;
   }
-  
   header .btn:hover {
     background: var(--accent-purple);
   }
@@ -141,7 +127,6 @@
     padding: 60px 20px;
     animation: fadeInUp 1s ease-out;
   }
-  
   section h2 {
     text-align: center;
     margin-bottom: 40px;
@@ -154,14 +139,11 @@
     max-width: 1200px;
     margin: 0 auto;
   }
-
   .container-camp-detail {
     max-width: 1600px;  /* 1200pxから拡大 */
     margin: 0 auto;
     padding: 0 20px;    /* 横方向の余白（必要に応じて調整） */
   }
-  
-
   
   /* コンテンツボックスにシャドウ追加 */
   .content-box {
@@ -178,7 +160,6 @@
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
   }
-  
   .campaign-card {
     background: var(--secondary-bg);
     border: 1px solid var(--accent-purple);
@@ -187,22 +168,18 @@
     box-shadow: 0 4px 8px rgba(0,0,0,0.5);
     transition: transform 0.3s, box-shadow 0.3s;
   }
-  
   .campaign-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0,0,0,0.7);
   }
-  
   .campaign-card h3 {
     color: var(--accent-green);
     margin-top: 0;
   }
-  
   .campaign-card p {
     font-size: 0.95em;
     line-height: 1.5;
   }
-  
   .campaign-card a {
     color: var(--accent-green);
     text-decoration: none;
@@ -219,13 +196,11 @@
     margin-top: 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
   }
-  
   .campaign-detail h2 {
     font-size: 2em;
     color: var(--accent-green);
     margin-bottom: 20px;
   }
-  
   .campaign-detail p {
     font-size: 1em;
     line-height: 1.6;
@@ -240,16 +215,80 @@
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.7);
   }
   
-  /* レスポンシブ対応 */
+  /* メンバー紹介 */
+  .member-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .member-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  .member-text {
+    flex: 1;
+  }
+  
+  /* キャンペーン詳細のイメージレイアウト */
+  /* 1) PC時：奇数番目は画像左、偶数番目は画像右 */
+  .detail-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  .campaign-detail:nth-of-type(odd) .detail-wrapper {
+    flex-direction: row;
+  }
+  .campaign-detail:nth-of-type(even) .detail-wrapper {
+    flex-direction: row-reverse;
+  }
+  
+  /* 2) 画像部分：幅40%、正方形に固定、サイズ統一 */
+  .detail-img {
+    flex: 4;
+    width: 40%;
+    max-width: 40%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+  
+  /* テキスト部分：幅60% */
+  .detail-content {
+    flex: 6;
+    width: 60%;
+    padding: 20px;
+  }
+  
+  /* レスポンシブ対応（@mediaはファイルの最後） */
   @media (max-width: 768px) {
-    header h1 {
-      font-size: 2.5em;
-    }
+    /* ヘッダーのメニューを非表示 */
     nav ul {
-      flex-direction: column;
+      display: none;
     }
-    nav ul li {
-      margin: 10px 0;
+  
+    /* h1, h2 の文字サイズをスマホ用に微調整 */
+    header h1 {
+      font-size: 2em !important;
+    }
+    section h2 {
+      font-size: 1.8em !important;
+    }
+  
+    /* キャンペーン詳細：画像を下、テキストを上 */
+    .detail-wrapper {
+      flex-direction: column !important;  /* !importantでnth-of-typeを上書き */
+    }
+    .detail-content {
+      order: 1;
+      width: 100% !important;  /* スマホ時はテキスト部を100%幅に */
+    }
+    .detail-img {
+      order: 2;
+      width: 100% !important;
+      max-width: none !important;
+      aspect-ratio: auto !important;
+      margin-top: 20px;
     }
   }
   
@@ -258,60 +297,8 @@
     from { opacity: 0; }
     to { opacity: 1; }
   }
-  
   @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
-  }
-
-  /* メンバー紹介 */
-  .member-info {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  
-  .member-icon {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    /* 角を丸くしたい場合 */
-    border-radius: 4px;
-  }
-  
-  .member-text {
-    flex: 1;
-  }
-  
-  /* キャンペーン詳細のイメージ */
-  /* 奇数番目のキャンペーン詳細では画像を左に、テキストを右に */
-  .campaign-detail:nth-of-type(odd) .detail-wrapper {
-    flex-direction: row;
-  }
-  
-  /* 偶数番目のキャンペーン詳細では画像を右に、テキストを左に */
-  .campaign-detail:nth-of-type(even) .detail-wrapper {
-    flex-direction: row-reverse;
-  }
-  
-  .detail-wrapper {
-    display: flex;
-    align-items: center;
-  }
-  
-  /* 画像部分（幅40%、正方形で統一、object-fitで切り抜き） */
-  .detail-img {
-    flex: 4;
-    width: 40%;
-    max-width: 40%;
-    aspect-ratio: 1/1; /* 1:1の正方形に固定 */
-    object-fit: cover; /* 画像が枠内に収まるように調整 */
-  }
-  
-  /* 説明部分（幅60%） */
-  .detail-content {
-    flex: 6;
-    width: 60%;
-    padding: 20px;
   }
   
