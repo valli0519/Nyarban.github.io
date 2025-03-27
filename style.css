@@ -7,6 +7,8 @@
   
   html {
     scroll-behavior: smooth;
+    /* 固定ヘッダーの高さぶんだけ余白を確保 */
+    scroll-padding-top: 80px; 
   }
   
   body {
@@ -152,6 +154,14 @@
     max-width: 1200px;
     margin: 0 auto;
   }
+
+  .container-camp-detail {
+    max-width: 1600px;  /* 1200pxから拡大 */
+    margin: 0 auto;
+    padding: 0 20px;    /* 横方向の余白（必要に応じて調整） */
+  }
+  
+
   
   /* コンテンツボックスにシャドウ追加 */
   .content-box {
@@ -200,6 +210,9 @@
   
   /* キャンペーン詳細説明エリアにシャドウ追加 */
   .campaign-detail {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background: var(--secondary-bg);
     padding: 40px 20px;
     border-top: 2px solid var(--accent-purple);
@@ -268,5 +281,37 @@
   
   .member-text {
     flex: 1;
+  }
+  
+  /* キャンペーン詳細のイメージ */
+  /* 奇数番目のキャンペーン詳細では画像を左に、テキストを右に */
+  .campaign-detail:nth-of-type(odd) .detail-wrapper {
+    flex-direction: row;
+  }
+  
+  /* 偶数番目のキャンペーン詳細では画像を右に、テキストを左に */
+  .campaign-detail:nth-of-type(even) .detail-wrapper {
+    flex-direction: row-reverse;
+  }
+  
+  .detail-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* 画像部分（幅40%、正方形で統一、object-fitで切り抜き） */
+  .detail-img {
+    flex: 4;
+    width: 40%;
+    max-width: 40%;
+    aspect-ratio: 1/1; /* 1:1の正方形に固定 */
+    object-fit: cover; /* 画像が枠内に収まるように調整 */
+  }
+  
+  /* 説明部分（幅60%） */
+  .detail-content {
+    flex: 6;
+    width: 60%;
+    padding: 20px;
   }
   
