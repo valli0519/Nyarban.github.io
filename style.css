@@ -8,8 +8,9 @@
   html {
     scroll-behavior: smooth;
     /* 固定ヘッダーの高さぶんだけ余白を確保 */
-    scroll-padding-top: 80px; 
+    scroll-padding-top: 130px; 
   }
+  
   
   body {
     font-family: 'Roboto', sans-serif;
@@ -17,6 +18,7 @@
     background-size: cover;
     color: #e0e0e0;
     line-height: 1.6;
+    padding-bottom: 80px; /* フッターの高さ＋余裕 */
   }
   
   /* aタグレイアウト変更無し */
@@ -139,6 +141,7 @@
     max-width: 1200px;
     margin: 0 auto;
   }
+
   .container-camp-detail {
     max-width: 1600px;  /* 1200pxから拡大 */
     margin: 0 auto;
@@ -165,6 +168,7 @@
     border: 1px solid var(--accent-purple);
     border-radius: 8px;
     padding: 20px;
+    margin-bottom: 40px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.5);
     transition: transform 0.3s, box-shadow 0.3s;
   }
@@ -213,6 +217,10 @@
     padding: 20px;
     font-size: 0.9em;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.7);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
   }
   
   /* メンバー紹介 */
@@ -259,6 +267,142 @@
     width: 60%;
     padding: 20px;
   }
+
+  /* — リプレイ用シンプルナビ — */
+.replay-nav {
+    background: var(--secondary-bg);
+    padding: 10px 20px;
+    text-align: left;
+  }
+  .replay-nav a {
+    color: var(--accent-green);
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+/* ───────────────────────────
+   パンくずリスト（Breadcrumb）
+─────────────────────────── */
+.breadcrumb {
+    position: fixed;      /* 固定解除 */
+    top: auto;
+    left: auto;
+    display: inline-block;   /* 左寄せ */
+    padding: 8px 16px;
+    margin: 20px 0 0 20px;   /* ヘッダー直下＋左マージン */
+    background: var(--secondary-bg);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-top: 80px;
+  }
+  
+  .breadcrumb a {
+    color: var(--accent-green);
+    text-decoration: none;
+  }
+  
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
+  
+  .breadcrumb span {
+    color: var(--text-color);
+  }
+  
+  
+  /* — スクロールトップボタン — */
+  .scroll-top {
+    position: fixed;
+    bottom: 120px;
+    right: 30px;
+    background: var(--accent-green);
+    color: var(--primary-bg);
+    padding: 10px 12px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.6rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    opacity: 0.7;
+    transition: opacity .2s;
+  }
+  .scroll-top:hover {
+    opacity: 1;
+  }
+  
+/* 「物語を見る」ボタン用コンテナ */
+.content-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+  }
+  
+  /* ボタン本体 */
+  .content-button .btn-story {
+    background: var(--accent-green);
+    color: var(--primary-bg);
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding: 12px 36px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  .content-button .btn-story:hover {
+    background: var(--accent-purple);
+    color: white;
+    transform: translateY(-2px);
+  }
+  
+  .replay-nav {
+    display: flex;
+    flex-wrap: wrap; /* 適切に改行 */
+    justify-content: center;
+    gap: 24px;
+    list-style: none;
+    margin: 40px 0;
+    padding: 0;
+  }
+  
+  .replay-nav li {
+    background: rgba(34, 139, 34, 0.15);
+    border: 2px solid var(--accent-green);
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  .replay-nav a {
+    display: block;
+    padding: 10px 20px;
+    color: var(--accent-green);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .replay-nav li:hover {
+    background: var(--accent-green);
+    transform: translateY(-3px);
+  }
+  
+  .replay-nav li:hover a {
+    color: var(--primary-bg);
+  }
+
+  .container-replay {
+    max-width: 1600px;  /* 1200pxから拡大 */
+    margin: 0 auto;
+    margin-top: 120px;
+    padding: 0 20px;    /* 横方向の余白（必要に応じて調整） */
+  }
+  
+  .container-replay-textbox {
+    max-width: 1600px;  /* 1200pxから拡大 */
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 0 20px;    /* 横方向の余白（必要に応じて調整） */
+  }
+
   
   /* レスポンシブ対応（@mediaはファイルの最後） */
   @media (max-width: 768px) {
@@ -292,6 +436,24 @@
     }
   }
   
+  /* リプレイページ 目次 */
+  @media (max-width: 768px) {
+    .replay-nav {
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+    }
+    .replay-nav li {
+      width: 80%;
+      text-align: center;
+    }
+    
+    /* スマホ版ではトップへスクロールは非表示 */
+    .scroll-top {
+        display: none !important;
+    }
+  }
+
   /* アニメーション */
   @keyframes fadeIn {
     from { opacity: 0; }
