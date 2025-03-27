@@ -1,0 +1,272 @@
+/* 基本リセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: url("img/nyar_logo.png") no-repeat center center fixed;
+    background-size: cover;
+    color: #e0e0e0;
+    line-height: 1.6;
+  }
+  
+  /* aタグレイアウト変更無し */
+  .campaign-card-link {
+    display: contents;
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .campaign-card-link:visited,
+  .campaign-card-link:hover,
+  .campaign-card-link:active {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  
+
+  /* カラーパレット */
+  :root {
+    --primary-bg: #0d0d0d;
+    --secondary-bg: #1a1a1a;
+    --accent-purple: #6a0dad;
+    --accent-green: #2ecc71;
+    --text-color: #e0e0e0;
+  }
+  
+  /* ナビゲーション */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* ナビゲーションに軽いシャドウを追加 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  }
+  
+  nav .logo img {
+    height: 50px; /* 適宜調整 */
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    color: var(--accent-green);
+  }
+  
+  /* ヒーローセクション */
+  header {
+    height: 100vh;
+    background: url('https://source.unsplash.com/1600x900/?dice') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: fadeIn 1.5s ease-out;
+  }
+  
+  header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  
+  header .hero-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  header h1 {
+    font-size: 3em;
+    color: var(--accent-purple);
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7), 0 0 8px rgba(255,255,255,0.5);
+  }
+  
+  header p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+  }
+  
+  header .btn {
+    padding: 15px 30px;
+    background: var(--accent-green);
+    color: var(--primary-bg);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background 0.3s;
+  }
+  
+  header .btn:hover {
+    background: var(--accent-purple);
+  }
+  
+  /* セクション */
+  section {
+    padding: 60px 20px;
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #ff66cc;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7), 0 0 8px rgba(255,255,255,0.5);
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* コンテンツボックスにシャドウ追加 */
+  .content-box {
+    background: var(--secondary-bg);
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* キャンペーン概要カード（グリッドレイアウト） */
+  .campaign-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  
+  .campaign-card {
+    background: var(--secondary-bg);
+    border: 1px solid var(--accent-purple);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .campaign-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.7);
+  }
+  
+  .campaign-card h3 {
+    color: var(--accent-green);
+    margin-top: 0;
+  }
+  
+  .campaign-card p {
+    font-size: 0.95em;
+    line-height: 1.5;
+  }
+  
+  .campaign-card a {
+    color: var(--accent-green);
+    text-decoration: none;
+  }
+  
+  /* キャンペーン詳細説明エリアにシャドウ追加 */
+  .campaign-detail {
+    background: var(--secondary-bg);
+    padding: 40px 20px;
+    border-top: 2px solid var(--accent-purple);
+    margin-top: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  }
+  
+  .campaign-detail h2 {
+    font-size: 2em;
+    color: var(--accent-green);
+    margin-bottom: 20px;
+  }
+  
+  .campaign-detail p {
+    font-size: 1em;
+    line-height: 1.6;
+  }
+  
+  /* フッター */
+  footer {
+    background: var(--secondary-bg);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* レスポンシブ対応 */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 2.5em;
+    }
+    nav ul {
+      flex-direction: column;
+    }
+    nav ul li {
+      margin: 10px 0;
+    }
+  }
+  
+  /* アニメーション */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* メンバー紹介 */
+  .member-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .member-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    /* 角を丸くしたい場合 */
+    border-radius: 4px;
+  }
+  
+  .member-text {
+    flex: 1;
+  }
+  
