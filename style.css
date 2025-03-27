@@ -403,6 +403,116 @@
     padding: 0 20px;    /* 横方向の余白（必要に応じて調整） */
   }
 
+/* キャラクターセクションのスタイル */
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .character-card {
+    background: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .character-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.8);
+  }
+  
+  .character-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+  
+  .character-card h3 {
+    color: #2ecc71;
+    padding: 10px;
+    margin: 0;
+  }
+  
+/* ポップアップ背景のスタイル */
+#char-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  z-index: 1000;
+}
+
+/* ポップアップ表示用のクラス */
+#char-popup.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ポップアップ内のコンテンツ */
+.popup-content {
+  display: flex;
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.8);
+  max-width: 800px;
+  width: 90%;
+  gap: 20px;
+}
+
+/* 画像部分 */
+.popup-content img {
+  width: 40%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* 説明部分 */
+.popup-text {
+  width: 60%;
+  color: #e0e0e0;
+  overflow-y: auto;
+  max-height: 500px;
+}
+
+/* 名前のスタイル */
+.popup-text h3 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #6a0dad;
+}
+
+/* 説明テキストのスタイル */
+.popup-text p {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* 閉じるボタン */
+#close-popup {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+  
+  
   
   /* レスポンシブ対応（@mediaはファイルの最後） */
   @media (max-width: 768px) {
@@ -433,6 +543,17 @@
       max-width: none !important;
       aspect-ratio: auto !important;
       margin-top: 20px;
+    }
+  }
+  
+  /* キャラクタースマホ対応 */
+  @media (max-width: 768px) {
+    .popup-inner {
+      width: 95%;
+      padding: 15px;
+    }
+    .character-grid {
+      gap: 10px;
     }
   }
   
