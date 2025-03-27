@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
       campaign: "CoC"
     },
     "char04": {
-      name: "キャラ名4",
+      name: "オルガ・イツカ",
       img: "img/char04.jpg",
       description: "止まらねぇ男",
       campaign: "CoC"
