@@ -1,25 +1,29 @@
 document.addEventListener("DOMContentLoaded", function() {
     // 動画データ：各動画に名前とYouTube共有リンクを指定
     const videos = {
-      "vid1": {
+      "vid0": {
         name: "わすれもの",
-        shareUrl: "https://youtu.be/RDcgVlPdz5w"
+        shareUrl: "https://youtu.be/uP2uKl8tI9w"
       },
-      "vid2": {
+      "vid1": {
         name: "ここはどこ？",
         shareUrl: "https://youtu.be/kbsksOGr8mY"
       },
-      "vid3": {
+      "vid2": {
         name: "罪の身代わり",
-        shareUrl: "https://youtu.be/bYeJommoVYY"
+        shareUrl: "https://youtu.be/t9tY08cGcGI"
       },
-      "vid4": {
+      "vid3": {
         name: "牧場物語　予告",
         shareUrl: "https://youtu.be/xE5vMKj0x-g"
       },
-      "vid5": {
+      "vid4": {
         name: "籠島　導入",
         shareUrl: "https://youtu.be/AdYosXf1vIg"
+      },
+      "vid5": {
+        name: "籠島 Part2",
+        shareUrl: "https://youtu.be/Zkf4YwWT61k"
       },
       "vid6": {
         name: "稲荷村",
@@ -39,11 +43,11 @@ document.addEventListener("DOMContentLoaded", function() {
       },
       "vid10": {
         name: "ロアナプラ",
-        shareUrl: "https://youtu.be/RSiErumcuWM"
+        shareUrl: "https://youtu.be/NT5VgxUPPcs"
       },
       "vid11": {
         name: "R type",
-        shareUrl: "https://youtu.be/itRgIUk-jgg"
+        shareUrl: "https://youtu.be/Gh93kg3RiwM"
       },
       "vid12": {
         name: "アズマ病院 PART1",
@@ -51,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
       },
       "vid13": {
         name: "止まらない肉の虫",
-        shareUrl: "https://youtu.be/oVnCT1Jstdg"
+        shareUrl: "https://youtu.be/JY6QbqOhfpQ"
       },
       "vid14": {
         name: "竜退治予告",
@@ -63,11 +67,11 @@ document.addEventListener("DOMContentLoaded", function() {
       },
       "vid16": {
         name: "オルたその昔話",
-        shareUrl: "https://youtu.be/_Ic7dnVgdF4"
+        shareUrl: "https://youtu.be/fJv19Y40s7s"
       },
       "vid17": {
         name: "2018年の断片",
-        shareUrl: "https://youtu.be/pbdhA_7pMR8"
+        shareUrl: "https://youtu.be/m6NBFf9PZ6s"
       },
       "vid18": {
         name: "君との明日",
@@ -107,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function() {
       },
       "vid27": {
         name: "white1",
-        shareUrl: "https://youtu.be/JMHbGTtr_rE"
+        shareUrl: "https://youtu.be/lAJr-wtddQE"
       },
       "vid28": {
         name: "white2",
@@ -123,11 +127,11 @@ document.addEventListener("DOMContentLoaded", function() {
       },
       "vid31": {
         name: "下劣竜前半",
-        shareUrl: "https://youtu.be/oaKt_TO32mM"
+        shareUrl: "https://youtu.be/ar9DHZWbK6A"
       },
       "vid32": {
         name: "下劣竜後半",
-        shareUrl: "https://youtu.be/1K1OZWTOuAw"
+        shareUrl: "https://youtu.be/xl65NJyoX2I"
       },
       "vid33": {
         name: "ノンデリクラさん",
@@ -151,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function() {
       },
       "vid38": {
         name: "一口呪術高専",
-        shareUrl: "https://youtu.be/pdF438qolVo"
+        shareUrl: "https://youtu.be/z4TOog3282k"
       },
       "vid39": {
         name: "インクレディブルと見る過去の敵一覧",
@@ -195,11 +199,11 @@ document.addEventListener("DOMContentLoaded", function() {
       },
       "vid50": {
         name: "わえ/天の最強持ちキャラランク Part4",
-        shareUrl: "https://youtu.be/vOMaLRIgN-k"
+        shareUrl: "https://youtu.be/A1vpka5T9kw"
       },
       "vid51": {
         name: "わえ/天の最強持ちキャラランク Part5",
-        shareUrl: "https://youtu.be/_ChqyRcpngI"
+        shareUrl: "https://youtu.be/LFD3yozPi-Y"
       },
       "vid52": {
         name: "わえ/天の最強持ちキャラランク Part6",
