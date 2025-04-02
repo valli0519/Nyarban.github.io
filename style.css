@@ -511,8 +511,124 @@
   color: #ffffff;
 }
 
-  
-  
+
+
+/* イラストセクションはまだ未実装 */
+
+
+/* 動画セクション 全体 */
+
+/* グリッドレイアウト：PCでは横に複数カード */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* 動画カードのスタイル */
+.video-card {
+  background: var(--secondary-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.video-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.8);
+}
+
+.video-card img {
+  width: 100%;
+  object-fit: cover;
+  /* 16:9比率のサムネイル */
+  aspect-ratio: 16 / 9;
+}
+
+.video-card h3 {
+  color: var(--accent-green);
+  padding: 10px;
+  margin: 0;
+}
+
+/* 動画ポップアップのスタイル */
+#video-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  z-index: 1000;
+}
+
+#video-popup.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ポップアップ内容を縦方向に整列 */
+#video-popup .popup-content {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 1200px;  /* モーダルウィンドウを大きめに */
+  width: 95%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* クローズボタン */
+#close-video-popup {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* 動画タイトルを上部中央に表示 */
+#video-popup-title {
+  width: 100%;
+  text-align: center;
+  color: var(--accent-green);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* レスポンシブな16:9動画埋め込み用コンテナ */
+#video-popup-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+#video-popup-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+
   
   /* レスポンシブ対応（@mediaはファイルの最後） */
   @media (max-width: 768px) {

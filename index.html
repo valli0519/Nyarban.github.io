@@ -23,6 +23,7 @@
       <li><a href="#campaigns">キャンペーン</a></li>
       <li><a href="#campaign-details">キャンペーン詳細</a></li>
       <li><a href="#characters">キャラクター</a></li>
+      <li><a href="#video-content">MOVIES</a></li>
       <li><a href="#contact">お問い合わせ</a></li>
     </ul>
   </nav>
@@ -178,7 +179,7 @@
         <a href="#detail-proto" class="campaign-card-link">
           <div class="campaign-card">
             <h3>「プロトコンプレックス」</h3>
-            <p>ウマ娘世界に巣くう巨悪、ボンドルドによって引き起こされたAIの超成長と倫理観の欠如した理想未来都市「プロトコンプレックス」を舞台に３人トレーナーが真相を目指して躍動する物語。</p>
+            <p>ウマ娘世界に巣くう巨悪、ボンドルドによって引き起こされたAIの超成長と倫理観の欠如した理想未来都市「プロトコンプレックス」を舞台に３人のトレーナーが衝撃の真相に辿り着き、世界を救う物語。</p>
           </div>
         </a>
         <a href="#detail-underworld" class="campaign-card-link">
@@ -309,10 +310,10 @@
         <img src="img/campaign_makai_bg.jpg" alt="此処同好会 Image" class="detail-img">
         <div class="detail-content">
           <h2>「此処同好会」</h2>
-          <p>「Lunatic_2nd」後、ノーマルエンドの果てに辿り着く「ゴジータ」「南光太郎」「アルトルス」「幻月」「夢月」の愉快な魔界浪漫紀行。<br>
+          <p>「Lunatic_2nd」後、ノーマルエンドの果てに辿り着く「ゴジータ」「南光太郎」「アルトリウス」「幻月」「夢月」の愉快な魔界浪漫紀行。<br>
             Lunatic_2ndクリア後の世界で、幻想郷から繋がる魔界を旅行し、伏魔殿(パンデモニウム)や理想郷(アルカディア)などの古都、都市を旅しながら、旧幻想郷と新幻想郷が歪に合併した弊害に触れながらも、目立つ解決はなく、ただ浪漫のままに紀行する物語。<br>
-            最終的に、Lunatic_2ndノーマルエンドの世界戦では、幻想郷の崩壊が避けられない事をアルトルスは口にする。<br>
-            その結果、アルトルスはこの幻想郷を救うためにも力をもった皆を別の２次元世界へと一度逃がす事を決行。<br>
+            最終的に、Lunatic_2ndノーマルエンドの世界戦では、幻想郷の崩壊が避けられない事をアルトリウスは口にする。<br>
+            その結果、アルトリウスはこの幻想郷を救うためにも力をもった皆を別の２次元世界へと一度逃がす事を決行。<br>
             そうして転移した先で辿り着いた世界が、異世界転生を受け入れる性質を強く持ちながら現代に極めて近い世界、「ウマ娘世界」であった。</p>
           <!-- ログを見るボタン -->
           <div class="content-button">
@@ -441,6 +442,46 @@
 </section>
 
 
+<!-- ワンドライブ コンテンツ イラストセクション -->
+<section id="fanart">
+  <div class="container">
+    <h2>ファンアート　実装予定</h2>
+    <div class="onedrive-embed">
+      <iframe src="https://onedrive.live.com/embed?cid=40f0412a3dcde926&resid=40f0412a3dcde926!EibpzT0qQfAggEBPEAAAAAABJlRe4TuyuQjItzX7CZIyhA" 
+              frameborder="0" scrolling="no" allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</section>
+
+
+<!-- 動画セクション -->
+<section id="video-content">
+  <div class="container">
+    <h2>MOVIES</h2>
+    <div class="content-box">
+      <p style="text-align: center;">ニャルラトホテプ万歳のファンメイド動画を紹介。</p>
+    </div>
+    <!-- 動画カードが自動生成されるグリッド -->
+    <div id="video-list" class="video-grid"></div>
+  </div>
+</section>
+
+<!-- 動画ポップアップ -->
+<div id="video-popup">
+  <div class="popup-content">
+    <span id="close-video-popup">&times;</span>
+    <!-- タイトルを動画より前に配置 -->
+    <div id="video-popup-title"></div>
+    <div id="video-popup-container">
+      <!-- ここにiframeが動的に挿入される -->
+    </div>
+  </div>
+</div>
+
+
+
+
   <!-- お問い合わせ -->
   <section id="contact">
     <div class="container">
@@ -457,7 +498,8 @@
     <p>&copy; 2025 ニャルラトホテプ万歳</p>
   </footer>
 
-  
+  <!-- JS読み込み -->
+  <script src="movies.js"></script>
   <script src="characters.js"></script>
 
 </body>
