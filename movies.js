@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function() {
       },
       "vid32": {
         name: "下劣竜後半",
-        shareUrl: "https://youtu.be/xl65NJyoX2I"
+        shareUrl: "https://youtu.be/1K1OZWTOuAw"
       },
       "vid33": {
         name: "ノンデリクラさん",
