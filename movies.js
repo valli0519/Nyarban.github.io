@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function() {
       },
       "vid33": {
         name: "ノンデリクラさん",
-        shareUrl: "https://youtu.be/RXeD5Hkn8PY"
+        shareUrl: "https://youtu.be/xl65NJyoX2I"
       },
       "vid34": {
         name: "ある日のフリーレン",
