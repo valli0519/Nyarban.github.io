@@ -13,10 +13,10 @@ document.addEventListener("DOMContentLoaded", function() {
         name: "罪の身代わり",
         shareUrl: "https://youtu.be/t9tY08cGcGI"
       },
-      "vid3": {
-        name: "牧場物語　予告",
-        shareUrl: "https://youtu.be/xE5vMKj0x-g"
-      },
+    //   "vid3": {
+    //     name: "牧場物語　予告",
+    //     shareUrl: "https://youtu.be/xE5vMKj0x-g"
+    //   },
       "vid4": {
         name: "籠島　導入",
         shareUrl: "https://youtu.be/AdYosXf1vIg"
@@ -37,14 +37,14 @@ document.addEventListener("DOMContentLoaded", function() {
         name: "行けば　後編",
         shareUrl: "https://youtu.be/VnJdSOrDXmo"
       },
-      "vid9": {
-        name: "行けば　エピローグ",
-        shareUrl: "https://youtu.be/nIavJfGlRig"
-      },
-      "vid10": {
-        name: "ロアナプラ",
-        shareUrl: "https://youtu.be/NT5VgxUPPcs"
-      },
+    //   "vid9": {
+    //     name: "行けば　エピローグ",
+    //     shareUrl: "https://youtu.be/nIavJfGlRig"
+    //   },
+    //   "vid10": {
+    //     name: "ロアナプラ",
+    //     shareUrl: "https://youtu.be/NT5VgxUPPcs"
+    //   },
       "vid11": {
         name: "R type",
         shareUrl: "https://youtu.be/Gh93kg3RiwM"
