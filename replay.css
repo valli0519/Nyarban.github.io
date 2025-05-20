@@ -9,21 +9,31 @@
 .scene-toggle:hover {
   background:var(--accent-purple); color:var(--primary-bg);
 }
+/* 折り畳みパネル */
 .scene-panel {
-  max-height:0; overflow:hidden; transition:max-height .3s ease;
-  background:var(--primary-bg); border-radius:0 0 4px 4px;
-  padding:0 16px; scroll-margin-top:130px;
-}
-.scene-panel.open { max-height:300px; }
-
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease;
+  }
+  .scene-panel.open {
+    max-height: 80vh;    /* 80% まで伸ばせる */
+    overflow-y: auto;    /* 内側でスクロール */
+  }
+  
 /* ── シーン一覧（検索付きスクロール） ── */
 .scene-filter {
   width:100%; padding:8px; margin:12px 0;
   border:1px solid var(--accent-green); border-radius:4px;
   background:var(--secondary-bg); color:var(--text-color);
 }
-.scene-list { list-style:none; margin:0; padding:0;
-  max-height:240px; overflow-y:auto;
+/* シーン一覧 */
+.scene-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* max-height を外して自由に伸びるように */
+  max-height: none;
+  overflow-y: auto;    /* 必要ならここでもスクロール可 */
 }
 .scene-list li + li { margin-top:6px; }
 .scene-list a {
