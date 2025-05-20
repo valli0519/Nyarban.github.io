@@ -92,13 +92,13 @@
     overflow-y: auto;            /* 縦スクロールは OK */
     overflow-x: hidden;          /* 横スクロール禁止 */
     padding: 20px;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.6);
     color: var(--text-color);
     /* 自動改行 */
     white-space: pre-wrap;
     word-wrap: break-word;
   }
-  
+
   /* モーダル内ログの自動改行 */
 #scene-popup-body pre {
     white-space: pre-wrap;        /* 改行はそのまま、長い行は折り返す */
