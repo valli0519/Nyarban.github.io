@@ -99,6 +99,13 @@
     word-wrap: break-word;
   }
   
+  /* モーダル内ログの自動改行 */
+#scene-popup-body pre {
+    white-space: pre-wrap;        /* 改行はそのまま、長い行は折り返す */
+    word-break: break-word;       /* 単語の途中でも必要なら改行 */
+    overflow-wrap: anywhere;      /* 任意の位置で折り返し */
+  }
+
   /* ── 閉じるボタン ── */
   #close-scene-popup {
     position: absolute;
