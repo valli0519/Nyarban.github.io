@@ -8,7 +8,37 @@ document.addEventListener("DOMContentLoaded", () => {
   const player = document.getElementById("bgm-player");
   const closeBtn = document.getElementById("close-scene-popup");
 
+  // Global BGM UI elements
+  const globalBgmUi = document.getElementById("global-bgm-ui");
+  const trackNameEl = document.getElementById("global-track-name");
+  const volumeSlider = document.getElementById("global-bgm-volume");
+  const playPauseBtn = document.getElementById("global-play-pause");
+
   let currentBgmUrl = "";
+
+  // 0. Initialize Global Volume
+  if (player && volumeSlider) {
+    const savedVol = localStorage.getItem("nyarban_bgm_volume");
+    if (savedVol !== null) {
+      player.volume = savedVol;
+      volumeSlider.value = savedVol;
+    } else {
+      player.volume = 0.5; // Default 50%
+    }
+
+    volumeSlider.addEventListener("input", (e) => {
+      player.volume = e.target.value;
+      localStorage.setItem("nyarban_bgm_volume", e.target.value);
+    });
+  }
+
+  // Helper to extract track name
+  function getFilenameFromPath(path) {
+    if (!path) return "No Track";
+    const parts = path.split(/[\/\\]/);
+    const filename = parts[parts.length - 1];
+    return filename.replace(".mp3", "").replace("DOVA", "").replace(".ogg", "").trim() || "Unknown Track";
+  }
 
   // 1. Accordion
   document.querySelectorAll(".scene-toggle").forEach(btn => {
@@ -73,18 +103,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Update Modal
     titleEl.textContent = data.title;
-    // Use <pre> for log formatting
     bodyEl.innerHTML = `<pre>${escapeHTML(data.text)}</pre>`;
-    document.getElementById("info-title").textContent = data.title;
+
+    // Safety check for info-title if it exists
+    const infoTitle = document.getElementById("info-title");
+    if (infoTitle) infoTitle.textContent = data.title;
 
     currentBgmUrl = data.bgm || "";
-    bgmBtn.textContent = "▶ BGM";
+    if (bgmBtn) bgmBtn.textContent = "▶ BGM";
 
-    if (window._currentAudio) {
-      window._currentAudio.pause();
-      window._currentAudio = null;
+    // Stop current track to switch seamlessly if required, or let user decide
+    // For global UI, auto-play the new scene's BGM
+    if (globalBgmUi && currentBgmUrl) {
+      const safeUrl = encodeURI(currentBgmUrl);
+      // Check if it's already playing the exact same track. If yes, don't interrupt.
+      if (player.getAttribute("src") !== safeUrl) {
+        player.setAttribute("src", safeUrl);
+        player.load();
+        player.play().catch(e => console.log("Autoplay prevented by browser:", e));
+      } else if (player.paused) {
+        player.play().catch(e => console.log("Autoplay prevented:", e));
+      }
+      trackNameEl.textContent = getFilenameFromPath(currentBgmUrl);
+      playPauseBtn.textContent = "⏸";
+      globalBgmUi.classList.add("active");
+    } else if (globalBgmUi && !currentBgmUrl) {
+      player.pause();
+      player.removeAttribute("src");
+      trackNameEl.textContent = "No Track";
+      playPauseBtn.textContent = "▶";
+      globalBgmUi.classList.remove("active");
+    } else if (!globalBgmUi) {
+      // Fallback to old behavior if user hasn't added the HTML snippet yet
+      player.pause();
+      player.removeAttribute("src");
     }
-    player.src = "";
 
     // Background
     const bg = data.bg_image;
@@ -102,6 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function escapeHTML(str) {
+    if (!str) return "";
     return str
       .replace(/&/g, "&amp;")
       .replace(/</g, "&lt;")
@@ -110,35 +164,77 @@ document.addEventListener("DOMContentLoaded", () => {
       .replace(/'/g, "&#039;");
   }
 
-  // 5. BGM Controls
-  bgmBtn.addEventListener("click", () => {
-    if (!currentBgmUrl) return;
-
-    if (window._currentAudio && !window._currentAudio.paused) {
-      window._currentAudio.pause();
-      bgmBtn.textContent = "▶ BGM";
-    } else {
-      if (!window._currentAudio || window._currentAudio.src !== currentBgmUrl) {
-        window._currentAudio = new Audio(currentBgmUrl);
-        window._currentAudio.loop = true;
+  // 5. Global BGM Play/Pause Toggle
+  if (playPauseBtn) {
+    playPauseBtn.addEventListener("click", () => {
+      if (!player.src || player.src.endsWith("null")) return;
+      if (player.paused) {
+        player.play().catch(err => console.error("Play failed", err));
+        playPauseBtn.textContent = "⏸";
+      } else {
+        player.pause();
+        playPauseBtn.textContent = "▶";
       }
-      window._currentAudio.play().catch(err => console.error("Audio play failed:", err));
-      bgmBtn.textContent = "⏸ BGM";
-    }
-  });
+    });
+  }
+
+  // Backward compatibility for the old modal bgm button
+  if (bgmBtn) {
+    bgmBtn.addEventListener("click", () => {
+      if (!currentBgmUrl) {
+        alert("このシーンにはBGMが設定されていません。");
+        return;
+      }
+
+      // If global UI exists, redirect the action
+      if (globalBgmUi) {
+        playPauseBtn.click();
+        // Sync text on the old button
+        setTimeout(() => {
+          bgmBtn.textContent = player.paused ? "▶ BGM" : "⏸ BGM";
+        }, 100);
+        return;
+      }
+
+      const safeUrl = encodeURI(currentBgmUrl);
+      if (!player.paused && player.getAttribute("src") === safeUrl) {
+        player.pause();
+        bgmBtn.textContent = "▶ BGM";
+      } else {
+        if (player.getAttribute("src") !== safeUrl) {
+          player.setAttribute("src", safeUrl);
+          player.load();
+        }
+        player.play().catch(err => {
+          console.error("Audio play failed:", err);
+          alert("BGMの再生に失敗しました。");
+        });
+        bgmBtn.textContent = "⏸ BGM";
+      }
+    });
+  }
 
   // 6. Close Modal
   const closeModal = () => {
     popup.classList.remove("visible");
+    const safeUrl = encodeURI(currentBgmUrl);
+
+    // Clear log text to prevent scroll overlap bugs
     bodyEl.innerHTML = "";
-    player.src = "";
-    if (window._currentAudio) {
-      window._currentAudio.pause();
-      window._currentAudio = null;
+
+    // Note: In global BGM mode, closing the scene modal DOES NOT stop the BGM!
+    // This allows the user to listen to the BGM while reading the chapter summaries.
+    if (!globalBgmUi) {
+      player.pause();
+      player.removeAttribute("src");
+      currentBgmUrl = "";
+      if (bgmBtn) bgmBtn.textContent = "▶ BGM";
+    } else {
+      // Just sync the modal button text back to Start when closed
+      if (bgmBtn) bgmBtn.textContent = "▶ BGM";
     }
-    currentBgmUrl = "";
-    bgmBtn.textContent = "▶ BGM";
   };
+
   closeBtn.addEventListener("click", closeModal);
   popup.addEventListener("click", e => {
     if (e.target === popup) closeModal();

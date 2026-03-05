@@ -1,130 +1,338 @@
-/* ── 章ナビ：折り畳みアコーディオン ── */
-.accordion { list-style:none; margin:20px; padding:0; }
-.accordion li + li { margin-top:8px; }
-.scene-toggle {
-  width:100%; background:var(--secondary-bg); color:var(--accent-green);
-  border:none; padding:12px; text-align:left; font-size:1.1rem;
-  cursor:pointer; border-radius:4px; transition:background .3s;
+/* ── Layout ── */
+.replay-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
-.scene-toggle:hover {
-  background:var(--accent-purple); color:var(--primary-bg);
+
+/* ── Replay Header & Campaign Card ── */
+#replay-header {
+    margin-top: 100px;
+    /* Space for fixed breadcrumb/nav */
+    padding: 20px;
 }
-/* 折り畳みパネル */
-.scene-panel {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height .3s ease;
-  }
-  .scene-panel.open {
-    max-height: 80vh;    /* 80% まで伸ばせる */
-    overflow-y: auto;    /* 内側でスクロール */
-  }
-  
-/* ── シーン一覧（検索付きスクロール） ── */
-.scene-filter {
-  width:100%; padding:8px; margin:12px 0;
-  border:1px solid var(--accent-green); border-radius:4px;
-  background:var(--secondary-bg); color:var(--text-color);
+
+.campaign-card {
+    background: rgba(26, 26, 26, 0.9);
+    border: 2px solid var(--accent-purple);
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(106, 13, 173, 0.4);
+    animation: fadeInUp 0.8s ease-out;
 }
-/* シーン一覧 */
-.scene-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  /* max-height を外して自由に伸びるように */
-  max-height: none;
-  overflow-y: auto;    /* 必要ならここでもスクロール可 */
+
+.campaign-card h2 {
+    font-size: 3rem;
+    color: #ff66cc;
+    text-shadow: 0 0 10px rgba(255, 102, 204, 0.6);
+    margin-bottom: 24px;
 }
-.scene-list li + li { margin-top:6px; }
-.scene-list a {
-  color:var(--text-color); text-decoration:none;
-  transition:color .2s;
+
+.campaign-desc {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    color: var(--text-color);
+    line-height: 1.8;
 }
-.scene-list a:hover { color:var(--accent-green); }
-/* ── モーダル全体 ── */
-#scene-popup {
-    display: none;               /* クリック前は完全に非表示 */
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.7);
-    z-index: 1000;
-  }
-  /* open時だけフレックスでセンタリング */
-  #scene-popup.visible {
+
+/* ── Jump Links (Inline list in card) ── */
+.replay-nav {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-  }
-  
-  /* ── モーダルコンテンツ ── */
-  #scene-popup .popup-content {
-    width: 95vw;                 /* 画面幅の95% */
-    max-width: 1400px;           /* 最大1400px */
-    height: 90vh;                /* 画面高さの90% */
-    background: #1a1a1a;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+}
+
+.replay-nav li a {
+    display: block;
+    padding: 8px 16px;
+    background: rgba(46, 204, 113, 0.1);
+    border: 1px solid var(--accent-green);
+    color: var(--accent-green);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.replay-nav li a:hover {
+    background: var(--accent-green);
+    color: var(--primary-bg);
+    transform: translateY(-2px);
+}
+
+/* ── Accordion (Full Width) ── */
+.accordion {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.accordion li {
+    margin-bottom: 12px;
+}
+
+.scene-toggle {
+    width: 100%;
+    background: #252525;
+    color: var(--accent-green);
+    border: 1px solid #333;
+    padding: 18px 24px;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
     border-radius: 8px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* ── モーダルヘッダー ── */
-  .modal-header {
-    position: sticky; top: 0;    /* スクロールしても常に上部固定 */
-    background: var(--secondary-bg);
-    padding: 16px;
+    transition: background 0.3s;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    z-index: 10;
-  }
-  #modal-scene-title {
-    margin: 0;
-    color: var(--accent-green);
-    font-size: 1.3rem;
-  }
-  #modal-bgm-btn {
-    background: var(--accent-green);
-    color: var(--primary-bg);
-    border: none;
-    padding: 8px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-  }
-  
-  /* ── モーダル本文 ── */
-  #scene-popup-body {
-    flex: 1;                     /* ヘッダー以外の残りを占有 */
-    overflow-y: auto;            /* 縦スクロールは OK */
-    overflow-x: hidden;          /* 横スクロール禁止 */
+}
+
+.scene-toggle::after {
+    content: "▼";
+    font-size: 0.8rem;
+    transition: transform 0.3s;
+}
+
+.scene-toggle:hover {
+    background: #333;
+}
+
+/* Panel Expansion */
+.scene-panel {
+    max-height: 0;
+    overflow: hidden;
+    background: #1a1a1a;
+    border-radius: 0 0 8px 8px;
+    transition: max-height 0.4s ease-out;
+}
+
+.scene-panel.open {
+    max-height: 50000px;
+    /* Support massive long lists without cutting off */
     padding: 20px;
-    background: rgba(0,0,0,0.6);
-    color: var(--text-color);
-    /* 自動改行 */
+    border: 1px solid #333;
+    border-top: none;
+    overflow-y: visible;
+}
+
+/* ── Scene List inside Panel ── */
+.scene-filter {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    background: #0d0d0d;
+    border: 1px solid var(--accent-purple);
+    color: white;
+    border-radius: 4px;
+}
+
+.scene-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+}
+
+.scene-list li a {
+    display: block;
+    padding: 10px 15px;
+    background: #222;
+    color: #ccc;
+    text-decoration: none;
+    border-radius: 4px;
+    border-left: 3px solid transparent;
+    transition: all 0.2s;
+}
+
+.scene-list li a:hover {
+    background: #2a2a2a;
+    color: var(--accent-green);
+    border-left-color: var(--accent-green);
+    padding-left: 20px;
+}
+
+/* ── Modal (Scene Content) ── */
+.scene-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+}
+
+.scene-popup.visible {
+    display: flex;
+}
+
+.popup-content {
+    width: 90vw;
+    max-width: 1200px;
+    height: 85vh;
+    background: #111;
+    border: 1px solid #444;
+    border-radius: 12px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.modal-header {
+    background: rgba(17, 17, 17, 0.85);
+    /* Restored transparency */
+    padding: 20px 30px;
+    border-bottom: 1px solid #333;
+}
+
+#modal-scene-title {
+    margin: 0 0 10px 0;
+    color: var(--accent-green);
+}
+
+.scene-body {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    background: rgba(0, 0, 0, 0.75);
+    /* Added transparency overlay for readability */
+}
+
+.scene-body pre {
     white-space: pre-wrap;
     word-wrap: break-word;
-  }
+    font-family: 'Inter', sans-serif;
+    color: #e0e0e0;
+}
 
-  /* モーダル内ログの自動改行 */
-#scene-popup-body pre {
-    white-space: pre-wrap;        /* 改行はそのまま、長い行は折り返す */
-    word-break: break-word;       /* 単語の途中でも必要なら改行 */
-    overflow-wrap: anywhere;      /* 任意の位置で折り返し */
-  }
-
-  /* ── 閉じるボタン ── */
-  #close-scene-popup {
+/* ── Utilities ── */
+.close-btn {
     position: absolute;
-    top: 10px; right: 20px;
-    font-size: 24px;
-    color: #fff;
+    top: 20px;
+    right: 25px;
+    font-size: 32px;
+    color: #666;
     cursor: pointer;
-    z-index: 20;
-  }
-  
-/* ── 隠しプレーヤー ── */
-#bgm-player { display:none; }
+    z-index: 2100;
+}
+
+.close-btn:hover {
+    color: #fff;
+}
+
+.bgm-btn {
+    background: var(--accent-purple);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .campaign-card h2 {
+        font-size: 2rem;
+    }
+
+    .scene-list {
+        grid-template-columns: 1fr;
+    }
+
+    .popup-content {
+        width: 98vw;
+        height: 95vh;
+    }
+}
+
+/* ── 7. Global BGM Player ── */
+#global-bgm-ui {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(10, 10, 20, 0.95);
+    border: 2px solid var(--accent-purple);
+    border-radius: 8px;
+    padding: 12px 20px;
+    z-index: 9999;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.8);
+    align-items: center;
+    gap: 15px;
+    color: #fff;
+    backdrop-filter: blur(5px);
+}
+#global-bgm-ui.active {
+    display: flex;
+    animation: slideUp 0.3s ease-out;
+}
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+.bgm-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+#global-play-pause {
+    background: var(--accent-purple);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bgm-track-info {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+}
+#global-track-name {
+    font-size: 0.9rem;
+    color: var(--accent-green);
+    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.volume-slider-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.8rem;
+}
+#global-bgm-volume {
+    width: 80px;
+}
+
+/* ── 8. Chapter Summary ── */
+.chapter-summary {
+    background: rgba(20, 20, 30, 0.6);
+    border-left: 4px solid var(--accent-green);
+    color: #e0e0e0;
+    padding: 15px 20px;
+    margin: 10px 0 20px 0;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    border-radius: 0 4px 4px 0;
+}
