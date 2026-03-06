@@ -253,8 +253,15 @@
     }
 
     .popup-content {
-        width: 98vw;
-        height: 95vh;
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+        flex-direction: column;
+    }
+
+    .scene-body {
+        padding: 20px;
+        font-size: 1rem;
     }
 }
 
@@ -269,25 +276,36 @@
     border-radius: 8px;
     padding: 12px 20px;
     z-index: 9999;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.8);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
     align-items: center;
     gap: 15px;
     color: #fff;
     backdrop-filter: blur(5px);
 }
+
 #global-bgm-ui.active {
     display: flex;
     animation: slideUp 0.3s ease-out;
 }
+
 @keyframes slideUp {
-    from { transform: translateY(50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
+
 .bgm-controls {
     display: flex;
     align-items: center;
     gap: 15px;
 }
+
 #global-play-pause {
     background: var(--accent-purple);
     color: white;
@@ -302,11 +320,13 @@
     align-items: center;
     justify-content: center;
 }
+
 .bgm-track-info {
     display: flex;
     flex-direction: column;
     width: 150px;
 }
+
 #global-track-name {
     font-size: 0.9rem;
     color: var(--accent-green);
@@ -315,12 +335,14 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 .volume-slider-container {
     display: flex;
     align-items: center;
     gap: 5px;
     font-size: 0.8rem;
 }
+
 #global-bgm-volume {
     width: 80px;
 }

@@ -1,442 +1,480 @@
 /* 基本リセット */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html {
-    scroll-behavior: smooth;
-    /* 固定ヘッダーの高さぶんだけ余白を確保 */
-    scroll-padding-top: 130px; 
-  }
-  
-  
-  body {
-    font-family: 'Roboto', sans-serif;
-    background: url("img/nyar_logo.png") no-repeat center center fixed;
-    background-size: cover;
-    color: #e0e0e0;
-    line-height: 1.6;
-    padding-bottom: 80px; /* フッターの高さ＋余裕 */
-  }
-  
-  /* aタグレイアウト変更無し */
-  .campaign-card-link {
-    display: contents;
-    color: inherit;
-    text-decoration: none;
-  }
-  .campaign-card-link:visited,
-  .campaign-card-link:hover,
-  .campaign-card-link:active {
-    color: inherit;
-    text-decoration: none;
-  }
-  
-  /* カラーパレット */
-  :root {
-    --primary-bg: #0d0d0d;
-    --secondary-bg: #1a1a1a;
-    --accent-purple: #6a0dad;
-    --accent-green: #2ecc71;
-    --text-color: #e0e0e0;
-  }
-  
-  /* ナビゲーション */
-  nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 15px 20px;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* ナビゲーションに軽いシャドウを追加 */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
-  }
-  nav .logo img {
-    height: 50px; /* 適宜調整 */
-  }
-  nav ul {
-    list-style: none;
-    display: flex;
-  }
-  nav ul li {
-    margin-left: 20px;
-  }
-  nav ul li a {
-    text-decoration: none;
-    color: var(--text-color);
-    transition: color 0.3s;
-  }
-  nav ul li a:hover {
-    color: var(--accent-green);
-  }
-  
-  /* ヒーローセクション */
-  header {
-    height: 100vh;
-    background: url('https://source.unsplash.com/1600x900/?dice') no-repeat center center/cover;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    animation: fadeIn 1.5s ease-out;
-  }
-  header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-  }
-  header .hero-content {
-    position: relative;
-    z-index: 1;
-  }
-  header h1 {
-    font-size: 3em;
-    color: var(--accent-purple);
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7), 0 0 8px rgba(255,255,255,0.5);
-  }
-  header p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-  }
-  header .btn {
-    padding: 15px 30px;
-    background: var(--accent-green);
-    color: var(--primary-bg);
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 4px;
-    transition: background 0.3s;
-  }
-  header .btn:hover {
-    background: var(--accent-purple);
-  }
-  
-  /* セクション */
-  section {
-    padding: 60px 20px;
-    animation: fadeInUp 1s ease-out;
-  }
-  section h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2.5em;
-    color: #ff66cc;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7), 0 0 8px rgba(255,255,255,0.5);
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .container-camp-detail {
-    max-width: 1600px;  /* 1200pxから拡大 */
-    margin: 0 auto;
-    padding: 0 20px;    /* 横方向の余白（必要に応じて調整） */
-  }
-  
-  /* コンテンツボックスにシャドウ追加 */
-  .content-box {
-    background: var(--secondary-bg);
-    padding: 20px;
-    border-radius: 4px;
-    margin-bottom: 40px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-  }
-  
-  /* キャンペーン概要カード（グリッドレイアウト） */
-  .campaign-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-  }
-  .campaign-card {
-    background: var(--secondary-bg);
-    border: 1px solid var(--accent-purple);
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 40px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  .campaign-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.7);
-  }
-  .campaign-card h3 {
-    color: var(--accent-green);
-    margin-top: 0;
-  }
-  .campaign-card p {
-    font-size: 0.95em;
-    line-height: 1.5;
-  }
-  .campaign-card a {
-    color: var(--accent-green);
-    text-decoration: none;
-  }
-  
-  /* キャンペーン詳細説明エリアにシャドウ追加 */
-  .campaign-detail {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background: var(--secondary-bg);
-    padding: 40px 20px;
-    border-top: 2px solid var(--accent-purple);
-    margin-top: 40px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-  }
-  .campaign-detail h2 {
-    font-size: 2em;
-    color: var(--accent-green);
-    margin-bottom: 20px;
-  }
-  .campaign-detail p {
-    font-size: 1em;
-    line-height: 1.6;
-  }
-  
-  /* フッター */
-  footer {
-    background: var(--secondary-bg);
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9em;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.7);
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-  }
-  
-  /* メンバー紹介 */
-  .member-info {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  .member-icon {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 4px;
-  }
-  .member-text {
-    flex: 1;
-  }
-  
-  /* キャンペーン詳細のイメージレイアウト */
-  /* 1) PC時：奇数番目は画像左、偶数番目は画像右 */
-  .detail-wrapper {
-    display: flex;
-    align-items: center;
-  }
-  .campaign-detail:nth-of-type(odd) .detail-wrapper {
-    flex-direction: row;
-  }
-  .campaign-detail:nth-of-type(even) .detail-wrapper {
-    flex-direction: row-reverse;
-  }
-  
-  /* 2) 画像部分：幅40%、正方形に固定、サイズ統一 */
-  .detail-img {
-    flex: 4;
-    width: 40%;
-    max-width: 40%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-  }
-  
-  /* テキスト部分：幅60% */
-  .detail-content {
-    flex: 6;
-    width: 60%;
-    padding: 20px;
-  }
+html {
+  scroll-behavior: smooth;
+  /* 固定ヘッダーの高さぶんだけ余白を確保 */
+  scroll-padding-top: 130px;
+}
 
-  /* — リプレイ用シンプルナビ — */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: url("img/nyar_logo.png") no-repeat center center fixed;
+  background-size: cover;
+  color: #e0e0e0;
+  line-height: 1.6;
+  padding-bottom: 80px;
+  /* フッターの高さ＋余裕 */
+}
+
+/* aタグレイアウト変更無し */
+.campaign-card-link {
+  display: contents;
+  color: inherit;
+  text-decoration: none;
+}
+
+.campaign-card-link:visited,
+.campaign-card-link:hover,
+.campaign-card-link:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* カラーパレット */
+:root {
+  --primary-bg: #0d0d0d;
+  --secondary-bg: #1a1a1a;
+  --accent-purple: #6a0dad;
+  --accent-green: #2ecc71;
+  --text-color: #e0e0e0;
+}
+
+/* ナビゲーション */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 15px 20px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* ナビゲーションに軽いシャドウを追加 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+nav .logo img {
+  height: 50px;
+  /* 適宜調整 */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--accent-green);
+}
+
+/* ヒーローセクション */
+header {
+  height: 100vh;
+  background: url('https://source.unsplash.com/1600x900/?dice') no-repeat center center/cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  animation: fadeIn 1.5s ease-out;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+header .hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+header h1 {
+  font-size: 3em;
+  color: var(--accent-purple);
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+header p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+header .btn {
+  padding: 15px 30px;
+  background: var(--accent-green);
+  color: var(--primary-bg);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+header .btn:hover {
+  background: var(--accent-purple);
+}
+
+/* セクション */
+section {
+  padding: 60px 20px;
+  animation: fadeInUp 1s ease-out;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5em;
+  color: #ff66cc;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container-camp-detail {
+  max-width: 1600px;
+  /* 1200pxから拡大 */
+  margin: 0 auto;
+  padding: 0 20px;
+  /* 横方向の余白（必要に応じて調整） */
+}
+
+/* コンテンツボックスにシャドウ追加 */
+.content-box {
+  background: var(--secondary-bg);
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* キャンペーン概要カード（グリッドレイアウト） */
+.campaign-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.campaign-card {
+  background: var(--secondary-bg);
+  border: 1px solid var(--accent-purple);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.campaign-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+.campaign-card h3 {
+  color: var(--accent-green);
+  margin-top: 0;
+}
+
+.campaign-card p {
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+.campaign-card a {
+  color: var(--accent-green);
+  text-decoration: none;
+}
+
+/* キャンペーン詳細説明エリアにシャドウ追加 */
+.campaign-detail {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: var(--secondary-bg);
+  padding: 40px 20px;
+  border-top: 2px solid var(--accent-purple);
+  margin-top: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.campaign-detail h2 {
+  font-size: 2em;
+  color: var(--accent-green);
+  margin-bottom: 20px;
+}
+
+.campaign-detail p {
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+/* フッター */
+footer {
+  background: var(--secondary-bg);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.7);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* メンバー紹介 */
+.member-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.member-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.member-text {
+  flex: 1;
+}
+
+/* キャンペーン詳細のイメージレイアウト */
+/* 1) PC時：奇数番目は画像左、偶数番目は画像右 */
+.detail-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.campaign-detail:nth-of-type(odd) .detail-wrapper {
+  flex-direction: row;
+}
+
+.campaign-detail:nth-of-type(even) .detail-wrapper {
+  flex-direction: row-reverse;
+}
+
+/* 2) 画像部分：幅40%、正方形に固定、サイズ統一 */
+.detail-img {
+  flex: 4;
+  width: 40%;
+  max-width: 40%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+/* テキスト部分：幅60% */
+.detail-content {
+  flex: 6;
+  width: 60%;
+  padding: 20px;
+}
+
+/* — リプレイ用シンプルナビ — */
 .replay-nav {
-    background: var(--secondary-bg);
-    padding: 10px 20px;
-    text-align: left;
-  }
-  .replay-nav a {
-    color: var(--accent-green);
-    font-weight: bold;
-    text-decoration: none;
-  }
-  
+  background: var(--secondary-bg);
+  padding: 10px 20px;
+  text-align: left;
+}
+
+.replay-nav a {
+  color: var(--accent-green);
+  font-weight: bold;
+  text-decoration: none;
+}
+
 /* ───────────────────────────
    パンくずリスト（Breadcrumb）
 ─────────────────────────── */
 .breadcrumb {
-    position: fixed;      /* 固定解除 */
-    top: auto;
-    left: auto;
-    display: inline-block;   /* 左寄せ */
-    padding: 8px 16px;
-    margin: 20px 0 0 20px;   /* ヘッダー直下＋左マージン */
-    background: var(--secondary-bg);
-    border-radius: 4px;
-    font-size: 0.9rem;
-    color: #ccc;
-    margin-top: 80px;
-  }
-  
-  .breadcrumb a {
-    color: var(--accent-green);
-    text-decoration: none;
-  }
-  
-  .breadcrumb a:hover {
-    text-decoration: underline;
-  }
-  
-  .breadcrumb span {
-    color: var(--text-color);
-  }
-  
-  
-  /* — スクロールトップボタン — */
-  .scroll-top {
-    position: fixed;
-    bottom: 120px;
-    right: 30px;
-    background: var(--accent-green);
-    color: var(--primary-bg);
-    padding: 10px 12px;
-    border-radius: 50%;
-    text-decoration: none;
-    font-size: 1.6rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-    opacity: 0.7;
-    transition: opacity .2s;
-  }
-  .scroll-top:hover {
-    opacity: 1;
-  }
-  
+  position: fixed;
+  /* 固定解除 */
+  top: auto;
+  left: auto;
+  display: inline-block;
+  /* 左寄せ */
+  padding: 8px 16px;
+  margin: 20px 0 0 20px;
+  /* ヘッダー直下＋左マージン */
+  background: var(--secondary-bg);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 80px;
+}
+
+.breadcrumb a {
+  color: var(--accent-green);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb span {
+  color: var(--text-color);
+}
+
+
+/* — スクロールトップボタン — */
+.scroll-top {
+  position: fixed;
+  bottom: 120px;
+  right: 30px;
+  background: var(--accent-green);
+  color: var(--primary-bg);
+  padding: 10px 12px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 1.6rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  opacity: 0.7;
+  transition: opacity .2s;
+}
+
+.scroll-top:hover {
+  opacity: 1;
+}
+
 /* 「物語を見る」ボタン用コンテナ */
 .content-button {
-    display: flex;
-    justify-content: center;
-    margin-top: 80px;
-  }
-  
-  /* ボタン本体 */
-  .content-button .btn-story {
-    background: var(--accent-green);
-    color: var(--primary-bg);
-    font-size: 1.25rem;
-    font-weight: 700;
-    padding: 12px 36px;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background 0.3s, transform 0.2s;
-  }
-  
-  .content-button .btn-story:hover {
-    background: var(--accent-purple);
-    color: white;
-    transform: translateY(-2px);
-  }
-  
-  .replay-nav {
-    display: flex;
-    flex-wrap: wrap; /* 適切に改行 */
-    justify-content: center;
-    gap: 24px;
-    list-style: none;
-    margin: 40px 0;
-    padding: 0;
-  }
-  
-  .replay-nav li {
-    background: rgba(34, 139, 34, 0.15);
-    border: 2px solid var(--accent-green);
-    border-radius: 8px;
-    transition: background 0.3s, transform 0.2s;
-  }
-  
-  .replay-nav a {
-    display: block;
-    padding: 10px 20px;
-    color: var(--accent-green);
-    font-weight: 600;
-    text-decoration: none;
-  }
-  
-  .replay-nav li:hover {
-    background: var(--accent-green);
-    transform: translateY(-3px);
-  }
-  
-  .replay-nav li:hover a {
-    color: var(--primary-bg);
-  }
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
 
-  .container-replay {
-    max-width: 1600px;  /* 1200pxから拡大 */
-    margin: 0 auto;
-    margin-top: 120px;
-    padding: 0 20px;    /* 横方向の余白（必要に応じて調整） */
-  }
-  
-  .container-replay-textbox {
-    max-width: 1600px;  /* 1200pxから拡大 */
-    margin: 0 auto;
-    margin-top: 40px;
-    padding: 0 20px;    /* 横方向の余白（必要に応じて調整） */
-  }
+/* ボタン本体 */
+.content-button .btn-story {
+  background: var(--accent-green);
+  color: var(--primary-bg);
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 12px 36px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.content-button .btn-story:hover {
+  background: var(--accent-purple);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.replay-nav {
+  display: flex;
+  flex-wrap: wrap;
+  /* 適切に改行 */
+  justify-content: center;
+  gap: 24px;
+  list-style: none;
+  margin: 40px 0;
+  padding: 0;
+}
+
+.replay-nav li {
+  background: rgba(34, 139, 34, 0.15);
+  border: 2px solid var(--accent-green);
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.replay-nav a {
+  display: block;
+  padding: 10px 20px;
+  color: var(--accent-green);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.replay-nav li:hover {
+  background: var(--accent-green);
+  transform: translateY(-3px);
+}
+
+.replay-nav li:hover a {
+  color: var(--primary-bg);
+}
+
+.container-replay {
+  max-width: 1600px;
+  /* 1200pxから拡大 */
+  margin: 0 auto;
+  margin-top: 120px;
+  padding: 0 20px;
+  /* 横方向の余白（必要に応じて調整） */
+}
+
+.container-replay-textbox {
+  max-width: 1600px;
+  /* 1200pxから拡大 */
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 0 20px;
+  /* 横方向の余白（必要に応じて調整） */
+}
 
 /* キャラクターセクションのスタイル */
 .character-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-  }
-  
-  .character-card {
-    background: #1a1a1a;
-    border-radius: 8px;
-    overflow: hidden;
-    text-align: center;
-    cursor: pointer;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.6);
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .character-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.8);
-  }
-  
-  .character-card img {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-  }
-  
-  .character-card h3 {
-    color: #2ecc71;
-    padding: 10px;
-    margin: 0;
-  }
-  
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.character-card {
+  background: #1a1a1a;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.character-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+}
+
+.character-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.character-card h3 {
+  color: #2ecc71;
+  padding: 10px;
+  margin: 0;
+}
+
 /* ポップアップ背景のスタイル */
 #char-popup {
   position: fixed;
@@ -466,7 +504,7 @@
   background: #1a1a1a;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.8);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
   max-width: 800px;
   width: 90%;
   gap: 20px;
@@ -533,13 +571,13 @@
   overflow: hidden;
   text-align: center;
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .video-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.8);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
 }
 
 .video-card img {
@@ -582,7 +620,8 @@
   background: #1a1a1a;
   padding: 20px;
   border-radius: 8px;
-  max-width: 1200px;  /* モーダルウィンドウを大きめに */
+  max-width: 1200px;
+  /* モーダルウィンドウを大きめに */
   width: 95%;
   position: relative;
   display: flex;
@@ -629,75 +668,89 @@
 }
 
 
-  
-  /* レスポンシブ対応（@mediaはファイルの最後） */
-  @media (max-width: 768px) {
-    /* ヘッダーのメニューを非表示 */
-    nav ul {
-      display: none;
-    }
-  
-    /* h1, h2 の文字サイズをスマホ用に微調整 */
-    header h1 {
-      font-size: 2em !important;
-    }
-    section h2 {
-      font-size: 1.8em !important;
-    }
-  
-    /* キャンペーン詳細：画像を下、テキストを上 */
-    .detail-wrapper {
-      flex-direction: column !important;  /* !importantでnth-of-typeを上書き */
-    }
-    .detail-content {
-      order: 1;
-      width: 100% !important;  /* スマホ時はテキスト部を100%幅に */
-    }
-    .detail-img {
-      order: 2;
-      width: 100% !important;
-      max-width: none !important;
-      aspect-ratio: auto !important;
-      margin-top: 20px;
-    }
-  }
-  
-  /* キャラクタースマホ対応 */
-  @media (max-width: 768px) {
-    .popup-inner {
-      width: 95%;
-      padding: 15px;
-    }
-    .character-grid {
-      gap: 10px;
-    }
-  }
-  
-  /* リプレイページ 目次 */
-  @media (max-width: 768px) {
-    .replay-nav {
-      flex-direction: column;
-      gap: 12px;
-      align-items: center;
-    }
-    .replay-nav li {
-      width: 80%;
-      text-align: center;
-    }
-    
-    /* スマホ版ではトップへスクロールは非表示 */
-    .scroll-top {
-        display: none !important;
-    }
+
+/* レスポンシブ対応（@mediaはファイルの最後） */
+@media (max-width: 768px) {
+
+  /* ヘッダーのメニューを非表示 */
+  nav ul {
+    display: none;
   }
 
-  /* アニメーション */
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+  /* h1, h2 の文字サイズをスマホ用に微調整 */
+  header h1 {
+    font-size: 2em !important;
   }
-  @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+
+  section h2 {
+    font-size: 1.8em !important;
   }
-  
+
+  /* キャンペーン詳細：画像を下、テキストを上 */
+  .detail-wrapper {
+    flex-direction: column !important;
+  }
+
+  .detail-content {
+    order: 1;
+    width: 100% !important;
+  }
+
+  .detail-img {
+    order: 2;
+    width: 100% !important;
+    max-width: none !important;
+    aspect-ratio: auto !important;
+    margin-top: 20px;
+  }
+
+  /* キャラクタースマホ対応 */
+  .popup-inner {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .character-grid {
+    gap: 10px;
+  }
+
+  /* リプレイページ 目次 */
+  .replay-nav {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .replay-nav li {
+    width: 80%;
+    text-align: center;
+  }
+
+  /* スマホ版ではトップへスクロールは非表示 */
+  .scroll-top {
+    display: none !important;
+  }
+}
+
+/* アニメーション */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
