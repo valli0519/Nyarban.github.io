@@ -682,8 +682,22 @@ footer {
     font-size: 2em !important;
   }
 
+  header p {
+    font-size: 1.1em;
+  }
+
   section h2 {
     font-size: 1.8em !important;
+  }
+
+  /* メンバー紹介：スマホ時は縦並びに */
+  .member-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content-box {
+    padding: 15px;
   }
 
   /* キャンペーン詳細：画像を下、テキストを上 */
