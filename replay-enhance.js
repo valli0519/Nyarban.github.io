@@ -1,4 +1,4 @@
-// replay-enhance.js
+// replay-enhance.js リプレイHTMLのコアロジックです。
 
 document.addEventListener("DOMContentLoaded", () => {
   const popup = document.getElementById("scene-popup");
@@ -16,20 +16,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let currentBgmUrl = "";
 
-  // 0. Initialize Global Volume
-  if (player && volumeSlider) {
-    const savedVol = localStorage.getItem("nyarban_bgm_volume");
-    if (savedVol !== null) {
-      player.volume = savedVol;
-      volumeSlider.value = savedVol;
-    } else {
-      player.volume = 0.5; // Default 50%
-    }
-
-    volumeSlider.addEventListener("input", (e) => {
-      player.volume = e.target.value;
-      localStorage.setItem("nyarban_bgm_volume", e.target.value);
-    });
+  // Helper for safe HTML
+  function escapeHTML(str) {
+    if (!str) return "";
+    return str
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
   }
 
   // Helper to extract track name
@@ -40,49 +35,154 @@ document.addEventListener("DOMContentLoaded", () => {
     return filename.replace(".mp3", "").replace("DOVA", "").replace(".ogg", "").trim() || "Unknown Track";
   }
 
+  // 0. Auto-Generate HTML Elements from ALL_CHAPTERS
+  window.SCENES_MAP = {};
+  const navContainer = document.getElementById("dynamic-nav") || document.querySelector(".replay-nav");
+  const accordionContainer = document.getElementById("scene-accordion");
+
+  if (window.ALL_CHAPTERS && navContainer && accordionContainer) {
+    navContainer.innerHTML = "";
+    accordionContainer.innerHTML = "";
+
+    window.ALL_CHAPTERS.forEach((chapterData, chIndex) => {
+      const chapterNum = chIndex + 1;
+      const panelId = chapterData.panelId || `panel-chapter${chapterNum}`;
+      
+      // --- 1. ナビゲーション（目次）の生成 ---
+      const navLi = document.createElement("li");
+      const navA = document.createElement("a");
+      navA.href = `#${panelId}`;
+      navA.textContent = chapterData.chapterName;
+      navLi.appendChild(navA);
+      navContainer.appendChild(navLi);
+
+      // --- 2. アコーディオンパネルの生成 ---
+      const accLi = document.createElement("li");
+
+      // トグルボタン
+      const toggleBtn = document.createElement("button");
+      toggleBtn.className = "scene-toggle";
+      toggleBtn.setAttribute("data-target", panelId);
+      toggleBtn.textContent = chapterData.chapterName;
+      accLi.appendChild(toggleBtn);
+
+      // パネル本体
+      const panelDiv = document.createElement("div");
+      panelDiv.id = panelId;
+      panelDiv.className = "scene-panel";
+
+      // 概要（Summary）があれば生成（改行を<br>に変換）
+      if (chapterData.summary) {
+        const summaryDiv = document.createElement("div");
+        summaryDiv.className = "chapter-summary";
+        summaryDiv.innerHTML = escapeHTML(chapterData.summary).replace(/\n/g, "<br>");
+        panelDiv.appendChild(summaryDiv);
+      }
+
+      // 検索バー
+      const filterInput = document.createElement("input");
+      filterInput.type = "text";
+      filterInput.className = "scene-filter";
+      filterInput.placeholder = "シーンを検索…";
+      panelDiv.appendChild(filterInput);
+
+      // シーンリスト（ul）
+      const sceneUl = document.createElement("ul");
+      sceneUl.className = "scene-list";
+
+      // シーンデータの構築
+      const displayChapterNum = chapterData.chapterPrefix || chapterNum;
+      const isSpecialChapter = isNaN(parseFloat(displayChapterNum));
+
+      if (chapterData.scenes && chapterData.scenes.length > 0) {
+        chapterData.scenes.forEach((scene, scIndex) => {
+          const sceneId = `ch${chapterNum}-sc${scIndex}`;
+          window.SCENES_MAP[sceneId] = scene;
+
+          let displayTitle = scene.title || "";
+          if (!displayTitle.includes("シーン") && !displayTitle.includes("幕間") && !displayTitle.includes("外伝")) {
+            if (isSpecialChapter) {
+              displayTitle = `${displayChapterNum}-${scIndex + 1}: ${displayTitle}`;
+            } else {
+              displayTitle = `シーン ${displayChapterNum}-${scIndex + 1}: ${displayTitle}`;
+            }
+          }
+
+          const scLi = document.createElement("li");
+          const scA = document.createElement("a");
+          scA.href = "#";
+          scA.setAttribute("data-scene", sceneId);
+          scA.textContent = displayTitle;
+          scLi.appendChild(scA);
+          sceneUl.appendChild(scLi);
+        });
+      } else {
+        const emptyLi = document.createElement("li");
+        emptyLi.textContent = "まだシーンがありません";
+        emptyLi.style.color = "#888";
+        sceneUl.appendChild(emptyLi);
+      }
+
+      panelDiv.appendChild(sceneUl);
+      accLi.appendChild(panelDiv);
+      accordionContainer.appendChild(accLi);
+    });
+  } else if (window.SCENES_DATA) {
+    window.SCENES_MAP = window.SCENES_DATA;
+  }
+
+  // 0.5. Initialize Global Volume
+  if (player && volumeSlider) {
+    const savedVol = localStorage.getItem("nyarban_bgm_volume");
+    if (savedVol !== null) {
+      player.volume = savedVol;
+      volumeSlider.value = savedVol;
+    } else {
+      player.volume = 0.5;
+    }
+
+    volumeSlider.addEventListener("input", (e) => {
+      player.volume = e.target.value;
+      localStorage.setItem("nyarban_bgm_volume", e.target.value);
+    });
+  }
+
   // 1. Accordion
   document.querySelectorAll(".scene-toggle").forEach(btn => {
-    const panel = document.getElementById(btn.dataset.target);
     btn.addEventListener("click", () => {
-      panel.classList.toggle("open");
+      const panel = document.getElementById(btn.getAttribute("data-target"));
+      if (panel) panel.classList.toggle("open");
     });
   });
 
   // 2. Nav links
-  document.querySelectorAll(".replay-nav a, #jump-select").forEach(el => {
-    if (el.tagName === "SELECT") {
-      el.addEventListener("change", () => {
-        const tgt = el.value;
-        if (tgt) {
-          const panel = document.querySelector(tgt);
-          if (panel) {
-            panel.classList.add("open");
-            panel.scrollIntoView({ behavior: "smooth" });
-          }
+  document.querySelectorAll(".replay-nav a").forEach(el => {
+    const tgt = el.getAttribute("href");
+    if (tgt && tgt.startsWith("#panel-")) {
+      el.addEventListener("click", e => {
+        e.preventDefault();
+        const panel = document.querySelector(tgt);
+        if (panel) {
+          panel.classList.add("open");
+          panel.scrollIntoView({ behavior: "smooth" });
         }
       });
-    } else {
-      const tgt = el.getAttribute("href");
-      if (tgt && tgt.startsWith("#panel-")) {
-        el.addEventListener("click", e => {
-          e.preventDefault();
-          const panel = document.querySelector(tgt);
-          if (panel) {
-            panel.classList.add("open");
-            panel.scrollIntoView({ behavior: "smooth" });
-          }
-        });
-      }
     }
   });
 
   // 3. Search Filter
   document.querySelectorAll(".scene-filter").forEach(input => {
-    const list = input.closest(".scene-panel").querySelector(".scene-list");
     input.addEventListener("input", () => {
+      const panel = input.closest(".scene-panel");
+      if (!panel) return;
+      const list = panel.querySelector(".scene-list");
+      if (!list) return;
       const f = input.value.trim().toLowerCase();
       list.querySelectorAll("li").forEach(li => {
-        li.style.display = (!f || li.textContent.toLowerCase().includes(f)) ? "" : "none";
+        // "まだシーンがありません" のliは除外して検索
+        if(li.querySelector("a")) {
+          li.style.display = (!f || li.textContent.toLowerCase().includes(f)) ? "" : "none";
+        }
       });
     });
   });
@@ -94,7 +194,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     e.preventDefault();
     const sceneId = link.dataset.scene;
-    const data = window.SCENES_DATA ? window.SCENES_DATA[sceneId] : null;
+    const data = window.SCENES_MAP ? window.SCENES_MAP[sceneId] : null;
 
     if (!data) {
       console.error("Scene data not found for:", sceneId);
@@ -105,22 +205,18 @@ document.addEventListener("DOMContentLoaded", () => {
     titleEl.textContent = data.title;
     bodyEl.innerHTML = `<pre>${escapeHTML(data.text)}</pre>`;
 
-    // Safety check for info-title if it exists
     const infoTitle = document.getElementById("info-title");
     if (infoTitle) infoTitle.textContent = data.title;
 
     currentBgmUrl = data.bgm || "";
     if (bgmBtn) bgmBtn.textContent = "▶ BGM";
 
-    // Stop current track to switch seamlessly if required, or let user decide
-    // For global UI, auto-play the new scene's BGM
     if (globalBgmUi && currentBgmUrl) {
       const safeUrl = encodeURI(currentBgmUrl);
-      // Check if it's already playing the exact same track. If yes, don't interrupt.
       if (player.getAttribute("src") !== safeUrl) {
         player.setAttribute("src", safeUrl);
         player.load();
-        player.play().catch(e => console.log("Autoplay prevented by browser:", e));
+        player.play().catch(e => console.log("Autoplay prevented:", e));
       } else if (player.paused) {
         player.play().catch(e => console.log("Autoplay prevented:", e));
       }
@@ -134,7 +230,6 @@ document.addEventListener("DOMContentLoaded", () => {
       playPauseBtn.textContent = "▶";
       globalBgmUi.classList.remove("active");
     } else if (!globalBgmUi) {
-      // Fallback to old behavior if user hasn't added the HTML snippet yet
       player.pause();
       player.removeAttribute("src");
     }
@@ -154,16 +249,6 @@ document.addEventListener("DOMContentLoaded", () => {
     popup.classList.add("visible");
   });
 
-  function escapeHTML(str) {
-    if (!str) return "";
-    return str
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;")
-      .replace(/'/g, "&#039;");
-  }
-
   // 5. Global BGM Play/Pause Toggle
   if (playPauseBtn) {
     playPauseBtn.addEventListener("click", () => {
@@ -178,24 +263,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Backward compatibility for the old modal bgm button
+  // Backward compatibility for old modal bgm button
   if (bgmBtn) {
     bgmBtn.addEventListener("click", () => {
       if (!currentBgmUrl) {
         alert("このシーンにはBGMが設定されていません。");
         return;
       }
-
-      // If global UI exists, redirect the action
       if (globalBgmUi) {
         playPauseBtn.click();
-        // Sync text on the old button
         setTimeout(() => {
           bgmBtn.textContent = player.paused ? "▶ BGM" : "⏸ BGM";
         }, 100);
         return;
       }
-
       const safeUrl = encodeURI(currentBgmUrl);
       if (!player.paused && player.getAttribute("src") === safeUrl) {
         player.pause();
@@ -206,7 +287,6 @@ document.addEventListener("DOMContentLoaded", () => {
           player.load();
         }
         player.play().catch(err => {
-          console.error("Audio play failed:", err);
           alert("BGMの再生に失敗しました。");
         });
         bgmBtn.textContent = "⏸ BGM";
@@ -217,20 +297,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // 6. Close Modal
   const closeModal = () => {
     popup.classList.remove("visible");
-    const safeUrl = encodeURI(currentBgmUrl);
-
-    // Clear log text to prevent scroll overlap bugs
     bodyEl.innerHTML = "";
-
-    // Note: In global BGM mode, closing the scene modal DOES NOT stop the BGM!
-    // This allows the user to listen to the BGM while reading the chapter summaries.
     if (!globalBgmUi) {
       player.pause();
       player.removeAttribute("src");
       currentBgmUrl = "";
       if (bgmBtn) bgmBtn.textContent = "▶ BGM";
     } else {
-      // Just sync the modal button text back to Start when closed
       if (bgmBtn) bgmBtn.textContent = "▶ BGM";
     }
   };
