@@ -223,6 +223,10 @@ document.addEventListener("DOMContentLoaded", () => {
       trackNameEl.textContent = getFilenameFromPath(currentBgmUrl);
       playPauseBtn.textContent = "⏸";
       globalBgmUi.classList.add("active");
+      
+      // ★ 新しい曲が流れたら、隠れていても自動で上にシュッと表示させる
+      globalBgmUi.classList.remove("minimized"); 
+      
     } else if (globalBgmUi && !currentBgmUrl) {
       player.pause();
       player.removeAttribute("src");
@@ -312,4 +316,16 @@ document.addEventListener("DOMContentLoaded", () => {
   popup.addEventListener("click", e => {
     if (e.target === popup) closeModal();
   });
+
+  // ========================================================
+  // ★7. Global BGM Toggle (Minimize/Maximize)
+  // ========================================================
+  const bgmToggleTab = document.getElementById("bgm-toggle-tab");
+  if (bgmToggleTab && globalBgmUi) {
+    bgmToggleTab.addEventListener("click", () => {
+      // つまみをタップするたびに、minimized クラスを付け外しして隠す/出すを切り替えます
+      globalBgmUi.classList.toggle("minimized");
+    });
+  }
+
 });

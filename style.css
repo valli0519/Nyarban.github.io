@@ -313,33 +313,46 @@ footer {
    パンくずリスト（Breadcrumb）
 ─────────────────────────── */
 .breadcrumb {
-  position: fixed;
-  /* 固定解除 */
-  top: auto;
-  left: auto;
-  display: inline-block;
-  /* 左寄せ */
-  padding: 8px 16px;
-  margin: 20px 0 0 20px;
-  /* ヘッダー直下＋左マージン */
-  background: var(--secondary-bg);
-  border-radius: 4px;
-  font-size: 0.9rem;
-  color: #ccc;
-  margin-top: 80px;
+  display: none;
 }
 
 .breadcrumb a {
-  color: var(--accent-green);
+  color: var(--text-color);
   text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.breadcrumb a::before {
+  content: '🏠';
+  font-size: 0.9rem;
 }
 
 .breadcrumb a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  color: var(--accent-purple);
+  text-shadow: 0 0 8px rgba(106, 13, 173, 0.6);
 }
 
 .breadcrumb span {
-  color: var(--text-color);
+  color: var(--accent-green);
+  text-shadow: 0 0 5px rgba(46, 204, 113, 0.3);
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+  .breadcrumb {
+    margin: 80px 10px 0 10px;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    width: calc(100% - 20px);
+    box-sizing: border-box;
+    border-radius: 8px;
+    border-left: none;
+    border-bottom: 3px solid var(--accent-purple);
+  }
 }
 
 
@@ -767,4 +780,63 @@ footer {
     opacity: 1;
     transform: translateY(0);
   }
+}
+/* ==========================================
+   グローバルBGMプレイヤー (スマホ対応トグル・完全修正版)
+   ========================================== */
+#global-bgm-ui {
+  /* もともとの「画面下からの浮き」を強制的にゼロにして、画面の底にぴったり密着させます */
+  bottom: 0 !important; 
+  margin-bottom: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#global-bgm-ui.minimized {
+  /* 底に密着した状態から100%下げることで、今度こそ完全に画面外へ押し出します */
+  transform: translateY(100%);
+}
+
+/* タッチを促す引き出し（つまみ）のスタイル */
+#bgm-toggle-tab {
+  position: absolute;
+  top: -28px; /* 本体の28px上にひょっこり出るようにします */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(15, 23, 42, 0.95);
+  color: #cbd5e1;
+  padding: 0 20px;
+  height: 28px;
+  border-radius: 10px 10px 0 0;
+  font-size: 0.75rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.15);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-bottom: none;
+  user-select: none;
+  white-space: nowrap;
+}
+
+#bgm-toggle-tab::after {
+  content: '▼ BGMを隠す';
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* 隠れている時のつまみの見た目 */
+#global-bgm-ui.minimized #bgm-toggle-tab {
+  background: rgba(15, 23, 42, 0.85); /* 隠れている時は少しだけ透明にして邪魔にならないように */
+}
+
+#global-bgm-ui.minimized #bgm-toggle-tab::after {
+  content: '▲ BGMを開く';
+}
+
+/* ログの最後に巨大なクッション（余白）を入れて、絶対に文字が隠れないようにします */
+.scene-body {
+  padding-bottom: 120px !important; 
 }
