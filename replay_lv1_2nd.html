@@ -8,6 +8,11 @@
   <title>Lv1_2nd リプレイ — ニャルラトホテプ万歳</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="replay.css">
+  <script>
+    // ★追加: このページ（キャンペーン）専用のIDを設定します。
+    // 別のリプレイを作る時は、ここを "lv2_replay" など別の名前に変更してください。
+    window.CAMPAIGN_ID = "lv1_2nd"; 
+  </script>
 </head>
 
 <body>
@@ -83,8 +88,26 @@
   <!-- 【目的】: 実際に音を鳴らすための、画面には見えない「裏方」のタグです。JSがこのタグを直接操作して音楽を流します。 -->
   <audio id="bgm-player" loop></audio>
 
+  <!-- コメント欄用DBアクセス -->
+  <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore-compat.js"></script>
+
   <!-- キャンペーン用のシーンデータJSを読み込むべし。 -->
   <script src="scenes_data_lv1_2nd.js?v=5"></script>
   <script src="replay-enhance.js?v=5"></script>
+
+  <!-- コメント欄 -->
+  <section id="comments-section">
+    <h3>感想・コメント</h3>
+    <div class="comment-form">
+      <input type="text" id="comment-name" placeholder="お名前 (省略可、名無しになります)">
+      <textarea id="comment-text" placeholder="ここにコメントを入力してください..." rows="4"></textarea>
+      <button id="submit-comment">コメントを送信</button>
+    </div>
+    <div id="comments-list">
+      <div style="text-align:center; color:#64748b; padding:20px;">コメント待ってます</div>
+    </div>
+  </section>
+
 </body>
 </html>
