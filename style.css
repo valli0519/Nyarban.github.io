@@ -925,3 +925,205 @@ footer {
 .comment-name { font-weight: bold; color: #f8fafc; }
 .comment-time { color: #64748b; }
 .comment-body { line-height: 1.6; font-size: 0.95rem; word-break: break-all; }
+
+
+/* =========================================
+   ファンアートギャラリー（レスポンシブ）
+========================================= */
+/* ギャラリー全体を囲む容器 */
+.gallery-grid {
+  display: grid;
+  /* 画面幅に合わせて自動調整。PCで大体4列、スマホで1-2列になる魔法の設定 */
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px; /* 画像間の隙間 */
+  margin-top: 30px;
+  margin-bottom: 50px;
+  padding: 0 10px; /* 既存のコンテナとの微調整 */
+}
+
+/* 画像を囲む枠（アスペクト比を1:1の正方形に固定します） */
+.gallery-item {
+  width: 100%;
+  padding-top: 100%; /* これで正方形になります。4:3なら75%に */
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  z-index: 1; /* ホバー時に前に出るように */
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(14, 165, 233, 0.5);
+  z-index: 2;
+}
+
+/* 枠の中の実際の画像 */
+.gallery-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 比率を保ったまま枠いっぱいにトリミング */
+  transition: transform 0.3s ease;
+}
+
+/* =========================================
+   拡大ポップアップ（ライトボックス）
+========================================= */
+.fanart-modal {
+  display: none; /* 初期は非表示 */
+  position: fixed;
+  z-index: 99999; /* 公式サイトのナビより前に出るように、極めて大きく */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95); /* 背景をほぼ真っ黒に */
+  backdrop-filter: blur(10px); /* 背景をぼかす */
+  cursor: zoom-out; /* クリックで閉じられることを示すカーソル */
+  animation: fadeInModal 0.3s ease;
+}
+
+@keyframes fadeInModal {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* モーダルの中身（画像） */
+.fanart-modal-content {
+  margin: auto;
+  display: block;
+  max-width: 95%; /* 画面幅の95%まで */
+  max-height: 95%; /* 画面高さの95%まで */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 中央配置 */
+  border-radius: 4px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+  animation: zoomInImg 0.3s ease; /* 画像だけフワッと大きく */
+}
+
+@keyframes zoomInImg {
+  from {transform: translate(-50%, -50%) scale(0.8); opacity: 0;}
+  to {transform: translate(-50%, -50%) scale(1); opacity: 1;}
+}
+
+/* 閉じるボタン（×） */
+.fanart-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  color: #f1f5f9;
+  font-size: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s;
+  z-index: 100000; /* 画像より前に */
+}
+
+.fanart-modal-close:hover {
+  color: #0ea5e9;
+}
+
+/* =========================================
+   ギャラリー・オブ・ラビリンス（仰々しい専用レイアウト）
+========================================= */
+
+/* 迷宮への入り口（コンテナ全体を禍々しく） */
+#labyrinth-container {
+  background: linear-gradient(145deg, #110e1a, #1a1525);
+  border: 1px solid #4a2b73;
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(74, 43, 115, 0.4);
+  position: relative;
+  overflow: hidden;
+  padding: 50px 20px;
+}
+
+/* 背景でゆっくり回る魔法陣のような霧（擬似要素） */
+#labyrinth-container::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(138, 43, 226, 0.05) 10%, transparent 60%);
+  animation: rotateMist 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes rotateMist {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 説明文を少し重厚なフォントに */
+.labyrinth-text {
+  color: #d1c4e9 !important;
+  font-family: 'Noto Serif JP', serif, 'Yu Mincho', 'MS Mincho';
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* 仰々しいボタン本体 */
+.btn-labyrinth {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 18px 40px;
+  background: linear-gradient(45deg, #2a0845, #4a148c);
+  color: #fff !important;
+  font-family: 'Noto Serif JP', serif, 'Yu Mincho', 'MS Mincho';
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  border: 2px solid #9c27b0;
+  border-radius: 4px; /* あえて少し角ばらせて重厚感を */
+  box-shadow: 0 0 15px rgba(156, 39, 176, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 2;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+  /* スマホではみ出さないための処理 */
+  max-width: 90%;
+  word-break: keep-all;
+}
+
+/* マウスを乗せたときの爆発的な発光 */
+.btn-labyrinth:hover {
+  transform: scale(1.05) translateY(-3px);
+  background: linear-gradient(45deg, #3a0b5e, #7b1fa2);
+  border-color: #e040fb;
+  box-shadow: 0 0 30px rgba(224, 64, 251, 0.8), inset 0 0 20px rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.25em;
+}
+
+/* ボタンの周囲で脈打つオーラ */
+.btn-labyrinth::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: 4px;
+  box-shadow: 0 0 20px #e040fb;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.btn-labyrinth:hover::after {
+  opacity: 1;
+  animation: pulseGlow 1.5s infinite alternate;
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 20px #e040fb, inset 0 0 10px #e040fb; }
+  100% { box-shadow: 0 0 45px #d500f9, inset 0 0 25px #d500f9; }
+}

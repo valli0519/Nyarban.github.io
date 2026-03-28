@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ファンアート - ニャルラトホテプ万歳</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <a href="index.html">
+        <img src="img/nyar_logo_header.png" alt="ニャルラトホテプ万歳">
+      </a>
+    </div>
+    <ul>
+      <li><a href="index.html#about">サークル紹介</a></li>
+      <li><a href="index.html#members">メンバー</a></li>
+      <li><a href="index.html#campaigns">キャンペーン</a></li>
+      <li><a href="index.html#campaign-details">キャンペーン詳細</a></li>
+      <li><a href="index.html#characters">キャラクター</a></li>
+      <li><a href="index.html#video-content">MOVIES</a></li>
+      <li><a href="index.html#contact">お問い合わせ</a></li>
+    </ul>
+  </nav>
+
+  <header style="min-height: 20vh; display: flex; align-items: center; justify-content: center;">
+    <div class="hero-content">
+      <h1>FANART</h1>
+    </div>
+  </header>
+
+  <section id="fanart">
+    <div class="container">
+      <h2>ファンアート</h2>
+      <div class="content-box">
+        <p style="text-align: center;">ニャルラトホテプ万歳に寄せられた、大切なイラストたちです。</p>
+      </div>
+      
+      <div id="fanart-gallery" class="gallery-grid"></div>
+    </div>
+  </section>
+
+  <div id="fanart-modal" class="fanart-modal">
+    <span class="fanart-modal-close">&times;</span>
+    <img class="fanart-modal-content" id="fanart-modal-img">
+  </div>
+
+  <footer>
+    <p>&copy; 2025 ニャルラトホテプ万歳</p>
+  </footer>
+
+  <script src="fanart_data.js"></script>
+  <script src="fanart.js"></script>
+</body>
+</html>
