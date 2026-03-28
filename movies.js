@@ -209,6 +209,10 @@ document.addEventListener("DOMContentLoaded", function() {
         name: "わえ/天の最強持ちキャラランク Part6",
         shareUrl: "aaa"
       },
+      "vid53": {
+        name: "ハイカラ卓OP",
+        shareUrl: "https://youtu.be/Y0xFlXy2Lgk"
+      },
       "vidX": {
         name: "movieName",
         shareUrl: "aaa"
