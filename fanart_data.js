@@ -7,6 +7,8 @@ const fanartFiles = [
   "from-PixAI-1982691720328082533.jpg", 
   "from-PixAI-1982700017474600810.jpg", 
   "from-PixAI-1982714218174739410.jpg", 
+  "IMG_0371.jpg", 
+  "IMG_20190315_170848_1.jpg", 
   "あんていくにて優月クラウド.jpg", 
   "おしえて神様ケオベ.jpg", 
   "アルダニスなう.jpg", 
