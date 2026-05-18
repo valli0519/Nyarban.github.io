@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ページタイトルを記入 -->
+  <title>ステイナイト卓 リプレイ — ニャルラトホテプ万歳</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="replay.css">
+  <script>
+    // ★追加: このページ（キャンペーン）専用のIDを設定します。
+    // 別のリプレイを作る時は、ここを "lv2_replay" など別の名前に変更してください。
+    window.CAMPAIGN_ID = "staynight"; 
+  </script>
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+      <a href="index.html"><img src="img/nyar_logo_header.png" alt="ニャルラトホテプ万歳"></a>
+    </div>
+  </nav>
+  <section id="replay-header">
+    <div class="container-replay">
+      <div class="campaign-card">
+        <!-- キャンペーンのタイトルを記入 -->
+        <h2>ステイナイト卓 - Replay Log</h2>
+        <div class="campaign-desc">
+          <!-- ここにキャンペーン概要を記入 -->
+          <p>
+            Lv1_2ndの外伝キャンペーンの一つ。<br>Fate/stay night の世界観・キャラクター・聖杯戦争のテーマを Lv1_2nd 世界に融合させた特異な外伝。<br>サーヴァントとマスターの関係性、宝具と魔術が織りなす激しい戦いの果てに、各々の願いが交錯する。
+          </p>
+        </div>
+        <!-- 【目的】: 画面上部の「目次（1章、2章…）」を自動で並べるための空箱です。
+            【JSの動き】: JSが ALL_CHAPTERS を読み取って、ここに各章へのリンクを全自動で生成します。 -->
+        <ul class="replay-nav" id="dynamic-nav"></ul>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="replay-container">
+    <!-- 【目的】: メインの「章の開閉ボタン」と「シーン一覧」をすべて格納するための巨大な空箱です。
+        【JSの動き】: HTML側に章ごとの枠を手書きする必要はありません。JSがここに、章のボタン・概要テキスト・検索窓・シーンのリストを全て自動で組み立てて流し込みます。 -->
+    <ul id="scene-accordion" class="accordion"></ul>
+
+    <div class="info-bar" style="margin-top: 40px; text-align: center;">
+      <span class="info-title" id="info-title">シーンを選択してください</span>
+    </div>
+  </div>
+
+  <!-- 【目的】: シーンをクリックした時に全画面に広がる、ポップアップ画面の「骨組み（型）」です。
+      【JSの動き】: id="modal-scene-title" にタイトルが入り、id="scene-popup-body" にセリフなどの本文が入り、さらにその背景として設定した画像が自動で敷かれます。 -->
+  <div id="scene-popup" class="scene-popup">
+    <div class="popup-content">
+      <span id="close-scene-popup" class="close-btn">&times;</span>
+      <div class="modal-header">
+        <h2 id="modal-scene-title">シーンタイトル</h2>
+        <div class="modal-controls">
+          <button id="modal-bgm-btn" class="bgm-btn">▶ BGM</button>
+        </div>
+      </div>
+      <div id="scene-popup-body" class="scene-body">
+        </div>
+    </div>
+  </div>
+
+  <!-- 【目的】: 画面下部などに常駐する「BGM操作パネル（再生・停止・音量）」のUIです。
+       【JSの動き】: JSがファイル名を読み取って <span id="global-track-name"> に曲名を表示し、音量スライダーの変更をブラウザに記憶させます。 -->
+  <div id="global-bgm-ui">
+    <div id="bgm-toggle-tab"></div>
+
+    <button id="global-play-pause">▶</button>
+    <div class="bgm-track-info">
+      <span id="global-track-name" title="現在のBGMファイル名">No Track</span>
+      <div class="volume-slider-container">
+        <span>🔈</span>
+        <input type="range" id="global-bgm-volume" min="0" max="1" step="0.01" value="0.5">
+      </div>
+    </div>
+  </div>
+
+  <!-- 【目的】: 実際に音を鳴らすための、画面には見えない「裏方」のタグです。JSがこのタグを直接操作して音楽を流します。 -->
+  <audio id="bgm-player" loop></audio>
+
+  <!-- コメント欄用DBアクセス -->
+  <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore-compat.js"></script>
+
+  <!-- キャンペーン用のシーンデータJSを読み込むべし。 -->
+  <script src="scenes_data_staynight.js?v=5"></script>
+  <script src="replay-enhance.js?v=5"></script>
+
+  <!-- コメント欄 -->
+  <section id="comments-section">
+    <h3>感想・コメント</h3>
+    <div class="comment-form">
+      <input type="text" id="comment-name" placeholder="お名前 (省略可、名無しになります)">
+      <textarea id="comment-text" placeholder="ここにコメントを入力してください..." rows="4"></textarea>
+      <button id="submit-comment">コメントを送信</button>
+    </div>
+    <div id="comments-list">
+      <div style="text-align:center; color:#64748b; padding:20px;">コメント待ってます</div>
+    </div>
+  </section>
+
+</body>
+</html>
