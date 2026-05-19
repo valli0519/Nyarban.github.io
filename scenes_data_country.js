@@ -557,19 +557,19 @@ window.ALL_CHAPTERS = [
   { 
     chapterName: "EP.1", 
     panelId: "panel-chapter1", 
-    summary: "銀髪の男に一刀両断された竜達はマジェラニカ大陸の遥か西部にて目を覚まし、一堂に会する。そして運命は廻りだす。",
+    summary: "銀髪の男に斬り捨てられ、マジェラニカ大陸の荒野に美少女として転生した竜たち。見知らぬ土地で互いを見つけ、ロックンロールの男・ジョン・レノンと運命の出会いを果たす。カントリーな夜襲を乗り越えて、旅の幕が上がる。",
     scenes: window.CHAPTER_1_SCENES || [] // データが無ければ空にする安全対策
   },
   { 
     chapterName: "EP.2", 
     panelId: "panel-chapter2", 
-    summary: "ジョンの故郷である港湾都市リヴァプールを訪れた一行は、牢獄にぶち込まれていたビートルズの仲間達を助けるべく、リヴァプールの闇を暴きに奔走する。",
+    summary: "ジョンの故郷・港湾都市リヴァプールへ。牢に捕らわれたビートルズの仲間たちを救うべく、埠頭の闇と腐敗に斬り込む竜たち。怒濤の捜索と戦闘の末、ライブの熱狂が港に鳴り響く。",
     scenes: window.CHAPTER_2_SCENES || [] 
   },
   { 
     chapterName: "EP.3：『GET BACK』", 
     panelId: "panel-chapter3", 
-    summary: "実装予定",
+    summary: "砂塵舞う酒場から始まった旅は、ララバイ村の虚ろな童たちと甘い香りの罠、鉱山要塞に巣くう麻薬の闇へと続く。メイソンと子どもたちの命を巡る長い夜。荒野に届く最後の歌は、Let it be。",
     scenes: window.CHAPTER_3_SCENES || [] 
   }
 ];
