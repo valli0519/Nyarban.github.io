@@ -381,3 +381,34 @@
   box-shadow: 0 6px 20px rgba(14, 165, 233, 0.4);
   border-color: transparent;
 }
+/* =========================================
+   シーンタイトル枠の複製ナビ (#scene-nav-header)
+   - 全セレクタを #scene-nav-header / :has(#scene-nav-header) にスコープ。
+     当該要素を生成しない replay (= まだ未展開のもの) には一切影響しない。
+   - 高さは BGMボタンに合わせて flex stretch で自動一致。
+   - スマホ(<=640px)は矢印のみ表示、PCはフルラベル。
+========================================= */
+.modal-header:has(#scene-nav-header){
+  display:flex; flex-wrap:wrap; align-items:center;
+  justify-content:space-between; gap:8px 14px;
+}
+.modal-header:has(#scene-nav-header) #modal-scene-title{
+  margin:0; flex:1 1 auto; min-width:0; word-break:break-word;
+}
+.modal-header:has(#scene-nav-header) .modal-controls{
+  display:flex; align-items:stretch; flex-wrap:nowrap;
+  flex-shrink:0; gap:6px; white-space:nowrap;
+}
+#scene-nav-header{
+  display:inline-flex; align-items:stretch; flex-wrap:nowrap; gap:6px;
+}
+#scene-nav-header .nav-scene-btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:0 14px; border:none; border-radius:4px;
+  font-size:0.9rem; line-height:1; white-space:nowrap; box-sizing:border-box;
+}
+#scene-nav-header .snh-mini{ display:none; }
+@media (max-width:640px){
+  #scene-nav-header .snh-full{ display:none; }
+  #scene-nav-header .snh-mini{ display:inline; }
+}

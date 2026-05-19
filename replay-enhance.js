@@ -233,7 +233,8 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.appendChild(commentsSection);
     }
 
-    titleEl.textContent = data.title;
+    const numberedTitle = (link && link.textContent && link.textContent.trim()) ? link.textContent.trim() : data.title;
+    titleEl.textContent = numberedTitle;
     
     // 1. ログ本文を描画します
     bodyEl.innerHTML = `<pre>${escapeHTML(data.text)}</pre>`;
@@ -283,6 +284,51 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // ログの直後にボタンを追加します
     bodyEl.appendChild(navDiv);
+    // 2b. ★ BGMの右に「前へ/次へ」を複製。styling/レスポンシブ/高さ揃えは replay.css(#scene-nav-header)側。下部ボタンは維持。
+    const modalControlsEl = popup.querySelector(".modal-controls");
+    if (modalControlsEl) {
+      const oldHeaderNav = popup.querySelector("#scene-nav-header");
+      if (oldHeaderNav) oldHeaderNav.remove();
+
+      const headerNav = document.createElement("span");
+      headerNav.id = "scene-nav-header";
+
+      const mk = (full, mini, tip) => {
+        const b = document.createElement("button");
+        b.className = "nav-scene-btn";
+        b.title = tip;
+        b.setAttribute("aria-label", tip);
+        const sf = document.createElement("span");
+        sf.className = "snh-full";
+        sf.textContent = full;
+        const sm = document.createElement("span");
+        sm.className = "snh-mini";
+        sm.setAttribute("aria-hidden", "true");
+        sm.textContent = mini;
+        b.appendChild(sf);
+        b.appendChild(sm);
+        return b;
+      };
+      const hPrev = mk("◀ 前のシーンへ", "◀", "前のシーンへ");
+      const hNext = mk("次のシーンへ ▶", "▶", "次のシーンへ");
+
+      if (currentIndex > 0) {
+        hPrev.style.visibility = "visible";
+        hPrev.onclick = () => { sceneLinks[currentIndex - 1].click(); };
+      } else {
+        hPrev.style.visibility = "hidden";
+      }
+      if (currentIndex >= 0 && currentIndex < sceneLinks.length - 1) {
+        hNext.style.visibility = "visible";
+        hNext.onclick = () => { sceneLinks[currentIndex + 1].click(); };
+      } else {
+        hNext.style.visibility = "hidden";
+      }
+
+      headerNav.appendChild(hPrev);
+      headerNav.appendChild(hNext);
+      modalControlsEl.appendChild(headerNav);
+    }
 
     // 3. その直後にコメント欄を配置します
     if (commentsSection) {
@@ -293,7 +339,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const infoTitle = document.getElementById("info-title");
-    if (infoTitle) infoTitle.textContent = data.title;
+    if (infoTitle) infoTitle.textContent = numberedTitle;
 
     const uniqueSceneId = (data.uid) ? String(data.uid) : sceneId;
     activeSceneIdForComments = uniqueSceneId;
