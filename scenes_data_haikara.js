@@ -4795,96 +4795,112 @@ window.ALL_CHAPTERS = [
     chapterName: "第1章：日常に潜む闇",
     panelId: "panel-chapter1",
     summary: "Lv1_2nd外伝『ペルソナ卓』開幕。魔法都市アルカナの劣等生・鳴上、結城、雨宮の三人は、シエル先生による魔力操作の補習を受ける日々を送っていた。 ある日、未知の感覚に導かれ、彼等は『枢機の樹』の地下へと足を踏み入れる━━。",
+    chapterPrefix: "1",
     scenes: window.CHAPTER_1_SCENES || []
   },
   {
     chapterName: "第2章：陰るアルカナ、中間考査。",
     panelId: "panel-chapter2",
     summary: "魔力隆起事件から一月。アルカナの街では行方不明者が増え、軍は対応を渋り、ハイカラ部は自らの足で真相を追う。 中間考査に追われながらも、街の闇に踏み込んでいくハイカラ部の戦いの記録。",
+    chapterPrefix: "2",
     scenes: window.CHAPTER_2_SCENES || []
   },
   {
     chapterName: "第3章：人でなしサマードライバー",
     panelId: "panel-chapter3",
     summary: "夏休み、ハイカラ部はアルカナ国の極秘リゾート『リアク島』へバカンスに訪れる。だが、穏やかな海と離島の静寂の下には、何者かが遺した禁忌の遺構と、目覚めの時を待つ古の装置が眠っていた。 複数の組織と思惑が交錯する中、ハイカラ部はそれぞれの過去と覚悟を試される。これは──『人でなし』達の長き夏の物語。",
+    chapterPrefix: "3",
     scenes: window.CHAPTER_3_SCENES || []
   },
   {
     chapterName: "第4章：大星令祭",
     panelId: "panel-chapter4",
     summary: "エリン歴1002年、盛夏。魔法都市アルカナは建都以来最大規模の祭典『大星令祭』に沸き立っていた。学術と武術の粋を競い合う三日間の大競宴──その華やかな表舞台の裏で、都市の底に巨大な闇が蠢き始める。旧き因縁の再来と、競技場に張り巡らされた罠。ハイカラ部、祭典の記録。",
+    chapterPrefix: "4",
     scenes: window.CHAPTER_4_SCENES || []
   },
   {
     chapterName: "幕間①『束の間の日常』",
     panelId: "panel-chapter5",
     summary: "第1章の事件を終え、僅かな日常を取り戻したハイカラ部に、新たな出会いと予兆が訪れる。 屋上のたこさんウインナー、ピンク髪の後輩、地下水道に潜む水底の謎、そして魂を巡る朝の対話。ハイカラ部結成と『始まり』の記録。",
+    chapterPrefix: "幕間①",
     scenes: window.CHAPTER_5_SCENES || []
   },
   {
     chapterName: "幕間②『バイクほしいぜ…高額バイト編』",
     panelId: "panel-chapter6",
     summary: "魔導バイクという黒光りする憧れを目にしたハイカラ部一同。値札の壁に挑むため『高額バイト』を志し、街と闇と国境を駆け抜ける。 身を削る稼ぎの果てに辿り着いた、紳士の指南とは。",
+    chapterPrefix: "幕間②",
     scenes: window.CHAPTER_6_SCENES || []
   },
   {
     chapterName: "幕間③『シトナイCOOP集』",
     panelId: "panel-chapter7",
     summary: "シトナイ・アインツベルンの何気ない日々、出会い、絆。 屋上の隅でひっそりと交わされる会話、地下水路に潜む後輩、そして『先輩』としての務めを果たす万死の物語。",
+    chapterPrefix: "幕間③",
     scenes: window.CHAPTER_7_SCENES || []
   },
   {
     chapterName: "幕間④『ホシノCOOP集』",
     panelId: "panel-chapter8",
     summary: "小鳥遊ホシノが部活開始までの時間を埋めるべく、大学区へと足を運ぶ。 総本山に近い空気と、二つの顔を持つ会長、サボり気質の先輩、そして再会の温もり。ホシノが歩む小さな一歩の記録。",
+    chapterPrefix: "幕間④",
     scenes: window.CHAPTER_8_SCENES || []
   },
   {
     chapterName: "幕間⑤『郊外探索中の裏で鳴上パイセンは～？』",
     panelId: "panel-chapter9",
     summary: "中間考査二日前。郊外探索の影で、鳴上悠は補習仲間とメルト先輩の元へ足繁く通い、創造魔法の習得に挑んでいた。 暴発と先輩の傍、夕焼けに舞う剣戟、銀のフレームに宿った宿願の一刀。鳴上悠が初めて『魔法』を握った日の記録。",
+    chapterPrefix: "幕間⑤",
     scenes: window.CHAPTER_9_SCENES || []
   },
   {
     chapterName: "幕間⑥『タイマン部屋｜PC側』短編集",
     panelId: "panel-chapter10",
     summary: "ハイカラ部の個々が紡ぐ、秘密の断章たち。シトナイとホシノの過去編、各キャラのCOOPフェイズ、中間考査の喧騒、血のクリスマス──学園の光の下と影の底を往き来する、58シーンの日常百科全書。",
+    chapterPrefix: "幕間⑥",
     scenes: window.CHAPTER_10_SCENES || []
   },
   {
     chapterName: "幕間⑦ ジャジメント編『やらかしの代償～水平線上の陰謀』",
     panelId: "panel-chapter11",
     summary: "ハイカラ卓世界の裏側で蠢く巨大組織『ジャジメント』。 その一員として駆け抜けるアズサが背負う過去から、組織との関わり、そして豪華客船パシフィック・ボーダーで起こる陰謀劇まで。天使の容姿に滲む暗殺者の顔──アズサが見つめてきた組織の表裏一体の記録。",
+    chapterPrefix: "幕間⑦",
     scenes: window.CHAPTER_11_SCENES || []
   },
   {
     chapterName: "幕間⑧『タイマン部屋｜短編集～遠野志貴追跡まで』",
     panelId: "panel-chapter12",
     summary: "タイマン部屋スレッドに積み重ねられた、数多の短編・幕間の集積。ホシノ過去編、鳴上短編、各種COOPの綴り合い──そして最後の頁で始まる追跡譚が、ハイカラ部の物語を次の局面へと引き寄せる。",
+    chapterPrefix: "幕間⑧",
     scenes: window.CHAPTER_12_SCENES || []
   },
   {
     chapterName: "幕間⑨『タイマン部屋｜短編集 前編』",
     panelId: "panel-chapter13",
     summary: "短編・幕間・COOPの大集積──その前編。ジャジメント編の余波が冷めやらぬ中、巌窟王・神条家・漆黒の追跡者・ガーデン・オブ・バニーと、ハイカラ卓を彩る異色の物語が次々と幕を開ける。",
+    chapterPrefix: "幕間⑨",
     scenes: window.CHAPTER_13_SCENES || []
   },
   {
     chapterName: "幕間⑩『タイマン部屋｜短編集 後編』",
     panelId: "panel-chapter14",
     summary: "短編・幕間・COOPの大集積──その後編。殺人鬼追跡の決着、各種COOPの続き、大星令祭の熱狂、ユグドラシル・オンライン。そして辿り着くクライマックス『お前は一人じゃない』──鳴上とホシノ、刑死者のアルカナ、堂々の完。",
+    chapterPrefix: "幕間⑩",
     scenes: window.CHAPTER_14_SCENES || []
   },
   {
     chapterName: "幕間⑪『今宵、女風呂を覗く』",
     panelId: "panel-chapter15",
     summary: "大星令祭を前に、ハイカラ部のペルソナな男子高校生たちが一世一代の密議を結ぶ。標的は女風呂——天井裏の通気ダクトで繰り広げられる、青春と煩悩と友情の馬鹿馬鹿しくも熱い一夜。",
+    chapterPrefix: "幕間⑪",
     scenes: window.CHAPTER_15_SCENES || []
   },
   {
     chapterName: "幕間⑫『爆乳テニスとシトナイ聖痕覚醒』",
     panelId: "panel-chapter16",
     summary: "伊斬悟飯再臨の余韻も冷めやらぬ中、神条紫杏の思想問答から一転、ストレス発散のテニス大会へ。だがコートの熱狂の裏で、シトナイの胸に灯る赤い聖痕が静かに運命を告げる。喜劇と覚醒が交錯するハイカラ卓の一幕。",
+    chapterPrefix: "幕間⑫",
     scenes: window.CHAPTER_16_SCENES || []
   },
 ];

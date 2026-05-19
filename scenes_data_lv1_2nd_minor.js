@@ -447,24 +447,28 @@ window.ALL_CHAPTERS = [
     chapterName: "武陵源編『東方の旅、レオと雷電』",
     panelId: "panel-chapter1",
     summary: "エリンディル東方、中国地方の断崖を越えた高原の村。依頼板の前に立ったレオと雷電が妖魔のアジトを制圧し、武陵源の高みから次の旅先を見渡して幕を引く。軽快で温かな東方小話。",
+    chapterPrefix: "武陵源編",
     scenes: window.CHAPTER_1_SCENES || []
   },
   {
     chapterName: "Y・O『ユグドラシン・オンライン_sideアリアル』",
     panelId: "panel-chapter2",
     summary: "グラン学園Scalarsの研究棟で端末を受け取ったアリアルが、妹ミリアルに導かれて仮想世界へとログインする。拠点での仲間との出会い、草原・奥地・森の奥——機械の中のもう一つの世界で、差し伸べられた手が待っている。",
+    chapterPrefix: "Y・O",
     scenes: window.CHAPTER_2_SCENES || []
   },
   {
     chapterName: "ヒカリ編『悪夢の旅路、ヒカリとゴリラ』",
     panelId: "panel-chapter3",
     summary: "クラウドの剣技に憧れた少女ヒカリが、家の秘宝を手に飛び出した先で出会ったのは一匹のゴリラ。エルガドの山も、メルゼンの広場も、終わらない悪夢さえも——拳をくれた相棒とともに駆け抜ける、ヒカリとゴリラの旅路。",
+    chapterPrefix: "ヒカリ編",
     scenes: window.CHAPTER_3_SCENES || []
   },
   {
     chapterName: "ダイワ編『東方異聞、イトーカイジ』",
     panelId: "panel-chapter4",
     summary: "東方の地に流れ着いたイトー・カイジ。鵺を狩り、刀を巡る因縁に巻き込まれ、やがて特級の怨霊と対峙する。望月千代女やトラロックと織りなす、笑いと刃と怪異の東方異聞。",
+    chapterPrefix: "ダイワ編",
     scenes: window.CHAPTER_4_SCENES || []
   },
 ];

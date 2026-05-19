@@ -612,12 +612,14 @@ window.ALL_CHAPTERS = [
     chapterName: "1章『異形潜む村』",
     panelId: "panel-chapter1",
     summary: "依頼で訪れたラマス・ク村に潜む異形と、噴水広場・村長宅・墓地を舞台にした戦い。圭一とアレックスの出会いと、奇妙な指輪の因縁。村の夜が明けた時、撲殺同盟という名が生まれた。",
+    chapterPrefix: "1",
     scenes: window.CHAPTER_1_SCENES || []
   },
   {
     chapterName: "2章『撲殺は此処に在り』",
     panelId: "panel-chapter2",
     summary: "指輪を捨てる場所を求め、とりあえず南下した二人。秩序と平穏のラマシア、商業と伝統の神原——双子都市を巻き込む陰謀に、圭一の機転とアレックスの拳が炸裂する。指輪どころじゃねえ、悪いが主役は俺達だぜ？ 神原高原に撲殺の咆哮が轟く71シーンの大長編。",
+    chapterPrefix: "2",
     scenes: window.CHAPTER_2_SCENES || []
   },
 ];

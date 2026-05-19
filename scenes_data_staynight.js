@@ -170,12 +170,14 @@ window.ALL_CHAPTERS = [
     chapterName: "序章『sideハリウッド・ニューロサンゼルス開拓』",
     panelId: "panel-chapter1",
     summary: "ロザリア領が灰になった後の荒野。たき火を囲む百人の夜に切嗣・ギルガメッシュ・アーミヤ・キュウべぇが出会い、新天地ニューロサンゼルス開拓へと踏み出す。ギルド「StayNight」が生まれる前の、乾いた前日譚。",
+    chapterPrefix: "序章",
     scenes: window.CHAPTER_1_SCENES || []
   },
   {
     chapterName: "本編『北を目指して』",
     panelId: "panel-chapter2",
     summary: "アーミヤの故郷を求めて北へ。灰の西海岸、夜間奇襲、巨木の門の先に広がる地下都市、そして暗殺集団との対峙——StayNightの四人が荒野と雪を越えて目指す、ニュールサーレムへの旅の記録。",
+    chapterPrefix: "本編",
     scenes: window.CHAPTER_2_SCENES || []
   },
 ];

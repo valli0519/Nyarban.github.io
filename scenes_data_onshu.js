@@ -128,12 +128,14 @@ window.ALL_CHAPTERS = [
     chapterName: "序章『脱獄』",
     panelId: "panel-chapter1",
     summary: "永久収容区画の底に横たわるバオウ・エヴァンのもとへ、エドモン・ダンテスは灯を携えて訪れた。ヨハネの問い、迷宮を解く誓い、捻れの狭間を抜けた先の雲海——怨讐の旅路は、二人の誓いから動き出す。",
+    chapterPrefix: "序章",
     scenes: window.CHAPTER_1_SCENES || []
   },
   {
     chapterName: "幕間『脱獄者の朝』",
     panelId: "panel-chapter2",
     summary: "数年ぶりの陽光が肌を刺す朝、バオウとエドモンは辺境の酒場で初めて己の名を名乗った。原初のひと口、帝都への針路、そして小さな集落ココットを後にする瞬間——怨讐の旅路、その最初の一歩の記録。",
+    chapterPrefix: "幕間①",
     scenes: window.CHAPTER_2_SCENES || []
   },
 ];

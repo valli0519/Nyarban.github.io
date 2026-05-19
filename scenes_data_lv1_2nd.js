@@ -6742,37 +6742,42 @@ window.ALL_CHAPTERS = [
     chapterName: "第1章：エルツ山のゴブリン退治", 
     panelId: "panel-chapter1", 
     summary: "全てを奪われ故郷を失った剣士クラウドと、あてどない好奇心で旅に出たエルフの魔法使いフリーレンが、秘薬の霊峰エルツ山で運命の出会いを果たす。ここから二人の旅——そして世界の歯車——が静かに廻り始める。",
+    chapterPrefix: "1",
     scenes: window.CHAPTER_1_SCENES || [] // データが無ければ空にする安全対策
   },
   { 
     chapterName: "第2章：商業都市メルゼン", 
     panelId: "panel-chapter2", 
     summary: "路銀稼ぎに訪れた運河の商業都市メルゼンで、クラウドとフリーレンは闇の組織の影を嗅ぎつける。ギルドの試験をくぐり抜けながら、港に巣食う人攫い組織との決戦へ。そしてある出会いが、パーティの形を変えていく。",
+    chapterPrefix: "2",
     scenes: window.CHAPTER_2_SCENES || [] 
   },
   { 
     chapterName: "第3章：目指せホーヴァルロード島", 
     panelId: "panel-chapter3", 
     summary: "四人が揃い、北上の旅が本格的に動き出す。アレスタ港からフロルブリッジ号に乗り込み、島へと向かう一行の前に次々と難敵が立ちはだかる。諸島を渡るこの航路が、パーティの絆を鍛え直す試練となる。",
+    chapterPrefix: "3",
     scenes: window.CHAPTER_3_SCENES || [] 
   },
   { 
     chapterName: "第4章：海神伝説", 
     panelId: "panel-chapter4", 
     summary: "ホーヴァルロード島に古くから伝わる海神の神話。信仰と祟りと秘密が複雑に絡み合う島の深部へ、一行は否応なく引き込まれていく。サンズガルド山の頂で待ち受ける真実が、世界の広さを四人に突きつける。",
+    chapterPrefix: "4",
     scenes: window.CHAPTER_4_SCENES || [] 
   },
   { 
     chapterName: "第5章：闇を駆ける", 
     panelId: "panel-chapter5", 
     summary: "トワド諸島の二つ目の島、鉱山の島センドルイス。平穏を装った街の底に隠された炭鉱支配と孤児院の暗部——一行はその真相を暴くべく、泥と闇の中を疾駆する。センドアルスの神殿都市で物語は次の幕へと接続する。",
+    chapterPrefix: "5",
     scenes: window.CHAPTER_5_SCENES || [] 
   },
   { 
     chapterName: "フリーレン過去編", 
     panelId: "panel-chapter6", 
     summary: "10歳のフリーレンが秘密基地で少女アリシアと初めて友達になった日。記憶の喪失と回復、師ゼーリエとの絆、そして「初めて」が積み重なる幼き旅路——エルフ150年の時間が凝縮された、静かで深い回想章。",
-    chapterPrefix: "シーン", 
+    chapterPrefix: "フリーレン過去編", 
     scenes: window.CHAPTER_6_SCENES || [] 
   },
   { 
@@ -6793,33 +6798,35 @@ window.ALL_CHAPTERS = [
     chapterName: "第7章：『祖竜聖杯戦争　約束の刻来たれり』", 
     panelId: "panel-chapter9", // ★HTML側の7章のIDと一致させました
     summary: "本キャンペーン最大の山場、575シーンにわたる大戦争章。舞台はキャメロット王城を擁するロンドン型大都市「ログレス」——聖杯を巡って複数の国家・勢力が激突し、円卓の騎士ガウェイン・ギャラハッド・トリスタンらが覇を争う。祖竜ティアマトの降臨、魔女モルガンの暗躍、王女アルトリア・オルタとクラウドたちの共闘、そして地下深く竜骸の回廊へ潜る決死行——前日譚から大宴会エピローグまで、喪失と誓いと奇跡が連なる一大叙事詩。",
+    chapterPrefix: "7",
     scenes: window.CHAPTER_9_SCENES || [] 
   },
   { 
     chapterName: "幕間『覇竜の目覚めと眠る地』", 
     panelId: "panel-chapter10", 
     summary: "大地に眠る覇竜の息吹、近日実装予定。",
-    chapterPrefix: "幕間", // ★これで「幕間-1: タイトル」になります！
+    chapterPrefix: "幕間①", // ★これで「幕間-1: タイトル」になります！
     scenes: window.CHAPTER_10_SCENES || [] 
   },
   {
     chapterName: "第8章：『葬送歌 ～冒涜の旅路』", 
     panelId: "panel-chapter11", 
     summary: "聖杯戦争終結から数日、名ばかりの停戦協定の下で双方が水面下に蠢く。世界大戦を回避すべく、クラウドたちはグランフェルデンの凶行を止める旅へ。遺跡都市ラクレールから水上審問都市クラン=ベルへ——出会いと別れの果て、幻想冒涜都市の闇に迫るとき、護りたい世界はその向こうにあるのか。",
+    chapterPrefix: "8",
     scenes: window.CHAPTER_11_SCENES || [] 
   },
   {
     chapterName: "第8章 幕間『ぶっちゃけ女子会・命の灯火』", 
     panelId: "panel-chapter12", 
     summary: "ラクレールの宿の夜、フリーレン・オルタ・ヒカリが膝を突き合わせて言葉を交わす。戦場では語れなかった本音、命の重さ、女たちだけが共有できる静謐な時間——小さくも深い、一夜限りの対話。",
-    chapterPrefix: "幕間", 
+    chapterPrefix: "幕間②", 
     scenes: window.CHAPTER_12_SCENES || [] 
   },
   {
     chapterName: "第8章 幕間『ラクレール騒動後のお買い物・ソルジャークラス1stの宿命』", 
     panelId: "panel-chapter13", 
     summary: "ラクレールの騒動が片付いた後、一行は買い出しへ。胡乱な魔導書店に寄り道し、踊り子の衣装が思わぬ波乱を呼ぶ——戦場の張り詰めた空気が緩む、可笑しくも温かな八章の幕間。",
-    chapterPrefix: "幕間", 
+    chapterPrefix: "幕間③", 
     scenes: window.CHAPTER_13_SCENES || [] 
   }
 ];

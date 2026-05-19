@@ -43,6 +43,7 @@ window.ALL_CHAPTERS = [
     chapterName: "EP.0『ワザップ炎上』",
     panelId: "panel-chapter1",
     summary: "北部高原を往くロザリアの元皇子クライヴと、ワザップのジョルノ・ジョバァーナが宿命の邂逅を果たす。騙され、煽られ、黒鱗の城門の先で禁忌の黒龍に挑むも完敗。メルゼンの神殿で全てを悟った二人の大馬鹿は、それでも覚悟を固め直す。大馬鹿同盟、ここに爆誕。",
+    chapterPrefix: "EP.0",
     scenes: window.CHAPTER_1_SCENES || []
   },
 ];

@@ -840,24 +840,28 @@ window.ALL_CHAPTERS = [
     chapterName: "直前譚『アルダニスの北方城塞探索 ~ 仁との邂逅』",
     panelId: "panel-chapter1",
     summary: "デビル同盟誕生の前夜。月明かりに照らされた北方城塞跡で、風間仁は旅人たちと初めて剣を交わす。同盟へ踏み込む一歩を決めた夜の、静かな邂逅の記録。",
+    chapterPrefix: "直前譚",
     scenes: window.CHAPTER_1_SCENES || []
   },
   {
     chapterName: "第一幕『旅立ち』",
     panelId: "panel-chapter2",
     summary: "Lv1_2nd7章クライマックスの砲火を背景に、仁・優月・ヒナの三人が合流する。アルダニスから東へ──呪術高専や廃城を経由しながら、仲間の絆を紡ぎ、広大な世界へと踏み出す65シーンの長大な旅立ち篇。",
+    chapterPrefix: "第一幕",
     scenes: window.CHAPTER_2_SCENES || []
   },
   {
     chapterName: "第三幕『星見の街のエアプタシン』",
     panelId: "panel-chapter3",
     summary: "天文台ヨハネと蒼硝子図書館を擁する星見の街に、謎の蠢動「エアプタシン」が広がる。軍・護人・竜呼び研究者が交錯する中、デビル同盟は異変の核心へ。マジェスタへの旅路に真実の欠片が散らばる。",
+    chapterPrefix: "第三幕",
     scenes: window.CHAPTER_3_SCENES || []
   },
   {
     chapterName: "第3章『彷徨街と怠惰なる竜』",
     panelId: "panel-chapter4",
     summary: "マジェスタを発ち霧の森を南下する一行を、一際深い霧が包む。晴れた先の空に浮かんでいたのは——神具の眠る伝説の街『彷徨街リアナンテ』。封印図書館に刻まれた大罪の名へ、長寿の住民と怠惰なる竜を相手に、知略と遊戯で挑むデビル同盟の一幕。",
+    chapterPrefix: "3",
     scenes: window.CHAPTER_4_SCENES || []
   },
 ];

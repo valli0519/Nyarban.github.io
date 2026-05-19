@@ -313,18 +313,21 @@ window.ALL_CHAPTERS = [
     chapterName: "序章『キヴォトス学園中等部 はじめての実戦！』",
     panelId: "panel-chapter1",
     summary: "キヴォトス学園中等部の門をくぐったホシノが迎えた、はじめての実戦。教師と仲間、看護室の日常、路地裏の交渉、そして地下に潜む異形。帝国の影が少女の背後に近づきはじめる、青春と緊張が同居した序章。",
+    chapterPrefix: "序章",
     scenes: window.CHAPTER_1_SCENES || []
   },
   {
     chapterName: "第二章『血のクリスマス』",
     panelId: "panel-chapter2",
     summary: "雪が積もる冬の夜、宮殿に仕掛けられた陰謀が炎となって噴き出す。不死者が踊り、爆発が轟く修羅の夜にTiger小隊が駆ける。後に「血のクリスマス」と呼ばれることになる一夜の、緊迫した全記録。",
+    chapterPrefix: "2",
     scenes: window.CHAPTER_2_SCENES || []
   },
   {
     chapterName: "第三章『粛清の底の底』",
     panelId: "panel-chapter3",
     summary: "ソロモン王再婚の祝宴、煌めく白金の王宮に招かれたルークが耳にしたのは、暗殺計画の囁きだった。通路を流れる紙束、毒めいた忠告、崩れる祝祭の幕——帝国の権謀術数が交錯する最深部で、剣の青年は真実を追う。",
+    chapterPrefix: "3",
     scenes: window.CHAPTER_3_SCENES || []
   }
 ];
