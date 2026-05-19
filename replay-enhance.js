@@ -132,11 +132,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
           let displayTitle = scene.title || "";
           if (!displayTitle.includes("シーン") && !displayTitle.includes("幕間") && !displayTitle.includes("外伝")) {
-            if (isSpecialChapter) {
-              displayTitle = `${displayChapterNum}-${scIndex + 1}: ${displayTitle}`;
-            } else {
-              displayTitle = `シーン ${displayChapterNum}-${scIndex + 1}: ${displayTitle}`;
-            }
+            // 全サイト統一: 「シーン」文言を付けず <prefix>-<no>: <title> 形式
+            displayTitle = `${displayChapterNum}-${scIndex + 1}: ${displayTitle}`;
           }
 
           const scLi = document.createElement("li");
