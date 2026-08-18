@@ -1,0 +1,744 @@
+/* Lv1_2nd cinematic scroll header
+   The page keeps its existing replay UI; this file only owns the opening journey. */
+
+.lv1-scroll-page {
+  --lv1-progress: 0;
+  --lv1-paper: #ffffff;
+  --lv1-paper-soft: rgba(255, 255, 255, 0.76);
+  --lv1-gold: #d9b96e;
+  --lv1-night: #07090c;
+  background-color: var(--lv1-night);
+  overflow-x: hidden;
+}
+
+body.lv1-scroll-page #replay-header.lv1-journey {
+  position: relative;
+  min-height: 100svh;
+  margin: 0;
+  padding: 0;
+  animation: none;
+  background: var(--lv1-night);
+}
+
+body.lv1-scroll-page #replay-header.lv1-journey.is-enhanced {
+  height: 650vh;
+}
+
+.lv1-journey-shell {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100svh;
+  min-height: 620px;
+  overflow: hidden;
+  isolation: isolate;
+  background: #090b0f;
+}
+
+.lv1-journey.is-enhanced .lv1-journey-shell {
+  position: sticky;
+  top: 0;
+}
+
+.lv1-journey-stage,
+.lv1-journey-frame,
+.lv1-journey-clip,
+.lv1-journey-shade,
+.lv1-journey-grain {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.lv1-journey-stage {
+  z-index: 0;
+  overflow: hidden;
+  background: #090b0f;
+}
+
+.lv1-journey-frame,
+.lv1-journey-clip {
+  object-fit: cover;
+  object-position: 50% 50%;
+  pointer-events: none;
+  user-select: none;
+  will-change: opacity, transform;
+  filter: saturate(0.94) contrast(1.07) brightness(0.95);
+  backface-visibility: hidden;
+}
+
+.lv1-journey-frame.is-current {
+  z-index: 1;
+  opacity: 1;
+}
+
+.lv1-journey-frame.is-next {
+  z-index: 2;
+  opacity: 0;
+}
+
+.lv1-journey-clip {
+  z-index: 3;
+  display: block;
+  opacity: 0;
+  background: #090b0f;
+  transform: scale(1.015);
+}
+
+.lv1-journey-clip::-webkit-media-controls {
+  display: none !important;
+}
+
+.lv1-journey-shade {
+  z-index: 3;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(4, 6, 9, 0.46) 0%, rgba(4, 6, 9, 0.28) 31%, rgba(4, 6, 9, 0.1) 61%, rgba(4, 6, 9, 0.02) 78%),
+    linear-gradient(0deg, rgba(3, 5, 8, 0.38) 0%, transparent 30%),
+    linear-gradient(180deg, rgba(3, 5, 8, 0.2) 0%, transparent 25%),
+    radial-gradient(circle at 68% 42%, transparent 0%, rgba(3, 5, 8, 0.04) 62%, rgba(3, 5, 8, 0.2) 100%);
+}
+
+.lv1-journey-grain {
+  z-index: 4;
+  pointer-events: none;
+  opacity: 0.16;
+  mix-blend-mode: soft-light;
+  background-image:
+    repeating-radial-gradient(circle at 17% 31%, rgba(255, 255, 255, 0.22) 0 0.5px, transparent 0.8px 4px),
+    repeating-radial-gradient(circle at 83% 63%, rgba(0, 0, 0, 0.26) 0 0.6px, transparent 0.9px 5px);
+  background-size: 7px 7px, 11px 11px;
+}
+
+.lv1-journey-topbar {
+  position: absolute;
+  z-index: 8;
+  top: 96px;
+  left: clamp(24px, 4.8vw, 76px);
+  right: clamp(24px, 4.8vw, 76px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  color: rgba(245, 238, 223, 0.68);
+  font-size: 0.68rem;
+  font-weight: 650;
+  letter-spacing: 0.16em;
+}
+
+.lv1-journey-topbar a {
+  color: var(--lv1-paper);
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.lv1-journey-topbar a:hover,
+.lv1-journey-topbar a:focus-visible {
+  color: var(--lv1-gold);
+}
+
+.lv1-journey-copy {
+  position: absolute;
+  z-index: 7;
+  top: 52%;
+  left: clamp(24px, 7vw, 112px);
+  width: min(680px, 48vw);
+  transform: translateY(-46%);
+}
+
+.lv1-journey .campaign-card {
+  position: relative;
+  margin: 0;
+  padding: clamp(28px, 3.2vw, 48px);
+  overflow: hidden;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  border-left: 2px solid rgba(255, 255, 255, 0.82);
+  border-radius: 6px;
+  background: linear-gradient(135deg, rgba(7, 11, 17, 0.38), rgba(7, 11, 17, 0.12));
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(9px) saturate(1.08);
+  -webkit-backdrop-filter: blur(9px) saturate(1.08);
+  animation: none;
+  transition: border-color 240ms ease, background 240ms ease;
+}
+
+.lv1-journey .campaign-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 84px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(217, 185, 110, 0.9));
+}
+
+.lv1-journey .campaign-card:hover {
+  transform: none;
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.2);
+}
+
+.lv1-journey-kicker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.69rem;
+  font-weight: 650;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.lv1-journey-kicker > span:first-child {
+  color: rgba(255, 255, 255, 0.74);
+  font-variant-numeric: tabular-nums;
+}
+
+#lv1-journey-chapter-number {
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+}
+
+.lv1-journey-kicker i {
+  width: 34px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.6;
+}
+
+.lv1-journey-title {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", Georgia, serif;
+  font-size: clamp(2.8rem, 4.8vw, 5.35rem);
+  font-weight: 500;
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+  text-shadow: 0 3px 24px rgba(0, 0, 0, 0.78), 0 0 2px rgba(0, 0, 0, 0.72);
+}
+
+.lv1-journey-title > span {
+  display: block;
+  text-wrap: balance;
+}
+
+.lv1-journey-title small {
+  display: block;
+  margin-top: 15px;
+  color: rgba(255, 255, 255, 0.84);
+  font-family: Arial, "Hiragino Kaku Gothic ProN", sans-serif;
+  font-size: clamp(0.75rem, 1vw, 0.9rem);
+  font-weight: 650;
+  line-height: 1;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.lv1-journey .campaign-desc {
+  max-width: 58ch;
+  margin: 28px 0 0;
+  color: rgba(255, 255, 255, 0.94);
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
+  font-size: clamp(0.84rem, 1vw, 0.98rem);
+  font-weight: 500;
+  line-height: 1.75;
+  letter-spacing: 0.025em;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.86), 0 0 2px rgba(0, 0, 0, 0.72);
+}
+
+.lv1-journey .campaign-desc p {
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.lv1-journey .campaign-card.is-updating .lv1-journey-kicker,
+.lv1-journey .campaign-card.is-updating .lv1-journey-title,
+.lv1-journey .campaign-card.is-updating .campaign-desc {
+  animation: lv1-copy-reveal 480ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.lv1-journey .campaign-card.is-updating .campaign-desc {
+  animation-delay: 50ms;
+}
+
+@keyframes lv1-copy-reveal {
+  from {
+    opacity: 0.18;
+    filter: blur(2px);
+    transform: translateY(9px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+.lv1-journey-rail {
+  position: absolute;
+  z-index: 9;
+  top: 50%;
+  right: clamp(14px, 2.7vw, 46px);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 190px;
+  transform: translateY(-50%);
+}
+
+.lv1-journey-rail::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  bottom: 15px;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.lv1-journey-rail button {
+  position: relative;
+  width: 100%;
+  height: 31px;
+  padding: 0;
+  border: 0;
+  color: rgba(245, 238, 223, 0.58);
+  background: transparent;
+  cursor: pointer;
+}
+
+.lv1-journey-rail button span {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  display: grid;
+  width: 31px;
+  height: 31px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 50%;
+  background: rgba(8, 10, 13, 0.42);
+  font-size: 0.6rem;
+  font-variant-numeric: tabular-nums;
+  transition: color 220ms ease, border-color 220ms ease, background 220ms ease, box-shadow 220ms ease;
+}
+
+.lv1-journey-rail button b {
+  position: absolute;
+  top: 50%;
+  right: 43px;
+  overflow: hidden;
+  max-width: 0;
+  color: var(--lv1-paper);
+  opacity: 0;
+  white-space: nowrap;
+  transform: translate(7px, -50%);
+  transition: max-width 320ms ease, opacity 220ms ease, transform 260ms ease;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.lv1-journey-rail button:hover b,
+.lv1-journey-rail button:focus-visible b,
+.lv1-journey-rail button.is-active b {
+  max-width: 150px;
+  opacity: 1;
+  transform: translate(0, -50%);
+}
+
+.lv1-journey-rail button:hover span,
+.lv1-journey-rail button:focus-visible span,
+.lv1-journey-rail button.is-active span {
+  color: #17130a;
+  border-color: var(--lv1-paper);
+  background: var(--lv1-paper);
+  box-shadow: 0 0 0 5px rgba(245, 238, 223, 0.12);
+}
+
+.lv1-journey-footer {
+  position: absolute;
+  z-index: 8;
+  left: clamp(24px, 4.8vw, 76px);
+  right: clamp(24px, 4.8vw, 76px);
+  bottom: 22px;
+  display: grid;
+  grid-template-columns: minmax(170px, 1fr) minmax(140px, 280px) minmax(70px, 1fr);
+  align-items: center;
+  gap: 30px;
+  color: rgba(245, 238, 223, 0.64);
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+}
+
+.lv1-journey-scroll {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.lv1-journey-scroll i {
+  position: relative;
+  width: 20px;
+  height: 31px;
+  border: 1px solid rgba(245, 238, 223, 0.48);
+  border-radius: 999px;
+}
+
+.lv1-journey-scroll i::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  width: 2px;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--lv1-paper);
+  transform: translateX(-50%);
+  animation: lv1-wheel 1.7s ease-in-out infinite;
+}
+
+@keyframes lv1-wheel {
+  0% { opacity: 0; transform: translate(-50%, 0); }
+  35% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, 10px); }
+}
+
+.lv1-journey-progress {
+  position: relative;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.lv1-journey-progress i {
+  position: absolute;
+  inset: 0;
+  background: var(--lv1-paper);
+  transform: scaleX(var(--lv1-progress));
+  transform-origin: 0 50%;
+  will-change: transform;
+}
+
+.lv1-journey-count {
+  justify-self: end;
+  color: rgba(245, 238, 223, 0.78);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Chapter index below the cinematic stage */
+body.lv1-scroll-page .lv1-chapter-index {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  padding: clamp(80px, 10vw, 140px) 20px;
+  scroll-margin-top: 76px;
+  animation: none;
+  border-top: 1px solid rgba(217, 185, 110, 0.3);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(81, 67, 43, 0.24), transparent 42%),
+    linear-gradient(180deg, #090b0f, #101116 80%);
+}
+
+.lv1-chapter-index .container-replay {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.lv1-index-heading {
+  max-width: 620px;
+  margin: 0 auto 54px;
+  text-align: center;
+}
+
+.lv1-index-heading > span {
+  color: var(--lv1-gold);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+}
+
+body.lv1-scroll-page .lv1-index-heading h2 {
+  margin: 12px 0 16px;
+  color: var(--lv1-paper);
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", Georgia, serif;
+  font-size: clamp(2.4rem, 5vw, 4.6rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  text-shadow: none;
+}
+
+.lv1-index-heading p {
+  color: rgba(245, 238, 223, 0.58);
+  font-size: 0.9rem;
+}
+
+.lv1-chapter-index .replay-nav {
+  counter-reset: lv1-chapter;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.lv1-chapter-index .replay-nav li {
+  counter-increment: lv1-chapter;
+  margin: 0;
+  border: 1px solid rgba(245, 238, 223, 0.13);
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.025);
+  transition: border-color 220ms ease, background 220ms ease, transform 220ms ease;
+}
+
+.lv1-chapter-index .replay-nav li:hover {
+  border-color: rgba(217, 185, 110, 0.68);
+  background: rgba(217, 185, 110, 0.08);
+  transform: translateY(-2px);
+}
+
+.lv1-chapter-index .replay-nav li a {
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  gap: 13px;
+  align-items: center;
+  min-height: 62px;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 0;
+  color: rgba(245, 238, 223, 0.82);
+  background: transparent;
+  font-size: 0.88rem;
+  font-weight: 500;
+  line-height: 1.45;
+  text-align: left;
+}
+
+.lv1-chapter-index .replay-nav li a::before {
+  content: counter(lv1-chapter, decimal-leading-zero);
+  color: var(--lv1-gold);
+  font-size: 0.66rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.12em;
+}
+
+.lv1-chapter-index .replay-nav li a:hover {
+  color: var(--lv1-paper);
+  background: transparent;
+  transform: none;
+}
+
+body.lv1-scroll-page > .replay-container {
+  margin-top: clamp(56px, 8vw, 100px);
+}
+
+@media (max-width: 960px) {
+  .lv1-journey-copy {
+    left: 28px;
+    width: min(650px, calc(100vw - 116px));
+  }
+
+  .lv1-journey .campaign-card {
+    padding: 30px;
+  }
+
+  .lv1-journey-title {
+    font-size: clamp(3rem, 8vw, 5rem);
+  }
+
+  .lv1-journey .campaign-desc {
+    font-size: 0.86rem;
+  }
+}
+
+@media (max-width: 700px) {
+  body.lv1-scroll-page #replay-header.lv1-journey.is-enhanced {
+    height: 520vh;
+  }
+
+  .lv1-journey-shell {
+    min-height: 100svh;
+  }
+
+  .lv1-journey-shade {
+    background:
+      linear-gradient(0deg, rgba(4, 6, 9, 0.62) 0%, rgba(4, 6, 9, 0.28) 54%, rgba(4, 6, 9, 0.05) 82%),
+      linear-gradient(90deg, rgba(4, 6, 9, 0.18), transparent 40%, rgba(4, 6, 9, 0.08)),
+      radial-gradient(circle at 50% 35%, transparent 0%, rgba(3, 5, 8, 0.12) 86%);
+  }
+
+  .lv1-journey-topbar {
+    top: 82px;
+    left: 17px;
+    right: 17px;
+    font-size: 0.57rem;
+    letter-spacing: 0.1em;
+  }
+
+  .lv1-journey-topbar > span {
+    max-width: 56vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .lv1-journey-copy {
+    top: 122px;
+    right: 47px;
+    bottom: 72px;
+    left: 15px;
+    display: flex;
+    width: auto;
+    align-items: flex-end;
+    transform: none;
+  }
+
+  .lv1-journey .campaign-card {
+    width: 100%;
+    max-height: 100%;
+    padding: 22px 20px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background: linear-gradient(180deg, rgba(6, 9, 13, 0.3), rgba(6, 9, 13, 0.5));
+    backdrop-filter: blur(8px) saturate(1.05);
+    -webkit-backdrop-filter: blur(8px) saturate(1.05);
+  }
+
+  .lv1-journey-kicker {
+    gap: 8px;
+    margin-bottom: 14px;
+    font-size: 0.58rem;
+    letter-spacing: 0.08em;
+  }
+
+  .lv1-journey-kicker i {
+    width: 18px;
+  }
+
+  .lv1-journey-title {
+    font-size: clamp(2.35rem, 12vw, 3.5rem);
+  }
+
+  .lv1-journey-title small {
+    margin-top: 10px;
+    font-size: 0.62rem;
+  }
+
+  .lv1-journey .campaign-desc {
+    margin-top: 18px;
+    font-size: 0.76rem;
+    line-height: 1.62;
+  }
+
+  .lv1-journey-rail {
+    right: 6px;
+    width: 31px;
+    gap: 10px;
+  }
+
+  .lv1-journey-rail button {
+    width: 31px;
+  }
+
+  .lv1-journey-rail button b {
+    display: none;
+  }
+
+  .lv1-journey-footer {
+    left: 16px;
+    right: 16px;
+    bottom: 15px;
+    grid-template-columns: 1fr auto;
+    gap: 14px;
+    font-size: 0.56rem;
+  }
+
+  .lv1-journey-progress {
+    display: none;
+  }
+
+  .lv1-journey-scroll i {
+    width: 17px;
+    height: 27px;
+  }
+
+  body.lv1-scroll-page .lv1-chapter-index {
+    padding: 74px 16px 86px;
+  }
+
+  .lv1-index-heading {
+    margin-bottom: 36px;
+  }
+
+  .lv1-chapter-index .replay-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .lv1-chapter-index .replay-nav li {
+    width: 100%;
+  }
+}
+
+@media (max-height: 680px) and (min-width: 701px) {
+  .lv1-journey-topbar {
+    top: 84px;
+  }
+
+  .lv1-journey-copy {
+    top: 54%;
+  }
+
+  .lv1-journey .campaign-card {
+    max-height: calc(100svh - 190px);
+    overflow-y: auto;
+  }
+
+  .lv1-journey-title {
+    font-size: clamp(2.6rem, 6vw, 4.6rem);
+  }
+
+  .lv1-journey .campaign-desc {
+    margin-top: 20px;
+    font-size: 0.78rem;
+    line-height: 1.55;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.lv1-scroll-page #replay-header.lv1-journey,
+  body.lv1-scroll-page #replay-header.lv1-journey.is-enhanced {
+    height: auto;
+    min-height: 100svh;
+  }
+
+  .lv1-journey-shell,
+  .lv1-journey.is-enhanced .lv1-journey-shell {
+    position: relative;
+    min-height: 100svh;
+  }
+
+  .lv1-journey-frame {
+    transform: none !important;
+  }
+
+  .lv1-journey-frame.is-next,
+  .lv1-journey-clip,
+  .lv1-journey-rail,
+  .lv1-journey-progress,
+  .lv1-journey-count {
+    display: none;
+  }
+
+  .lv1-journey-scroll i::after {
+    animation: none;
+  }
+}

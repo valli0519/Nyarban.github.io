@@ -8,6 +8,8 @@
   <title>Lv1_2nd リプレイ — ニャルラトホテプ万歳</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="replay.css?v=6">
+  <link rel="preload" as="image" href="img/scroll-lv1-2nd/01-mountain.webp" fetchpriority="high">
+  <link rel="stylesheet" href="lv1-scroll.css?v=4">
   <script>
     // ★追加: このページ（キャンペーン）専用のIDを設定します。
     // 別のリプレイを作る時は、ここを "lv2_replay" など別の名前に変更してください。
@@ -15,32 +17,85 @@
   </script>
 </head>
 
-<body>
+<body class="lv1-scroll-page">
   <nav>
     <div class="logo">
       <a href="index.html"><img src="img/nyar_logo_header.png" alt="ニャルラトホテプ万歳"></a>
     </div>
   </nav>
-  <section id="replay-header">
-    <div class="container-replay">
-      <div class="campaign-card">
-        <!-- キャンペーンのタイトルを記入 -->
-        <h2>Lv1_2nd - Replay Log</h2>
-        <div class="campaign-desc">
-          <!-- ここにキャンペーン概要を記入 -->
-          <p>
-            「Lv1」卓の丁度いい感じで遊ぶために始まった壮大な超規模キャンペーン。<br>
-            神々が次々に復活する混乱の時代を舞台に、運命に導かれし主人公「クラウド」「フリーレン」「ケオベ」「モードレッド」が集い、滅びの運命を変えるためにのし上がり、人々を束ね、人妖を繋ぎ━━世界の真相へと迫る。<br>
-            ２年以上かけ現在もセッションが進められている超大規模キャンペーン。<br>
-            「Lv1_2nd」は外伝キャンペーンも多く、世界を多数の側面から描写されています。<br>
-            「サンクチュアリ」「ヒカリ編」「ステイナイト」「デビル同盟」「撲殺同盟」「アルカナ編」「イズリエル編」「ダイワ編」など、多くの外伝作品が本編で描写しきれない世界を描いています。
-          </p>
-        </div>
-        <!-- 【目的】: 画面上部の「目次（1章、2章…）」を自動で並べるための空箱です。
-            【JSの動き】: JSが ALL_CHAPTERS を読み取って、ここに各章へのリンクを全自動で生成します。 -->
-        <ul class="replay-nav" id="dynamic-nav"></ul>
-
+  <section id="replay-header" class="lv1-journey" aria-labelledby="lv1-journey-title">
+    <div class="lv1-journey-shell">
+      <div id="lv1-journey-stage" class="lv1-journey-stage" aria-hidden="true">
+        <img id="lv1-journey-current" class="lv1-journey-frame is-current"
+          src="img/scroll-lv1-2nd/01-mountain.webp" alt="" fetchpriority="high" decoding="async">
+        <img id="lv1-journey-next" class="lv1-journey-frame is-next"
+          src="img/scroll-lv1-2nd/02-crystal-tree.webp" alt="" decoding="async">
+        <video class="lv1-journey-clip" data-lv1-clip="0" muted playsinline preload="auto"
+          poster="img/scroll-lv1-2nd/01-mountain.webp"
+          src="video/scroll-lv1-2nd/01-mountain-to-crystal-tree.mp4"></video>
+        <video class="lv1-journey-clip" data-lv1-clip="1" muted playsinline preload="metadata"
+          poster="img/scroll-lv1-2nd/03-tavern.webp"
+          src="video/scroll-lv1-2nd/02-tavern-to-deck-battle.mp4"></video>
+        <video class="lv1-journey-clip" data-lv1-clip="2" muted playsinline preload="metadata"
+          poster="img/scroll-lv1-2nd/05-harbor.webp"
+          src="video/scroll-lv1-2nd/03-harbor-to-kraken.mp4"></video>
+        <video class="lv1-journey-clip" data-lv1-clip="3" muted playsinline preload="metadata"
+          poster="img/scroll-lv1-2nd/07-guild.webp"
+          src="video/scroll-lv1-2nd/04-guild-to-descent.mp4"></video>
+        <video class="lv1-journey-clip" data-lv1-clip="4" muted playsinline preload="metadata"
+          poster="img/scroll-lv1-2nd/09-island-road.webp"
+          src="video/scroll-lv1-2nd/05-island-road-to-gate.mp4"></video>
       </div>
+      <div class="lv1-journey-shade" aria-hidden="true"></div>
+      <div class="lv1-journey-grain" aria-hidden="true"></div>
+
+      <div class="lv1-journey-topbar">
+        <span>NYARLATHOTEP BANZAI · REPLAY ARCHIVE</span>
+        <a href="#chapter-index">目次へスキップ</a>
+      </div>
+
+      <div class="lv1-journey-copy">
+        <article class="campaign-card">
+          <div class="lv1-journey-kicker">
+            <span>CHAPTER</span>
+            <i aria-hidden="true"></i>
+            <span id="lv1-journey-chapter-number">01</span>
+          </div>
+          <h1 id="lv1-journey-title" class="lv1-journey-title">
+            <span id="lv1-journey-chapter-title">エルツ山のゴブリン退治</span>
+            <small>Lv1_2nd · Replay Log</small>
+          </h1>
+          <div class="campaign-desc">
+            <p id="lv1-journey-summary">全てを奪われ故郷を失った剣士クラウドと、あてどない好奇心で旅に出たエルフの魔法使いフリーレンが、秘薬の霊峰エルツ山で運命の出会いを果たす。ここから二人の旅——そして世界の歯車——が静かに廻り始める。</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="lv1-journey-rail" role="navigation" aria-label="CGで辿る第1章から第5章">
+        <button type="button" class="is-active" data-lv1-chapter="0" aria-label="第1章 エルツ山のゴブリン退治" aria-current="step"><span>01</span><b>エルツ山</b></button>
+        <button type="button" data-lv1-chapter="1" aria-label="第2章 商業都市メルゼン"><span>02</span><b>メルゼン</b></button>
+        <button type="button" data-lv1-chapter="2" aria-label="第3章 目指せホーヴァルロード島"><span>03</span><b>島への航路</b></button>
+        <button type="button" data-lv1-chapter="3" aria-label="第4章 海神伝説"><span>04</span><b>海神伝説</b></button>
+        <button type="button" data-lv1-chapter="4" aria-label="第5章 闇を駆ける"><span>05</span><b>闇を駆ける</b></button>
+      </div>
+
+      <div class="lv1-journey-footer">
+        <div class="lv1-journey-scroll"><i aria-hidden="true"></i><span>SCROLL TO JOURNEY</span></div>
+        <div class="lv1-journey-progress" aria-hidden="true"><i></i></div>
+        <span class="lv1-journey-count"><span id="lv1-journey-frame-number">01</span> / 05</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="chapter-index" class="lv1-chapter-index" aria-labelledby="chapter-index-title">
+    <div class="container-replay">
+      <div class="lv1-index-heading">
+        <span>CHAPTER INDEX</span>
+        <h2 id="chapter-index-title">物語を選ぶ</h2>
+        <p>章を選ぶと、その章のシーン一覧へ移動します。</p>
+      </div>
+      <!-- JSが ALL_CHAPTERS を読み取り、各章へのリンクを自動生成します。 -->
+      <ul class="replay-nav" id="dynamic-nav"></ul>
     </div>
   </section>
 
@@ -93,6 +148,7 @@
   <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore-compat.js"></script>
 
   <!-- キャンペーン用のシーンデータJSを読み込むべし。 -->
+  <script src="lv1-scroll.js?v=4"></script>
   <script src="scenes_data_lv1_2nd.js?v=5"></script>
   <script src="replay-enhance.js?v=6"></script>
 
