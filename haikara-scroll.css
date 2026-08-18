@@ -1,0 +1,54 @@
+/* Haikara campaign accents layered over the shared cinematic header layout. */
+
+.haikara-scroll-page {
+  --lv1-gold: #9ee9ff;
+  --lv1-night: #050712;
+  background-color: var(--lv1-night);
+}
+
+body.haikara-scroll-page #replay-header.lv1-journey.is-enhanced {
+  height: 340vh;
+}
+
+.haikara-scroll-page .lv1-journey-shell,
+.haikara-scroll-page .lv1-journey-stage,
+.haikara-scroll-page .lv1-journey-clip {
+  background-color: #050712;
+}
+
+.haikara-scroll-page .lv1-journey-frame,
+.haikara-scroll-page .lv1-journey-clip {
+  filter: saturate(1.04) contrast(1.07) brightness(0.94);
+}
+
+.haikara-scroll-page .lv1-journey .campaign-card {
+  border-left-color: rgba(158, 233, 255, 0.9);
+  background: linear-gradient(135deg, rgba(7, 12, 28, 0.4), rgba(13, 8, 29, 0.13));
+  box-shadow: 0 24px 64px rgba(3, 4, 18, 0.24);
+}
+
+.haikara-scroll-page .lv1-journey .campaign-card::after {
+  background: linear-gradient(90deg, transparent, rgba(164, 140, 255, 0.92));
+}
+
+.haikara-scroll-page #haikara-journey-chapter-number,
+.haikara-scroll-page .lv1-index-heading > span,
+.haikara-scroll-page .lv1-chapter-index .replay-nav li a::before {
+  color: #9ee9ff;
+}
+
+.haikara-scroll-page .lv1-journey-grain {
+  opacity: 0.12;
+  mix-blend-mode: screen;
+}
+
+body.haikara-scroll-page,
+.haikara-scroll-page .lv1-journey .campaign-desc {
+  font-feature-settings: "palt" 1;
+}
+
+@media (max-width: 700px) {
+  body.haikara-scroll-page #replay-header.lv1-journey.is-enhanced {
+    height: 300vh;
+  }
+}

@@ -8,36 +8,81 @@
   <title>ハイカラ卓 リプレイ — ニャルラトホテプ万歳</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="replay.css?v=6">
+  <link rel="preload" as="image" href="img/cinematic-scenes/haikara/ch01-01-door.webp" fetchpriority="high">
+  <link rel="stylesheet" href="lv1-scroll.css?v=4">
+  <link rel="stylesheet" href="haikara-scroll.css?v=1">
   <script>
     // ★追加: このページ（キャンペーン）専用のIDを設定します。
     window.CAMPAIGN_ID = "haikara"; 
   </script>
 </head>
 
-<body>
+<body class="lv1-scroll-page haikara-scroll-page">
   <nav>
     <div class="logo">
       <a href="index.html"><img src="img/nyar_logo_header.png" alt="ニャルラトホテプ万歳"></a>
     </div>
   </nav>
-  <section id="replay-header">
-    <div class="container-replay">
-      <div class="campaign-card">
-        <!-- キャンペーンのタイトルを記入 -->
-        <h2>ハイカラ卓 - Replay Log</h2>
-        <div class="campaign-desc">
-          <!-- ここにキャンペーン概要を記入 -->
-          <p>
-            Lv1_2ndの外伝キャンペーン。別名「ペルソナ卓」または「アルカナ編」。<br>
-            アルディオン大陸東方の魔法都市アルカナを舞台に、魔法学校の劣等生である鳴上悠、結城理、雨宮蓮の三人が、ある事件を切欠に運命の歯車に巻き込まれていく物語。<br>
-            ハイカラ部の仲間と共に、街の闇や軍部の腐敗、テロ組織アジムや異界の存在と立ち向かう、青春の戦いの記録です。
-          </p>
-        </div>
-        <!-- 【目的】: 画面上部の「目次（1章、2章…）」を自動で並べるための空箱です。
-            【JSの動き】: JSが ALL_CHAPTERS を読み取って、ここに各章へのリンクを全自動で生成します。 -->
-        <ul class="replay-nav" id="dynamic-nav"></ul>
-
+  <section id="replay-header" class="lv1-journey haikara-journey" aria-labelledby="haikara-journey-title">
+    <div class="lv1-journey-shell">
+      <div id="haikara-journey-stage" class="lv1-journey-stage" aria-hidden="true">
+        <img id="haikara-journey-current" class="lv1-journey-frame is-current"
+          src="img/cinematic-scenes/haikara/ch01-01-door.webp" alt="" fetchpriority="high" decoding="async">
+        <img id="haikara-journey-next" class="lv1-journey-frame is-next"
+          src="img/cinematic-scenes/haikara/ch01-03-awakening.webp" alt="" decoding="async">
+        <video class="lv1-journey-clip" data-haikara-clip="0" muted playsinline preload="auto"
+          poster="img/cinematic-scenes/haikara/ch01-01-door.webp"
+          src="video/cinematic-scenes/haikara/ch01-door-to-awakening-720p.mp4"></video>
+        <video class="lv1-journey-clip" data-haikara-clip="1" muted playsinline preload="metadata"
+          poster="img/cinematic-scenes/haikara/ch02-01-lesson.webp"
+          src="video/cinematic-scenes/haikara/ch02-truth-to-stakeout-720p.mp4"></video>
       </div>
+      <div class="lv1-journey-shade" aria-hidden="true"></div>
+      <div class="lv1-journey-grain" aria-hidden="true"></div>
+
+      <div class="lv1-journey-topbar">
+        <span>HAIKARA CLUB · PERSONA REPLAY</span>
+        <a href="#chapter-index">目次へスキップ</a>
+      </div>
+
+      <div class="lv1-journey-copy">
+        <article class="campaign-card">
+          <div class="lv1-journey-kicker">
+            <span>CHAPTER</span>
+            <i aria-hidden="true"></i>
+            <span id="haikara-journey-chapter-number">01</span>
+          </div>
+          <h1 id="haikara-journey-title" class="lv1-journey-title">
+            <span id="haikara-journey-chapter-title">日常に潜む闇</span>
+            <small>Haikara · Replay Log</small>
+          </h1>
+          <div class="campaign-desc">
+            <p id="haikara-journey-summary">Lv1_2nd外伝『ペルソナ卓』開幕。魔法都市アルカナの劣等生・鳴上、結城、雨宮の三人は、シエル先生による魔力操作の補習を受ける日々を送っていた。ある日、未知の感覚に導かれ、彼等は『枢機の樹』の地下へと足を踏み入れる━━。</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="lv1-journey-rail" role="navigation" aria-label="CGで辿るハイカラ卓">
+        <button type="button" class="is-active" data-haikara-chapter="0" aria-label="第1章 日常に潜む闇" aria-current="step"><span>01</span><b>日常に潜む闇</b></button>
+        <button type="button" data-haikara-chapter="1" aria-label="第2章 陰るアルカナ、中間考査"><span>02</span><b>陰るアルカナ</b></button>
+      </div>
+
+      <div class="lv1-journey-footer">
+        <div class="lv1-journey-scroll"><i aria-hidden="true"></i><span>SCROLL TO JOURNEY</span></div>
+        <div class="lv1-journey-progress" aria-hidden="true"><i></i></div>
+        <span class="lv1-journey-count"><span id="haikara-journey-frame-number">01</span> / 02</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="chapter-index" class="lv1-chapter-index" aria-labelledby="chapter-index-title">
+    <div class="container-replay">
+      <div class="lv1-index-heading">
+        <span>CHAPTER INDEX</span>
+        <h2 id="chapter-index-title">物語を選ぶ</h2>
+        <p>章を選ぶと、その章のシーン一覧へ移動します。</p>
+      </div>
+      <ul class="replay-nav" id="dynamic-nav"></ul>
     </div>
   </section>
 
@@ -91,6 +136,7 @@
 
   <!-- キャンペーン用のシーンデータJSを読み込むべし。 -->
   <script src="scenes_data_haikara.js?v=1"></script>
+  <script src="haikara-scroll.js?v=1"></script>
   <script src="replay-enhance.js?v=6"></script>
 
   <!-- コメント欄 -->

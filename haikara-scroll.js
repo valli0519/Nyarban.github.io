@@ -1,55 +1,46 @@
 (() => {
   "use strict";
 
-  const scenes = [
+  const media = [
     {
       number: "01",
-      title: "エルツ山のゴブリン退治",
-      summary: "全てを奪われ故郷を失った剣士クラウドと、あてどない好奇心で旅に出たエルフの魔法使いフリーレンが、秘薬の霊峰エルツ山で運命の出会いを果たす。ここから二人の旅——そして世界の歯車——が静かに廻り始める。",
-      first: "img/scroll-lv1-2nd/01-mountain.webp",
-      last: "img/scroll-lv1-2nd/02-crystal-tree.webp",
+      chapterIndex: 0,
+      fallbackTitle: "日常に潜む闇",
+      fallbackSummary: "魔法都市アルカナの劣等生三人は、未知の感覚に導かれ『枢機の樹』の地下へ足を踏み入れる。",
+      first: "img/cinematic-scenes/haikara/ch01-01-door.webp",
+      last: "img/cinematic-scenes/haikara/ch01-03-awakening.webp",
     },
     {
       number: "02",
-      title: "商業都市メルゼン",
-      summary: "路銀稼ぎに訪れた運河の商業都市メルゼンで、クラウドとフリーレンは闇の組織の影を嗅ぎつける。ギルドの試験をくぐり抜けながら、港に巣食う人攫い組織との決戦へ。そしてある出会いが、パーティの形を変えていく。",
-      first: "img/scroll-lv1-2nd/03-tavern.webp",
-      last: "img/scroll-lv1-2nd/04-pirate-battle.webp",
-    },
-    {
-      number: "03",
-      title: "目指せホーヴァルロード島",
-      summary: "四人が揃い、北上の旅が本格的に動き出す。アレスタ港からフロルブリッジ号に乗り込み、島へと向かう一行の前に次々と難敵が立ちはだかる。諸島を渡るこの航路が、パーティの絆を鍛え直す試練となる。",
-      first: "img/scroll-lv1-2nd/05-harbor.webp",
-      last: "img/scroll-lv1-2nd/06-kraken.webp",
-    },
-    {
-      number: "04",
-      title: "海神伝説",
-      summary: "ホーヴァルロード島に古くから伝わる海神の神話。信仰と祟りと秘密が複雑に絡み合う島の深部へ、一行は否応なく引き込まれていく。サンズガルド山の頂で待ち受ける真実が、世界の広さを四人に突きつける。",
-      first: "img/scroll-lv1-2nd/07-guild.webp",
-      last: "img/scroll-lv1-2nd/08-descent.webp",
-    },
-    {
-      number: "05",
-      title: "闇を駆ける",
-      summary: "トワド諸島の二つ目の島、鉱山の島センドルイス。平穏を装った街の底に隠された炭鉱支配と孤児院の暗部——一行はその真相を暴くべく、泥と闇の中を疾駆する。センドアルスの神殿都市で物語は次の幕へと接続する。",
-      first: "img/cinematic-scenes/lv1_2nd/ch05-01-night-flight.webp",
-      last: "img/cinematic-scenes/lv1_2nd/ch05-03-ritual.webp",
+      chapterIndex: 1,
+      fallbackTitle: "陰るアルカナ、中間考査。",
+      fallbackSummary: "行方不明者が増える街で、ハイカラ部は中間考査に追われながらも自らの足で真相を追う。",
+      first: "img/cinematic-scenes/haikara/ch02-01-lesson.webp",
+      last: "img/cinematic-scenes/haikara/ch02-03-stakeout.webp",
     },
   ];
 
+  const chapterData = Array.isArray(window.ALL_CHAPTERS) ? window.ALL_CHAPTERS : [];
+  const scenes = media.map((item) => {
+    const chapter = chapterData[item.chapterIndex] || {};
+    return {
+      ...item,
+      title: String(chapter.chapterName || item.fallbackTitle).replace(/^第\d+章[：:]\s*/, ""),
+      summary: chapter.summary || item.fallbackSummary,
+    };
+  });
+
   const section = document.getElementById("replay-header");
-  const stage = document.getElementById("lv1-journey-stage");
-  const currentImage = document.getElementById("lv1-journey-current");
-  const nextImage = document.getElementById("lv1-journey-next");
-  const chapterNumber = document.getElementById("lv1-journey-chapter-number");
-  const chapterTitle = document.getElementById("lv1-journey-chapter-title");
-  const chapterSummary = document.getElementById("lv1-journey-summary");
+  const stage = document.getElementById("haikara-journey-stage");
+  const currentImage = document.getElementById("haikara-journey-current");
+  const nextImage = document.getElementById("haikara-journey-next");
+  const chapterNumber = document.getElementById("haikara-journey-chapter-number");
+  const chapterTitle = document.getElementById("haikara-journey-chapter-title");
+  const chapterSummary = document.getElementById("haikara-journey-summary");
   const campaignCard = section?.querySelector(".campaign-card");
-  const frameNumber = document.getElementById("lv1-journey-frame-number");
-  const railButtons = Array.from(document.querySelectorAll("[data-lv1-chapter]"));
-  const videos = Array.from(document.querySelectorAll("[data-lv1-clip]"));
+  const frameNumber = document.getElementById("haikara-journey-frame-number");
+  const railButtons = Array.from(document.querySelectorAll("[data-haikara-chapter]"));
+  const videos = Array.from(document.querySelectorAll("[data-haikara-clip]"));
 
   if (
     !section ||
@@ -75,7 +66,7 @@
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const videoState = videos.map((video, index) => ({
     video,
-    duration: 5.166,
+    duration: 10.333,
     current: 0,
     target: 0,
     ready: false,
@@ -184,7 +175,7 @@
           try {
             state.video.currentTime = destination;
           } catch (_error) {
-            // The loadeddata handler retries after a metadata race.
+            // A loadeddata/canplay event retries after metadata races.
           }
         }
       }
@@ -198,8 +189,7 @@
       state.video.style.opacity = opacity.toFixed(4);
     });
 
-    const videoActive = videoState[segment].ready;
-    stage.classList.toggle("is-video-active", videoActive);
+    stage.classList.toggle("is-video-active", videoState[segment].ready);
     section.style.setProperty("--lv1-progress", progress.toFixed(4));
     updateLabels(crossfade >= 0.5 ? nextSegment : segment);
   };
@@ -221,7 +211,7 @@
 
   railButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      jumpToChapter(Number(button.dataset.lv1Chapter));
+      jumpToChapter(Number(button.dataset.haikaraChapter));
     });
   });
 

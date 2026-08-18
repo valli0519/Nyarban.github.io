@@ -1,0 +1,118 @@
+{
+  "version": 1,
+  "source_root": "F:/ＴＲＰＧ/アリアンロッド2E/lebel1_2nd/4_AI/シーンCG化",
+  "jobs": [
+    {
+      "id": "haikara-ch01-door-awakening",
+      "campaign": "haikara",
+      "chapter": "1",
+      "title": "扉から星の内海へ、三人の覚醒",
+      "priority": 100,
+      "source_frames": [
+        "CC_ハイカラ卓/1章/1-04_sc_7gwurspii_扉.png",
+        "CC_ハイカラ卓/1章/1-05_sc_oe2ptujw2_星の内海と古代竜.png",
+        "CC_ハイカラ卓/1章/1-06_sc_9zat0wz9d_出逢い、覚醒.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/haikara/ch01-01-door.webp",
+        "img/cinematic-scenes/haikara/ch01-02-inner-sea.webp",
+        "img/cinematic-scenes/haikara/ch01-03-awakening.webp"
+      ],
+      "output": "video/cinematic-scenes/haikara/ch01-door-to-awakening-720p.mp4",
+      "transitions": [
+        {
+          "seed": 913101,
+          "prompt": "One continuous cinematic shot, no cuts. Begin exactly on Picture 1: three Japanese male students in fitted black school uniforms stand with their backs to the camera inside a dark cavern of enormous tree roots and violet crystals, facing a brilliant rectangular door. Slowly dolly forward between the same three students. Their coats and hair move in the rising magical wind as the doorway blooms into soft white light. Pass through the light and reveal the vast violet crystal forest, flower meadow, turquoise stream, and suspended crystals shown exactly in Picture 2, with the same three students still seen from behind in the same left-to-right order. Preserve their hair colors, uniforms, anatomy, and polished cinematic anime illustration style. End exactly on Picture 2. No dialogue, text, subtitles, logos, or watermarks."
+        },
+        {
+          "seed": 913102,
+          "prompt": "One continuous cinematic shot, no cuts. Begin exactly on Picture 1: the same three black-uniformed male students stand in a luminous violet crystal meadow beside a turquoise stream, seen from behind. The camera makes a gentle half orbit while petals and crystal dust rise. Blue and gold magical currents spiral around the three students, accelerate toward the lens, and transform into the powerful awakening battle composition shown exactly in Picture 2, where the same three students summon their mechanical and spectral guardians. Preserve each face, hairstyle, black uniform, guardian design, anatomy, and detailed cinematic anime illustration style. Energy and clothing may move dynamically, but do not add characters. End exactly on Picture 2. No dialogue, text, subtitles, logos, or watermarks."
+        }
+      ]
+    },
+    {
+      "id": "lv1-ch05-night-ritual",
+      "campaign": "lv1_2nd",
+      "chapter": "5",
+      "title": "夜を駆け、エルドランを越えて儀式へ",
+      "priority": 99,
+      "source_frames": [
+        "CG_Lv1_2nd/5章/5-53_sc_ppbziifnr_夜を駆ける.png",
+        "CG_Lv1_2nd/5章/5-54_sc_iaokrgqht_VSエルドラン.png",
+        "CG_Lv1_2nd/5章/5-55_sc_3qgu38bml_儀式.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch05-01-night-flight.webp",
+        "img/cinematic-scenes/lv1_2nd/ch05-02-eldran.webp",
+        "img/cinematic-scenes/lv1_2nd/ch05-03-ritual.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch05-night-to-ritual-720p.mp4",
+      "transitions": [
+        {
+          "seed": 913201,
+          "prompt": "One continuous cinematic shot, no cuts. Begin exactly on Picture 1 with the blond swordsman, the fox-eared woman, and the white-and-red female-shaped machine racing through a purple night sky above a sprawling city. Keep their exact faces, clothing, weapons, machine armor, and formation. The camera flies beside them, then accelerates ahead as violet sparks and distant flying machines streak past. A green moon rises through the clouds and the camera dives into the ruined battlefield shown exactly in Picture 2, where the blond swordsman and white-haired mage confront the dark enemy. Preserve the polished cinematic fantasy-anime style and every character's identity. End exactly on Picture 2. No graphic injury, dialogue, text, subtitles, logos, or watermarks."
+        },
+        {
+          "seed": 913202,
+          "prompt": "One continuous cinematic shot, no cuts. Begin exactly on Picture 1 in the ruined moonlit battlefield: the blond swordsman and white-haired mage face the dark enemy beneath a huge green moon while blue magic crosses the ground. The camera makes a low half orbit as blue-green energy gathers around the red-tipped staff, then follows the energy upward into the moon. The moonlight expands across the lens and resolves into the ominous ritual courtyard shown exactly in Picture 2, with the same blond swordsman standing, the white-haired mage and white-red machine kneeling nearby, and the flying machine formation above. Preserve faces, costumes, weapons, armor geometry, anatomy, and cinematic fantasy-anime style. End exactly on Picture 2. No graphic injury, dialogue, text, subtitles, logos, or watermarks."
+        }
+      ]
+    },
+    {
+      "id": "haikara-ch02-truth-stakeout",
+      "campaign": "haikara",
+      "chapter": "2",
+      "title": "真実の教えから夜の張り込みへ",
+      "priority": 98,
+      "source_frames": [
+        "CC_ハイカラ卓/2章/2-07_sc_rcjkmfqid_真実の教え.png",
+        "CC_ハイカラ卓/2章/2-08_sc_07jmwr6hb_曇る部室.png",
+        "CC_ハイカラ卓/2章/2-09_sc_6vyr1xbmr_身なりのいい男.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/haikara/ch02-01-lesson.webp",
+        "img/cinematic-scenes/haikara/ch02-02-clubroom.webp",
+        "img/cinematic-scenes/haikara/ch02-03-stakeout.webp"
+      ],
+      "output": "video/cinematic-scenes/haikara/ch02-truth-to-stakeout-720p.mp4",
+      "transitions": [
+        {
+          "seed": 913301,
+          "prompt": "One continuous cinematic shot, no cuts. Begin exactly on Picture 1 with the long-haired black-clad instructor firing a focused blue magical railgun across the ruined training arena. Preserve his face, black coat, weapon, pose, and the distant spectators. Track alongside the blue beam as stone dust and restrained electrical arcs move through the air. The beam fills the lens, then contracts into the small blue magic circle glowing on the wooden map table shown exactly in Picture 2, with the same five students and instructor gathered around it in the warm clubroom. Preserve every hairstyle, uniform, face, anatomy, and polished cinematic anime illustration style. End exactly on Picture 2. No dialogue, text, subtitles, logos, or watermarks."
+        },
+        {
+          "seed": 913302,
+          "prompt": "One continuous cinematic shot, no cuts. Begin exactly on Picture 1 with five students and their black-haired instructor gathered around a wooden table and glowing blue map in a warm late-afternoon clubroom. The camera lowers toward the map while their hair, sleeves, and papers move subtly. The blue street lines expand into real streets and the warm light cools into night. Glide along a damp alley wall and reveal the discreet stakeout shown exactly in Picture 2: the blue-haired, white-haired, and pink-haired girls crouch in cover while the same black-haired man watches the lit warehouse window. Preserve faces, clothing, hair colors, anatomy, and cinematic anime illustration style. End exactly on Picture 2. No dialogue, text, subtitles, logos, or watermarks."
+        }
+      ]
+    },
+    {
+      "id": "lv1-ch05-level5-armament",
+      "campaign": "lv1_2nd",
+      "chapter": "5",
+      "title": "Level5突入、神機武装",
+      "priority": 97,
+      "source_frames": [
+        "CG_Lv1_2nd/5章/5-48_sc_oh73ia842_Level5へ-v2.png",
+        "CG_Lv1_2nd/5章/5-49_sc_50bf7qtfm_VSバルターエスティオ.png",
+        "CG_Lv1_2nd/5章/5-50_sc_dgenod80v_神機武装.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch05-04-level5.webp",
+        "img/cinematic-scenes/lv1_2nd/ch05-05-machine-battle.webp",
+        "img/cinematic-scenes/lv1_2nd/ch05-06-divine-armament.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch05-level5-to-armament-720p.mp4",
+      "transitions": [
+        {
+          "seed": 913401,
+          "prompt": "One continuous cinematic shot, no cuts. Begin exactly on Picture 1 inside the red industrial Level5 corridor, where the white-and-red female-shaped machine braces a huge yellow drill weapon while the adventuring party advances behind her. Preserve the machine's white-red armor, cable tail, drill geometry, and every hero. The camera slides past the drill and rushes through sparks and violet crystal dust into the high-tech battle chamber shown exactly in Picture 2, where the blond swordsman blocks crossing purple energy blades between the same machines. Preserve faces, costumes, armor designs, weapons, anatomy, and detailed cinematic fantasy-anime style. End exactly on Picture 2. No graphic injury, dialogue, text, subtitles, logos, or watermarks."
+        },
+        {
+          "seed": 913402,
+          "prompt": "One continuous cinematic shot, no cuts. Begin exactly on Picture 1 in the high-tech battle chamber with the blond swordsman, black mechanical enemy, and white-red allied machine locked around crossing violet energy blades. Make a short controlled orbit around the sword clash as purple crystal fragments rise. The fragments spiral upward and become floating weapon modules, revealing the fox-eared female warrior standing in the radiant divine-armament formation shown exactly in Picture 2 with the blond swordsman and white-red machine beside her. Preserve every face, outfit, weapon, machine silhouette, anatomy, and polished cinematic fantasy-anime style. End exactly on Picture 2. No graphic injury, dialogue, text, subtitles, logos, or watermarks."
+        }
+      ]
+    }
+  ]
+}
