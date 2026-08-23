@@ -46,10 +46,12 @@
   const chapterNumber = document.getElementById("lv1-journey-chapter-number");
   const chapterTitle = document.getElementById("lv1-journey-chapter-title");
   const chapterSummary = document.getElementById("lv1-journey-summary");
-  const campaignCard = section?.querySelector(".campaign-card");
+  const campaignCard = section ? section.querySelector(".campaign-card") : null;
+  const motionToggle = section ? section.querySelector("[data-cinematic-motion-toggle]") : null;
+  const scrollLabel = section ? section.querySelector(".lv1-journey-scroll span") : null;
   const frameNumber = document.getElementById("lv1-journey-frame-number");
   const railButtons = Array.from(document.querySelectorAll("[data-lv1-chapter]"));
-  const videos = Array.from(document.querySelectorAll("[data-lv1-clip]"));
+  const videos = scenes.map((_scene, index) => document.querySelector(`[data-lv1-clip="${index}"]`));
 
   if (
     !section ||
@@ -60,8 +62,7 @@
     !chapterTitle ||
     !chapterSummary ||
     !campaignCard ||
-    !frameNumber ||
-    videos.length !== scenes.length
+    !frameNumber
   ) {
     return;
   }
@@ -72,23 +73,38 @@
     return t * t * (3 - 2 * t);
   };
 
-  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const motionPreferenceKey = "nyarban.cinematic-motion";
+  const motionQuery = typeof window.matchMedia === "function"
+    ? window.matchMedia("(prefers-reduced-motion: reduce)")
+    : null;
   const videoState = videos.map((video, index) => ({
     video,
     duration: 5.166,
     current: 0,
     target: 0,
     ready: false,
-    failed: false,
-    promoted: index === 0,
+    failed: !video,
+    promoted: Boolean(video && index === 0),
   }));
 
+  let storedMotionPreference = null;
+  try {
+    const storedValue = window.localStorage.getItem(motionPreferenceKey);
+    if (storedValue === "enabled" || storedValue === "reduced") {
+      storedMotionPreference = storedValue;
+    }
+  } catch (_error) {
+    // Storage can be unavailable in private browsing or local-file contexts.
+  }
+
+  let motionEnabled = false;
   let activeChapter = -1;
   let fallbackKey = "";
   let sectionTop = 0;
   let scrollDistance = 1;
   let renderQueued = false;
   let labelTransitionTimer = 0;
+  let preloadScheduled = false;
 
   const setFallback = (from, to, blend, local) => {
     const key = `${from}|${to}`;
@@ -150,11 +166,18 @@
 
   const promoteVideo = (index) => {
     const state = videoState[index];
-    if (!state || state.promoted || state.failed) return;
+    if (!state || !state.video || state.promoted || state.failed) return;
     state.promoted = true;
     state.video.preload = "auto";
-    state.video.load();
+    try {
+      state.video.load();
+    } catch (_error) {
+      state.failed = true;
+      updateMotionUI();
+    }
   };
+
+  const getScrollY = () => window.scrollY || window.pageYOffset || 0;
 
   const measure = () => {
     sectionTop = section.offsetTop;
@@ -163,7 +186,9 @@
 
   const render = () => {
     renderQueued = false;
-    const progress = clamp((window.scrollY - sectionTop) / scrollDistance);
+    if (!motionEnabled) return;
+
+    const progress = clamp((getScrollY() - sectionTop) / scrollDistance);
     const exact = progress * scenes.length;
     const segment = Math.min(scenes.length - 1, Math.floor(exact));
     const local = segment === scenes.length - 1 ? clamp(exact - segment) : exact - segment;
@@ -174,9 +199,14 @@
     promoteVideo(segment);
     promoteVideo(nextSegment);
 
+    const segmentState = videoState[segment];
+    const nextSegmentState = videoState[nextSegment];
+    const segmentReady = Boolean(segmentState && segmentState.video && segmentState.ready && !segmentState.failed);
+    const nextSegmentReady = Boolean(nextSegmentState && nextSegmentState.video && nextSegmentState.ready && !nextSegmentState.failed);
+
     videoState.forEach((state, index) => {
       state.target = index < segment ? 1 : index === segment ? local : 0;
-      if (state.ready && !state.failed) {
+      if (state.video && state.ready && !state.failed) {
         const lastFrame = Math.max(0, state.duration - 1 / 24);
         const destination = state.target * lastFrame;
         state.current = destination;
@@ -189,25 +219,111 @@
         }
       }
       let opacity = 0;
-      if (videoState[segment].ready) {
-        if (index === segment) opacity = videoState[nextSegment].ready ? 1 - crossfade : 1;
-        if (index === nextSegment && nextSegment !== segment && videoState[nextSegment].ready) {
+      if (segmentReady) {
+        if (index === segment) opacity = nextSegmentReady ? 1 - crossfade : 1;
+        if (index === nextSegment && nextSegment !== segment && nextSegmentReady) {
           opacity = crossfade;
         }
       }
-      state.video.style.opacity = opacity.toFixed(4);
+      if (state.video) state.video.style.opacity = opacity.toFixed(4);
     });
 
-    const videoActive = videoState[segment].ready;
-    stage.classList.toggle("is-video-active", videoActive);
+    stage.classList.toggle("is-video-active", segmentReady);
     section.style.setProperty("--lv1-progress", progress.toFixed(4));
     updateLabels(crossfade >= 0.5 ? nextSegment : segment);
   };
 
   const requestRender = () => {
-    if (renderQueued) return;
+    if (!motionEnabled || renderQueued) return;
     renderQueued = true;
     window.requestAnimationFrame(render);
+  };
+
+  const updateMotionUI = () => {
+    const hasMediaFallback = videoState.some((state) => state.failed);
+    section.classList.toggle("has-media-fallback", hasMediaFallback);
+    section.dataset.motion = motionEnabled ? "enabled" : "reduced";
+
+    if (scrollLabel) {
+      scrollLabel.textContent = motionEnabled ? "SCROLL TO JOURNEY" : "MOTION REDUCED";
+    }
+
+    if (!motionToggle) return;
+    const actionLabel = motionEnabled ? "映像演出をオフにする" : "映像演出を有効にする";
+    const fallbackNote = hasMediaFallback
+      ? " 一部の動画は静止画のスクロール演出で表示します。"
+      : "";
+    motionToggle.hidden = false;
+    motionToggle.textContent = motionEnabled ? "映像演出をOFF" : "映像演出をON";
+    motionToggle.setAttribute("aria-pressed", String(motionEnabled));
+    motionToggle.setAttribute("aria-label", actionLabel);
+    motionToggle.title = motionEnabled
+      ? `スクロール連動の映像演出は有効です。${fallbackNote}`
+      : `動きを抑えた表示です。押すとスクロール連動の映像演出を有効にします。${fallbackNote}`;
+  };
+
+  const resetToStaticView = () => {
+    stage.classList.remove("is-video-active");
+    section.style.setProperty("--lv1-progress", "0");
+    fallbackKey = "";
+    currentImage.src = scenes[0].first;
+    nextImage.src = scenes[0].last;
+    currentImage.style.opacity = "1";
+    currentImage.style.transform = "none";
+    nextImage.style.opacity = "0";
+    nextImage.style.transform = "none";
+    videoState.forEach((state) => {
+      if (state.video) state.video.style.opacity = "0";
+    });
+    activeChapter = -1;
+    updateLabels(0);
+  };
+
+  const schedulePreloadAll = () => {
+    if (preloadScheduled || !motionEnabled) return;
+    preloadScheduled = true;
+    const preloadAll = () => videoState.forEach((_state, index) => promoteVideo(index));
+    if ("requestIdleCallback" in window) {
+      window.requestIdleCallback(preloadAll, { timeout: 2800 });
+    } else {
+      window.setTimeout(preloadAll, 1200);
+    }
+  };
+
+  const setMotionEnabled = (enabled, persistPreference) => {
+    measure();
+    const wasEnabled = motionEnabled;
+    const currentScroll = getScrollY();
+    const isInsideJourney = currentScroll > sectionTop && currentScroll < sectionTop + section.offsetHeight;
+
+    if (wasEnabled && !enabled && isInsideJourney) {
+      window.scrollTo(0, sectionTop);
+    }
+
+    motionEnabled = Boolean(enabled);
+    document.body.classList.toggle("lv1-motion-enabled", motionEnabled);
+    document.body.classList.toggle("lv1-motion-reduced", !motionEnabled);
+    section.classList.toggle("is-enhanced", motionEnabled);
+
+    if (persistPreference) {
+      storedMotionPreference = motionEnabled ? "enabled" : "reduced";
+      try {
+        window.localStorage.setItem(motionPreferenceKey, storedMotionPreference);
+      } catch (_error) {
+        // The in-page choice still applies for this visit when storage is blocked.
+      }
+    }
+
+    updateMotionUI();
+    if (motionEnabled) {
+      measure();
+      promoteVideo(0);
+      render();
+      schedulePreloadAll();
+    } else {
+      resetToStaticView();
+      measure();
+    }
   };
 
   const jumpToChapter = (chapterIndex) => {
@@ -215,7 +331,7 @@
     const progress = chapterIndex / scenes.length;
     window.scrollTo({
       top: sectionTop + progress * scrollDistance,
-      behavior: prefersReducedMotion ? "auto" : "smooth",
+      behavior: motionEnabled ? "smooth" : "auto",
     });
   };
 
@@ -225,19 +341,11 @@
     });
   });
 
-  if (prefersReducedMotion) {
-    const scrollLabel = section.querySelector(".lv1-journey-scroll span");
-    if (scrollLabel) scrollLabel.textContent = "MOTION REDUCED";
-    currentImage.style.opacity = "1";
-    currentImage.style.transform = "none";
-    nextImage.style.opacity = "0";
-    updateLabels(0);
-    return;
-  }
-
   videoState.forEach((state) => {
+    if (!state.video) return;
+
     const markMetadata = () => {
-      if (Number.isFinite(state.video.duration) && state.video.duration > 0) {
+      if (typeof state.video.duration === "number" && isFinite(state.video.duration) && state.video.duration > 0) {
         state.duration = state.video.duration;
       }
       requestRender();
@@ -247,11 +355,15 @@
       state.ready = true;
       state.failed = false;
       state.video.pause();
+      updateMotionUI();
       requestRender();
     };
 
     state.video.muted = true;
+    state.video.defaultMuted = true;
     state.video.playsInline = true;
+    state.video.setAttribute("muted", "");
+    state.video.setAttribute("playsinline", "");
     state.video.addEventListener("loadedmetadata", markMetadata);
     state.video.addEventListener("loadeddata", markReady);
     state.video.addEventListener("canplay", markReady);
@@ -259,15 +371,15 @@
       state.failed = true;
       state.ready = false;
       state.video.style.opacity = "0";
+      updateMotionUI();
       requestRender();
     });
 
-    if (state.video.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) markReady();
+    const haveCurrentData = typeof HTMLMediaElement === "undefined"
+      ? 2
+      : HTMLMediaElement.HAVE_CURRENT_DATA;
+    if (state.video.readyState >= haveCurrentData) markReady();
   });
-
-  section.classList.add("is-enhanced");
-  measure();
-  render();
 
   window.addEventListener("scroll", requestRender, { passive: true });
   window.addEventListener("resize", () => {
@@ -278,10 +390,27 @@
     if (!document.hidden) requestRender();
   });
 
-  const preloadAll = () => videoState.forEach((_, index) => promoteVideo(index));
-  if ("requestIdleCallback" in window) {
-    window.requestIdleCallback(preloadAll, { timeout: 2800 });
-  } else {
-    window.setTimeout(preloadAll, 1200);
+  if (motionToggle) {
+    motionToggle.addEventListener("click", () => {
+      setMotionEnabled(!motionEnabled, true);
+    });
   }
+
+  const handleSystemMotionChange = (event) => {
+    if (storedMotionPreference === null) {
+      setMotionEnabled(!event.matches, false);
+    }
+  };
+  if (motionQuery) {
+    if (typeof motionQuery.addEventListener === "function") {
+      motionQuery.addEventListener("change", handleSystemMotionChange);
+    } else if (typeof motionQuery.addListener === "function") {
+      motionQuery.addListener(handleSystemMotionChange);
+    }
+  }
+
+  const systemRequestsReducedMotion = Boolean(motionQuery && motionQuery.matches);
+  const initialMotionEnabled = storedMotionPreference === "enabled"
+    || (storedMotionPreference === null && !systemRequestsReducedMotion);
+  setMotionEnabled(initialMotionEnabled, false);
 })();

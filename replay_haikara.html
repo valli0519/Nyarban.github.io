@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="replay.css?v=6">
   <link rel="preload" as="image" href="img/cinematic-scenes/haikara/ch01-01-door.webp" fetchpriority="high">
-  <link rel="stylesheet" href="lv1-scroll.css?v=4">
+  <link rel="stylesheet" href="lv1-scroll.css?v=5">
   <link rel="stylesheet" href="haikara-scroll.css?v=1">
   <script>
     // ★追加: このページ（キャンペーン）専用のIDを設定します。
@@ -42,7 +42,10 @@
 
       <div class="lv1-journey-topbar">
         <span>HAIKARA CLUB · PERSONA REPLAY</span>
-        <a href="#chapter-index">目次へスキップ</a>
+        <div class="lv1-journey-actions">
+          <button type="button" class="lv1-motion-toggle" data-cinematic-motion-toggle hidden>映像演出をON</button>
+          <a href="#chapter-index">目次へスキップ</a>
+        </div>
       </div>
 
       <div class="lv1-journey-copy">
@@ -136,7 +139,7 @@
 
   <!-- キャンペーン用のシーンデータJSを読み込むべし。 -->
   <script src="scenes_data_haikara.js?v=1"></script>
-  <script src="haikara-scroll.js?v=1"></script>
+  <script src="haikara-scroll.js?v=2"></script>
   <script src="replay-enhance.js?v=6"></script>
 
   <!-- コメント欄 -->

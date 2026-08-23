@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="replay.css?v=6">
   <link rel="preload" as="image" href="img/scroll-lv1-2nd/01-mountain.webp" fetchpriority="high">
-  <link rel="stylesheet" href="lv1-scroll.css?v=4">
+  <link rel="stylesheet" href="lv1-scroll.css?v=5">
   <script>
     // ★追加: このページ（キャンペーン）専用のIDを設定します。
     // 別のリプレイを作る時は、ここを "lv2_replay" など別の名前に変更してください。
@@ -51,7 +51,10 @@
 
       <div class="lv1-journey-topbar">
         <span>NYARLATHOTEP BANZAI · REPLAY ARCHIVE</span>
-        <a href="#chapter-index">目次へスキップ</a>
+        <div class="lv1-journey-actions">
+          <button type="button" class="lv1-motion-toggle" data-cinematic-motion-toggle hidden>映像演出をON</button>
+          <a href="#chapter-index">目次へスキップ</a>
+        </div>
       </div>
 
       <div class="lv1-journey-copy">
@@ -148,7 +151,7 @@
   <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore-compat.js"></script>
 
   <!-- キャンペーン用のシーンデータJSを読み込むべし。 -->
-  <script src="lv1-scroll.js?v=5"></script>
+  <script src="lv1-scroll.js?v=6"></script>
   <script src="scenes_data_lv1_2nd.js?v=5"></script>
   <script src="replay-enhance.js?v=6"></script>
 

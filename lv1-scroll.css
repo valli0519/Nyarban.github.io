@@ -8,11 +8,12 @@
   --lv1-gold: #d9b96e;
   --lv1-night: #07090c;
   background-color: var(--lv1-night);
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body.lv1-scroll-page #replay-header.lv1-journey {
   position: relative;
+  min-height: 100vh;
   min-height: 100svh;
   margin: 0;
   padding: 0;
@@ -28,6 +29,7 @@ body.lv1-scroll-page #replay-header.lv1-journey.is-enhanced {
   position: relative;
   z-index: 1;
   width: 100%;
+  height: 100vh;
   height: 100svh;
   min-height: 620px;
   overflow: hidden;
@@ -36,6 +38,7 @@ body.lv1-scroll-page #replay-header.lv1-journey.is-enhanced {
 }
 
 .lv1-journey.is-enhanced .lv1-journey-shell {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
@@ -137,6 +140,53 @@ body.lv1-scroll-page #replay-header.lv1-journey.is-enhanced {
 .lv1-journey-topbar a:hover,
 .lv1-journey-topbar a:focus-visible {
   color: var(--lv1-gold);
+}
+
+.lv1-journey-actions {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: clamp(10px, 1.5vw, 22px);
+}
+
+.lv1-motion-toggle {
+  -webkit-appearance: none;
+  appearance: none;
+  min-height: 30px;
+  padding: 5px 11px;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 999px;
+  color: var(--lv1-paper);
+  background: rgba(7, 11, 17, 0.34);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.14);
+  font: inherit;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: color 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.lv1-motion-toggle[hidden] {
+  display: none;
+}
+
+.lv1-motion-toggle[aria-pressed="false"] {
+  border-color: rgba(217, 185, 110, 0.72);
+  color: #fff5d6;
+  background: rgba(73, 55, 22, 0.42);
+}
+
+.lv1-motion-toggle:hover,
+.lv1-motion-toggle:focus-visible {
+  border-color: var(--lv1-gold);
+  color: #fff;
+  background: rgba(7, 11, 17, 0.68);
+  outline: none;
+}
+
+.lv1-motion-toggle:focus-visible {
+  box-shadow: 0 0 0 3px rgba(217, 185, 110, 0.28);
 }
 
 .lv1-journey-copy {
@@ -585,10 +635,20 @@ body.lv1-scroll-page > .replay-container {
   }
 
   .lv1-journey-topbar > span {
-    max-width: 56vw;
+    max-width: 38vw;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+
+  .lv1-journey-actions {
+    gap: 7px;
+  }
+
+  .lv1-motion-toggle {
+    min-height: 27px;
+    padding: 4px 8px;
+    letter-spacing: 0.04em;
   }
 
   .lv1-journey-copy {
@@ -698,6 +758,7 @@ body.lv1-scroll-page > .replay-container {
   }
 
   .lv1-journey .campaign-card {
+    max-height: calc(100vh - 190px);
     max-height: calc(100svh - 190px);
     overflow-y: auto;
   }
@@ -713,32 +774,70 @@ body.lv1-scroll-page > .replay-container {
   }
 }
 
+body.lv1-scroll-page.lv1-motion-reduced #replay-header.lv1-journey,
+body.lv1-scroll-page.lv1-motion-reduced #replay-header.lv1-journey.is-enhanced {
+  height: auto;
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+body.lv1-scroll-page.lv1-motion-reduced .lv1-journey-shell,
+body.lv1-scroll-page.lv1-motion-reduced .lv1-journey.is-enhanced .lv1-journey-shell {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+body.lv1-scroll-page.lv1-motion-reduced .lv1-journey-frame {
+  transform: none !important;
+}
+
+body.lv1-scroll-page.lv1-motion-reduced .lv1-journey-frame.is-next,
+body.lv1-scroll-page.lv1-motion-reduced .lv1-journey-clip,
+body.lv1-scroll-page.lv1-motion-reduced .lv1-journey-rail,
+body.lv1-scroll-page.lv1-motion-reduced .lv1-journey-progress,
+body.lv1-scroll-page.lv1-motion-reduced .lv1-journey-count {
+  display: none;
+}
+
+body.lv1-scroll-page.lv1-motion-reduced .lv1-journey-scroll i::after,
+body.lv1-scroll-page.lv1-motion-reduced .campaign-card.is-updating .lv1-journey-kicker,
+body.lv1-scroll-page.lv1-motion-reduced .campaign-card.is-updating .lv1-journey-title,
+body.lv1-scroll-page.lv1-motion-reduced .campaign-card.is-updating .campaign-desc {
+  animation: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  body.lv1-scroll-page #replay-header.lv1-journey,
-  body.lv1-scroll-page #replay-header.lv1-journey.is-enhanced {
+  body.lv1-scroll-page:not(.lv1-motion-enabled) #replay-header.lv1-journey,
+  body.lv1-scroll-page:not(.lv1-motion-enabled) #replay-header.lv1-journey.is-enhanced {
     height: auto;
+    min-height: 100vh;
     min-height: 100svh;
   }
 
-  .lv1-journey-shell,
-  .lv1-journey.is-enhanced .lv1-journey-shell {
+  body.lv1-scroll-page:not(.lv1-motion-enabled) .lv1-journey-shell,
+  body.lv1-scroll-page:not(.lv1-motion-enabled) .lv1-journey.is-enhanced .lv1-journey-shell {
     position: relative;
+    min-height: 100vh;
     min-height: 100svh;
   }
 
-  .lv1-journey-frame {
+  body.lv1-scroll-page:not(.lv1-motion-enabled) .lv1-journey-frame {
     transform: none !important;
   }
 
-  .lv1-journey-frame.is-next,
-  .lv1-journey-clip,
-  .lv1-journey-rail,
-  .lv1-journey-progress,
-  .lv1-journey-count {
+  body.lv1-scroll-page:not(.lv1-motion-enabled) .lv1-journey-frame.is-next,
+  body.lv1-scroll-page:not(.lv1-motion-enabled) .lv1-journey-clip,
+  body.lv1-scroll-page:not(.lv1-motion-enabled) .lv1-journey-rail,
+  body.lv1-scroll-page:not(.lv1-motion-enabled) .lv1-journey-progress,
+  body.lv1-scroll-page:not(.lv1-motion-enabled) .lv1-journey-count {
     display: none;
   }
 
-  .lv1-journey-scroll i::after {
+  body.lv1-scroll-page:not(.lv1-motion-enabled) .lv1-journey-scroll i::after,
+  body.lv1-scroll-page:not(.lv1-motion-enabled) .campaign-card.is-updating .lv1-journey-kicker,
+  body.lv1-scroll-page:not(.lv1-motion-enabled) .campaign-card.is-updating .lv1-journey-title,
+  body.lv1-scroll-page:not(.lv1-motion-enabled) .campaign-card.is-updating .campaign-desc {
     animation: none;
   }
 }
