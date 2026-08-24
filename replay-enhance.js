@@ -80,6 +80,41 @@ document.addEventListener("DOMContentLoaded", () => {
   const navContainer = document.getElementById("dynamic-nav") || document.querySelector(".replay-nav");
   const accordionContainer = document.getElementById("scene-accordion");
 
+  function formatSceneTitle(scene, prefix, sceneNumber) {
+    let displayTitle = scene.title || "";
+    if (!displayTitle.includes("シーン") && !displayTitle.includes("幕間") && !displayTitle.includes("外伝")) {
+      // 全サイト統一: 「シーン」文言を付けず <prefix>-<no>: <title> 形式
+      displayTitle = `${prefix}-${sceneNumber}: ${displayTitle}`;
+    }
+    return displayTitle;
+  }
+
+  function appendSceneList(sceneUl, scenes, prefix, chapterNum, startIndex) {
+    let nextIndex = startIndex;
+    scenes.forEach((scene, sceneIndex) => {
+      const sceneId = `ch${chapterNum}-sc${nextIndex}`;
+      window.SCENES_MAP[sceneId] = scene;
+
+      const scLi = document.createElement("li");
+      const scA = document.createElement("a");
+      scA.href = "#";
+      scA.setAttribute("data-scene", sceneId);
+      scA.textContent = formatSceneTitle(scene, prefix, sceneIndex + 1);
+      scLi.appendChild(scA);
+      sceneUl.appendChild(scLi);
+      nextIndex += 1;
+    });
+    return nextIndex;
+  }
+
+  function setSceneGroupOpen(button, shouldOpen) {
+    const groupPanel = document.getElementById(button.getAttribute("data-target"));
+    if (!groupPanel) return;
+    groupPanel.hidden = !shouldOpen;
+    button.setAttribute("aria-expanded", shouldOpen ? "true" : "false");
+    button.classList.toggle("is-open", shouldOpen);
+  }
+
   if (window.ALL_CHAPTERS && navContainer && accordionContainer) {
     navContainer.innerHTML = "";
     accordionContainer.innerHTML = "";
@@ -119,39 +154,86 @@ document.addEventListener("DOMContentLoaded", () => {
       filterInput.placeholder = "シーンを検索…";
       panelDiv.appendChild(filterInput);
 
-      const sceneUl = document.createElement("ul");
-      sceneUl.className = "scene-list";
-
       const displayChapterNum = chapterData.chapterPrefix || chapterNum;
-      const isSpecialChapter = isNaN(parseFloat(displayChapterNum));
+      const sceneGroups = Array.isArray(chapterData.sceneGroups)
+        ? chapterData.sceneGroups.filter((group) => Array.isArray(group.scenes))
+        : [];
 
-      if (chapterData.scenes && chapterData.scenes.length > 0) {
-        chapterData.scenes.forEach((scene, scIndex) => {
-          const sceneId = `ch${chapterNum}-sc${scIndex}`;
-          window.SCENES_MAP[sceneId] = scene;
+      if (sceneGroups.length > 0) {
+        const groupsContainer = document.createElement("div");
+        groupsContainer.className = "scene-groups";
+        let chapterSceneIndex = 0;
 
-          let displayTitle = scene.title || "";
-          if (!displayTitle.includes("シーン") && !displayTitle.includes("幕間") && !displayTitle.includes("外伝")) {
-            // 全サイト統一: 「シーン」文言を付けず <prefix>-<no>: <title> 形式
-            displayTitle = `${displayChapterNum}-${scIndex + 1}: ${displayTitle}`;
-          }
+        sceneGroups.forEach((group, groupIndex) => {
+          const groupId = `${panelId}-group-${groupIndex + 1}`;
+          const groupPrefix = group.groupPrefix || `${displayChapterNum}-${groupIndex + 1}`;
+          const groupSection = document.createElement("section");
+          groupSection.className = "scene-group";
 
-          const scLi = document.createElement("li");
-          const scA = document.createElement("a");
-          scA.href = "#";
-          scA.setAttribute("data-scene", sceneId);
-          scA.textContent = displayTitle;
-          scLi.appendChild(scA);
-          sceneUl.appendChild(scLi);
+          const groupToggle = document.createElement("button");
+          groupToggle.type = "button";
+          groupToggle.className = "scene-group-toggle";
+          groupToggle.setAttribute("data-target", groupId);
+          groupToggle.setAttribute("aria-controls", groupId);
+          groupToggle.setAttribute("aria-expanded", "false");
+
+          const groupHeading = document.createElement("span");
+          groupHeading.className = "scene-group-heading";
+
+          const groupLabel = document.createElement("span");
+          groupLabel.className = "scene-group-label";
+          groupLabel.textContent = group.groupLabel || `ACT ${groupIndex + 1}`;
+
+          const groupName = document.createElement("strong");
+          groupName.className = "scene-group-name";
+          groupName.textContent = group.groupName || `第${groupIndex + 1}幕`;
+
+          const groupCount = document.createElement("span");
+          groupCount.className = "scene-group-count";
+          groupCount.textContent = `${group.scenes.length} SCENES`;
+
+          groupHeading.appendChild(groupLabel);
+          groupHeading.appendChild(groupName);
+          groupToggle.appendChild(groupHeading);
+          groupToggle.appendChild(groupCount);
+
+          const groupPanel = document.createElement("div");
+          groupPanel.id = groupId;
+          groupPanel.className = "scene-group-panel";
+          groupPanel.hidden = true;
+
+          const groupSceneUl = document.createElement("ul");
+          groupSceneUl.className = "scene-list scene-group-list";
+          chapterSceneIndex = appendSceneList(
+            groupSceneUl,
+            group.scenes,
+            groupPrefix,
+            chapterNum,
+            chapterSceneIndex
+          );
+
+          groupPanel.appendChild(groupSceneUl);
+          groupSection.appendChild(groupToggle);
+          groupSection.appendChild(groupPanel);
+          groupsContainer.appendChild(groupSection);
         });
+
+        panelDiv.appendChild(groupsContainer);
+      } else if (chapterData.scenes && chapterData.scenes.length > 0) {
+        const sceneUl = document.createElement("ul");
+        sceneUl.className = "scene-list";
+        appendSceneList(sceneUl, chapterData.scenes, displayChapterNum, chapterNum, 0);
+        panelDiv.appendChild(sceneUl);
       } else {
+        const sceneUl = document.createElement("ul");
+        sceneUl.className = "scene-list";
         const emptyLi = document.createElement("li");
         emptyLi.textContent = "まだシーンがありません";
         emptyLi.style.color = "#888";
         sceneUl.appendChild(emptyLi);
+        panelDiv.appendChild(sceneUl);
       }
 
-      panelDiv.appendChild(sceneUl);
       accLi.appendChild(panelDiv);
       accordionContainer.appendChild(accLi);
     });
@@ -181,6 +263,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  document.querySelectorAll(".scene-group-toggle").forEach(btn => {
+    btn.addEventListener("click", () => {
+      setSceneGroupOpen(btn, btn.getAttribute("aria-expanded") !== "true");
+    });
+  });
+
   document.querySelectorAll(".replay-nav a").forEach(el => {
     const tgt = el.getAttribute("href");
     if (tgt && tgt.startsWith("#panel-")) {
@@ -199,12 +287,22 @@ document.addEventListener("DOMContentLoaded", () => {
     input.addEventListener("input", () => {
       const panel = input.closest(".scene-panel");
       if (!panel) return;
-      const list = panel.querySelector(".scene-list");
-      if (!list) return;
       const f = input.value.trim().toLowerCase();
-      list.querySelectorAll("li").forEach(li => {
-        if(li.querySelector("a")) {
-          li.style.display = (!f || li.textContent.toLowerCase().includes(f)) ? "" : "none";
+
+      panel.querySelectorAll("a[data-scene]").forEach(link => {
+        const item = link.closest("li");
+        if (!item) return;
+        item.hidden = Boolean(f) && !link.textContent.toLowerCase().includes(f);
+      });
+
+      panel.querySelectorAll(".scene-group").forEach(group => {
+        const matchingLink = Array.from(group.querySelectorAll("a[data-scene]"))
+          .some(link => !link.closest("li").hidden);
+        group.hidden = Boolean(f) && !matchingLink;
+
+        if (f && matchingLink) {
+          const groupToggle = group.querySelector(".scene-group-toggle");
+          if (groupToggle) setSceneGroupOpen(groupToggle, true);
         }
       });
     });

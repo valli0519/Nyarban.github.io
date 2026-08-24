@@ -157,6 +157,104 @@
     padding-left: 20px;
 }
 
+/* ── Nested scene groups (chapter → act → scenes) ── */
+.scene-groups {
+    display: grid;
+    gap: 18px;
+}
+
+.scene-group {
+    overflow: hidden;
+    background: linear-gradient(145deg, rgba(35, 35, 45, 0.96), rgba(18, 18, 24, 0.96));
+    border: 1px solid #3a3a46;
+    border-radius: 8px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+.scene-group[hidden],
+.scene-group-panel[hidden],
+.scene-list li[hidden] {
+    display: none;
+}
+
+.scene-group-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 16px 20px;
+    color: #f4f4f6;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.scene-group-toggle:hover,
+.scene-group-toggle:focus-visible,
+.scene-group-toggle.is-open {
+    background: rgba(255, 255, 255, 0.045);
+}
+
+.scene-group-toggle:focus-visible {
+    outline: 2px solid var(--accent-green);
+    outline-offset: -2px;
+}
+
+.scene-group-toggle::after {
+    content: "▼";
+    flex: 0 0 auto;
+    color: var(--accent-green);
+    font-size: 0.72rem;
+    transition: transform 0.2s ease;
+}
+
+.scene-group-toggle.is-open::after {
+    transform: rotate(180deg);
+}
+
+.scene-group-heading {
+    min-width: 0;
+    flex: 1 1 auto;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+}
+
+.scene-group-label {
+    flex: 0 0 auto;
+    color: var(--accent-purple);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+}
+
+.scene-group-name {
+    overflow-wrap: anywhere;
+    color: var(--accent-green);
+    font-size: 1.08rem;
+    line-height: 1.4;
+}
+
+.scene-group-count {
+    flex: 0 0 auto;
+    color: #a9a9b3;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.scene-group-panel {
+    padding: 16px 18px 20px;
+    border-top: 1px solid #353540;
+    background: rgba(8, 8, 12, 0.42);
+}
+
+.scene-group-list {
+    margin: 0;
+}
+
 /* ── Modal (Scene Content) ── */
 .scene-popup {
     display: none;
@@ -250,6 +348,26 @@
 
     .scene-list {
         grid-template-columns: 1fr;
+    }
+
+    .scene-group-toggle {
+        align-items: flex-start;
+        gap: 10px;
+        padding: 14px;
+    }
+
+    .scene-group-heading {
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .scene-group-count {
+        padding-top: 3px;
+        font-size: 0.66rem;
+    }
+
+    .scene-group-panel {
+        padding: 12px;
     }
 
     .popup-content {
