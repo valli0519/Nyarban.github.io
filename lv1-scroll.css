@@ -22,7 +22,7 @@ body.lv1-scroll-page #replay-header.lv1-journey {
 }
 
 body.lv1-scroll-page #replay-header.lv1-journey.is-enhanced {
-  height: 650vh;
+  height: var(--lv1-scroll-height, 650vh);
 }
 
 .lv1-journey-shell {
@@ -612,7 +612,7 @@ body.lv1-scroll-page > .replay-container {
 
 @media (max-width: 700px) {
   body.lv1-scroll-page #replay-header.lv1-journey.is-enhanced {
-    height: 520vh;
+    height: var(--lv1-scroll-height-mobile, 520vh);
   }
 
   .lv1-journey-shell {

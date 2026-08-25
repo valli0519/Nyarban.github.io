@@ -128,9 +128,6 @@ def load_manifest(path: Path) -> tuple[Path, list[dict]]:
         if len(frames) < 2 or len(web_frames) != len(frames) or len(transitions) != len(frames) - 1:
             raise RuntimeError(f"Invalid frame/transition counts for {job_id}")
         relative_path(REPO_ROOT, job["output"])
-        for source in frames:
-            if not relative_path(source_root, source).is_file():
-                raise FileNotFoundError(relative_path(source_root, source))
         for web_frame in web_frames:
             relative_path(REPO_ROOT, web_frame)
     return source_root, jobs
@@ -512,6 +509,14 @@ def main() -> int:
         raise RuntimeError(f"Unknown job ids: {', '.join(sorted(unknown))}")
     if not selected:
         raise RuntimeError("No jobs selected")
+
+    # Validate only the selected jobs. Source CG folders are revised over time,
+    # so an older, unrelated manifest entry must not block a targeted rerun.
+    for job in selected:
+        for source in job["source_frames"]:
+            source_path = relative_path(source_root, source)
+            if not source_path.is_file():
+                raise FileNotFoundError(source_path)
 
     if args.prepare_only:
         for job in selected:

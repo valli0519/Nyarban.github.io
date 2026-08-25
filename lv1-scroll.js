@@ -37,6 +37,27 @@
       first: "img/cinematic-scenes/lv1_2nd/ch05-01-night-flight.webp",
       last: "img/cinematic-scenes/lv1_2nd/ch05-03-ritual.webp",
     },
+    {
+      number: "06",
+      title: "アルダニスの決戦",
+      summary: "神殿都市を越え、一行は大陸都市アルダニスへ。歓楽街、闘技場、舞踏会が華やぐ一方、その裏では陰謀が幾重にも絡み合う。翼竜の襲来を退け、大闘技大会を勝ち抜いた先で、新たな仲間と次なる戦いへの旗が上がる。",
+      first: "img/cinematic-scenes/lv1_2nd/ch06-01-grand-arena.webp",
+      last: "img/cinematic-scenes/lv1_2nd/ch06-03-victory.webp",
+    },
+    {
+      number: "6.5",
+      title: "東方編",
+      summary: "オオドとウツミヤを巡り、人と半妖の間に横たわる境界へ踏み込む東方の旅。桃都を襲う百鬼夜行との戦いを経て、敵味方を隔てていた線がほどけていく。最後に残るのは、花火の下で結び直された縁と笑顔だった。",
+      first: "img/cinematic-scenes/lv1_2nd/ch065-01-peach-city.webp",
+      last: "img/cinematic-scenes/lv1_2nd/ch065-03-fireworks.webp",
+    },
+    {
+      number: "07",
+      title: "祖竜聖杯戦争　約束の刻来たれり",
+      summary: "聖杯を巡り、国家と勢力が激突する大戦争。舞台は白亜の王城を擁する大都市ログレス。祖竜ティアマト、魔女モルガン、円卓の騎士たちが交錯する中、クラウドたちは竜骸の回廊へ挑む。喪失と誓いの果てに、帰る場所を取り戻す。",
+      first: "img/cinematic-scenes/lv1_2nd/ch07-01-star-splitting-sword.webp",
+      last: "img/cinematic-scenes/lv1_2nd/ch07-03-homecoming.webp",
+    },
   ];
 
   const section = document.getElementById("replay-header");
@@ -66,6 +87,9 @@
   ) {
     return;
   }
+
+  section.style.setProperty("--lv1-scroll-height", `${scenes.length * 130}vh`);
+  section.style.setProperty("--lv1-scroll-height-mobile", `${scenes.length * 104}vh`);
 
   const clamp = (value, min = 0, max = 1) => Math.min(max, Math.max(min, value));
   const smoothstep = (value) => {

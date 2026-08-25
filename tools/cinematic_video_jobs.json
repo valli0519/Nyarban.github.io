@@ -113,6 +113,90 @@
           "prompt": "One continuous cinematic shot, no cuts. Begin exactly on Picture 1 in the high-tech battle chamber with the blond swordsman, black mechanical enemy, and white-red allied machine locked around crossing violet energy blades. Make a short controlled orbit around the sword clash as purple crystal fragments rise. The fragments spiral upward and become floating weapon modules, revealing the fox-eared female warrior standing in the radiant divine-armament formation shown exactly in Picture 2 with the blond swordsman and white-red machine beside her. Preserve every face, outfit, weapon, machine silhouette, anatomy, and polished cinematic fantasy-anime style. End exactly on Picture 2. No graphic injury, dialogue, text, subtitles, logos, or watermarks."
         }
       ]
+    },
+    {
+      "id": "lv1-ch06-arena-victory",
+      "campaign": "lv1_2nd",
+      "chapter": "6",
+      "title": "大闘技場から翼竜襲来、優勝の旗揚げへ",
+      "priority": 96,
+      "source_frames": [
+        "CG_Lv1_2nd/6章/6-09_sc_jyhuxtawv_中央街、大闘技場を見据えて.png",
+        "CG_Lv1_2nd/6章/6-221_sc_ch6_221_5512eadabc_MASTER SCENE、空から来た翼竜を強者が迎撃する.png",
+        "CG_Lv1_2nd/6章/6-376_sc_ch6_376_311ee91e40_優勝直後の旗揚げ、アベンジャーズは送迎付き.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch06-01-grand-arena.webp",
+        "img/cinematic-scenes/lv1_2nd/ch06-02-wyvern-assault.webp",
+        "img/cinematic-scenes/lv1_2nd/ch06-03-victory.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch06-arena-to-victory-720p.mp4",
+      "transitions": [
+        {
+          "seed": 913501,
+          "prompt": "One continuous cinematic shot, no cuts. Begin exactly on Picture 1 in the sunlit central plaza: the blond swordsman, the tall fox-eared archer, the horned white-and-red armored knight, and the small white-haired elf mage stand with their backs to the camera, looking toward the monumental circular arena. Preserve their exact silhouettes, clothing, weapons, anatomy, and left-to-right order. Slowly push forward through the moving crowd as banners, hair, capes, and a few pale petals stir in the breeze. A vast dragon shadow crosses the plaza; blue daylight darkens into a fast storm and the camera rises over the arena wall through dust and wind. Resolve exactly into Picture 2, the packed arena under attack by wyverns while the armored heroes, flying machines, swordsmen, and defenders intercept them. Keep every endpoint character and machine distinct; do not merge, duplicate, or replace them. End exactly on Picture 2 in the same polished cinematic fantasy-anime illustration style. No graphic injury, dialogue, text, subtitles, logos, or watermarks."
+        },
+        {
+          "seed": 913502,
+          "prompt": "One continuous cinematic shot, no cuts. Begin exactly on Picture 1 in the storm-darkened arena, with wyverns diving above the red armored knight, airborne machines, and assembled defenders. Preserve every visible hero, machine design, weapon, dragon, and the arena architecture. Make a controlled rising arc around the central red knight while energy vortices, dust, capes, and distant wings move naturally. The defenders' combined light sweeps across the lens; the storm opens into warm golden daylight, battle debris becomes white confetti, and the same arena crowd rises in celebration. Reveal Picture 2 exactly: the blond swordsman stands on the victory platform with one fist raised, flanked by the blond woman in black and the tall black-suited man, while companions cheer from below. Preserve all faces, outfits, anatomy, crowd scale, banners, and composition. End exactly on Picture 2. No graphic injury, dialogue, text, subtitles, logos, or watermarks."
+        }
+      ]
+    },
+    {
+      "id": "lv1-ch065-peach-fireworks",
+      "campaign": "lv1_2nd",
+      "chapter": "6.5",
+      "title": "桃都の日常から百鬼夜行、縁を結ぶ花火へ",
+      "priority": 95,
+      "source_frames": [
+        "CG_Lv1_2nd/6.5章/6.5-1_sc_yufyobo2l_笑声満ちる桃の都-v2.png",
+        "CG_Lv1_2nd/6.5章/6.5-43_sc_3otjuek9x_戦端、平原を裂く.png",
+        "CG_Lv1_2nd/6.5章/6.5-66_sc_uout4y0ju_縁という名の絆.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch065-01-peach-city.webp",
+        "img/cinematic-scenes/lv1_2nd/ch065-02-battlefield.webp",
+        "img/cinematic-scenes/lv1_2nd/ch065-03-fireworks.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch065-peach-city-to-fireworks-720p.mp4",
+      "transitions": [
+        {
+          "seed": 913601,
+          "prompt": "One continuous cinematic shot, no cuts. Begin exactly on Picture 1 on a bright willow-lined street in the Japanese castle town: the tall brown-haired fox-eared archer in black-and-gold adventuring gear speaks with the small white-haired elf in a lavender floral kimono holding three dark bottles. Preserve their exact faces, ears, hair, hands, clothing, bottles, anatomy, rooftops, and sunny atmosphere. Drift backward and upward as willow leaves and hair move gently, then let a distant alarm send wind down the street. The two women turn toward the horizon; daylight deepens to a fiery sunset and streams of gold and blue magic sweep across the lens. Resolve exactly into Picture 2, where the same fox-eared archer fires a vast arrow volley while the same elf flies beside her over two opposing armies and the castle plain. Allow their clothing to change only as required by Picture 2. Preserve the army scale, castle, weapons, anatomy, and detailed cinematic fantasy-anime style. End exactly on Picture 2. No graphic injury, dialogue, text, subtitles, logos, or watermarks."
+        },
+        {
+          "seed": 913602,
+          "prompt": "One continuous cinematic shot, no cuts. Begin exactly on Picture 1 at sunset above the Japanese battlefield: the fox-eared archer is airborne releasing a sweeping gold-and-blue arrow storm while the white-haired elf mage flies at her side, with the castle and massed armies below. Preserve both women, their faces, ears, hair, outfits, weapons, anatomy, and the landscape. Follow the leading arrow across the field as the magical volleys neutralize one another without graphic harm; dust settles, banners lower, and the sunset fades into a clear festival night. The arrow becomes the first blue-violet firework and the camera glides into the crowded old-town street shown exactly in Picture 2, where the reunited heroes and townspeople look upward together. Preserve every endpoint character, armor design, staff, faces, anatomy, lanterns, buildings, and fireworks; do not merge or duplicate people. End exactly on Picture 2. No dialogue, text, subtitles, logos, or watermarks."
+        }
+      ]
+    },
+    {
+      "id": "lv1-ch07-star-homecoming",
+      "campaign": "lv1_2nd",
+      "chapter": "7",
+      "title": "星を割く剣から空挺侵攻、帰る場所への凱旋へ",
+      "priority": 94,
+      "source_frames": [
+        "CG_Lv1_2nd/7章/7-01_sc_1rlpmhwnp_前日譚_星を割く剣.png",
+        "CG_Lv1_2nd/7章/7-365_sc_lf9ky2c1k_クライマックスフェイズ開幕：クラウドの最大の貢献.png",
+        "CG_Lv1_2nd/7章/7-528_sc_3lrlyox52_大団円、帰る場所へ.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch07-01-star-splitting-sword.webp",
+        "img/cinematic-scenes/lv1_2nd/ch07-02-sky-invasion.webp",
+        "img/cinematic-scenes/lv1_2nd/ch07-03-homecoming.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch07-star-sword-to-homecoming-720p.mp4",
+      "transitions": [
+        {
+          "seed": 913701,
+          "prompt": "One continuous cinematic shot, no cuts. Begin exactly on Picture 1 at night outside the vast gothic city wall: the blond swordsman in black swings his enormous wrapped iron sword upward and a blue-white arc shatters the attacking dark dragons above him. Preserve his exact face, hair, outfit, sword, anatomy, wall, city spires, and cold moonlit palette. Track tightly along the blue-white energy into the sky as dragon fragments, frost-like sparks, and clouds spiral without graphic injury. The energy darkens to violet and the night warms into an apocalyptic sunset; airships, parachuting troops, and a translucent siege dome emerge through the clouds. Pull back to reveal Picture 2 exactly, with the same blond swordsman on the battlement gripping the enormous purple-black blade before the invading armada. Allow the weapon's appearance to change only as required by Picture 2. Preserve composition, face, outfit, anatomy, city, ships, and cinematic fantasy-anime style. End exactly on Picture 2. No dialogue, text, subtitles, logos, or watermarks."
+        },
+        {
+          "seed": 913702,
+          "prompt": "One continuous cinematic shot, no cuts. Begin exactly on Picture 1 at the besieged city wall beneath an apocalyptic sunset: the blond swordsman braces the enormous purple-black energy blade while airships and descending troops fill the sky behind the protective dome. Preserve his face, hair, black outfit, anatomy, sword, battlements, ships, and army scale. Make a slow heroic half orbit as the blade's violet energy sweeps upward and the battle sky gradually clears. The energy turns into warm sunlight and multicolored confetti; the camera descends through cheering citizens into the restored city street shown exactly in Picture 2. Reveal the same blond swordsman raising a glowing blue gem beside the horned white-and-red armored knight, the small white-haired elf mage, the tall fox-eared archer, and the black-haired companion. Preserve all endpoint faces, clothing, weapons, anatomy, crowd, banners, and joyous composition; do not merge or duplicate people. End exactly on Picture 2. No dialogue, text, subtitles, logos, or watermarks."
+        }
+      ]
     }
   ]
 }
