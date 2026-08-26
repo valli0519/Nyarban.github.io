@@ -58,6 +58,13 @@
       first: "img/cinematic-scenes/lv1_2nd/ch07-01-star-splitting-sword.webp",
       last: "img/cinematic-scenes/lv1_2nd/ch07-03-homecoming.webp",
     },
+    {
+      number: "08",
+      title: "葬送歌 ～冒涜の旅路～　第一幕『遺跡都市の誘惑』",
+      summary: "聖杯戦争後、名ばかりの停戦協定の裏でグランフェルデンの凶行を追う一行は、魔導車を駆って遺跡都市ラクレールへ。Lv1装備に身を落として潜入し、水売りの少年を手掛かりに街の地下へ踏み込む。陽動、救出、爆弾処理——保音機に残された真実を携え、夜の焚き火で束の間の息をつく。",
+      first: "img/cinematic-scenes/lv1_2nd/ch08-v3/shot01-start.webp",
+      last: "img/cinematic-scenes/lv1_2nd/ch08-v3/shot08-end.webp",
+    },
   ];
 
   const section = document.getElementById("replay-header");
