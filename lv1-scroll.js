@@ -8,6 +8,7 @@
       summary: "全てを奪われ故郷を失った剣士クラウドと、あてどない好奇心で旅に出たエルフの魔法使いフリーレンが、秘薬の霊峰エルツ山で運命の出会いを果たす。ここから二人の旅——そして世界の歯車——が静かに廻り始める。",
       first: "img/scroll-lv1-2nd/01-mountain.webp",
       last: "img/scroll-lv1-2nd/02-crystal-tree.webp",
+      target: "panel-chapter1",
     },
     {
       number: "02",
@@ -15,6 +16,7 @@
       summary: "路銀稼ぎに訪れた運河の商業都市メルゼンで、クラウドとフリーレンは闇の組織の影を嗅ぎつける。ギルドの試験をくぐり抜けながら、港に巣食う人攫い組織との決戦へ。そしてある出会いが、パーティの形を変えていく。",
       first: "img/scroll-lv1-2nd/03-tavern.webp",
       last: "img/scroll-lv1-2nd/04-pirate-battle.webp",
+      target: "panel-chapter2",
     },
     {
       number: "03",
@@ -22,6 +24,7 @@
       summary: "四人が揃い、北上の旅が本格的に動き出す。アレスタ港からフロルブリッジ号に乗り込み、島へと向かう一行の前に次々と難敵が立ちはだかる。諸島を渡るこの航路が、パーティの絆を鍛え直す試練となる。",
       first: "img/scroll-lv1-2nd/05-harbor.webp",
       last: "img/scroll-lv1-2nd/06-kraken.webp",
+      target: "panel-chapter3",
     },
     {
       number: "04",
@@ -29,6 +32,7 @@
       summary: "ホーヴァルロード島に古くから伝わる海神の神話。信仰と祟りと秘密が複雑に絡み合う島の深部へ、一行は否応なく引き込まれていく。サンズガルド山の頂で待ち受ける真実が、世界の広さを四人に突きつける。",
       first: "img/scroll-lv1-2nd/07-guild.webp",
       last: "img/scroll-lv1-2nd/08-descent.webp",
+      target: "panel-chapter4",
     },
     {
       number: "05",
@@ -36,6 +40,7 @@
       summary: "トワド諸島の二つ目の島、鉱山の島センドルイス。平穏を装った街の底に隠された炭鉱支配と孤児院の暗部——一行はその真相を暴くべく、泥と闇の中を疾駆する。センドアルスの神殿都市で物語は次の幕へと接続する。",
       first: "img/cinematic-scenes/lv1_2nd/ch05-01-night-flight.webp",
       last: "img/cinematic-scenes/lv1_2nd/ch05-03-ritual.webp",
+      target: "panel-chapter5",
     },
     {
       number: "06",
@@ -43,6 +48,7 @@
       summary: "神殿都市を越え、一行は大陸都市アルダニスへ。歓楽街、闘技場、舞踏会が華やぐ一方、その裏では陰謀が幾重にも絡み合う。翼竜の襲来を退け、大闘技大会を勝ち抜いた先で、新たな仲間と次なる戦いへの旗が上がる。",
       first: "img/cinematic-scenes/lv1_2nd/ch06-01-grand-arena.webp",
       last: "img/cinematic-scenes/lv1_2nd/ch06-03-victory.webp",
+      target: "panel-chapter7",
     },
     {
       number: "6.5",
@@ -50,6 +56,7 @@
       summary: "オオドとウツミヤを巡り、人と半妖の間に横たわる境界へ踏み込む東方の旅。桃都を襲う百鬼夜行との戦いを経て、敵味方を隔てていた線がほどけていく。最後に残るのは、花火の下で結び直された縁と笑顔だった。",
       first: "img/cinematic-scenes/lv1_2nd/ch065-01-peach-city.webp",
       last: "img/cinematic-scenes/lv1_2nd/ch065-03-fireworks.webp",
+      target: "panel-chapter8",
     },
     {
       number: "07",
@@ -57,13 +64,15 @@
       summary: "聖杯を巡り、国家と勢力が激突する大戦争。舞台は白亜の王城を擁する大都市ログレス。祖竜ティアマト、魔女モルガン、円卓の騎士たちが交錯する中、クラウドたちは竜骸の回廊へ挑む。喪失と誓いの果てに、帰る場所を取り戻す。",
       first: "img/cinematic-scenes/lv1_2nd/ch07-01-star-splitting-sword.webp",
       last: "img/cinematic-scenes/lv1_2nd/ch07-03-homecoming.webp",
+      target: "panel-chapter9",
     },
     {
       number: "08",
       title: "葬送歌 ～冒涜の旅路～　第一幕『遺跡都市の誘惑』",
       summary: "聖杯戦争後、名ばかりの停戦協定の裏でグランフェルデンの凶行を追う一行は、魔導車を駆って遺跡都市ラクレールへ。Lv1装備に身を落として潜入し、水売りの少年を手掛かりに街の地下へ踏み込む。陽動、救出、爆弾処理——保音機に残された真実を携え、夜の焚き火で束の間の息をつく。",
-      first: "img/cinematic-scenes/lv1_2nd/ch08-v3/shot01-start.webp",
-      last: "img/cinematic-scenes/lv1_2nd/ch08-v3/shot08-end.webp",
+      first: "img/cinematic-scenes/lv1_2nd/ch08-stable-v5/shot01-start.webp",
+      last: "img/cinematic-scenes/lv1_2nd/ch08-stable-v5/shot02-end.webp",
+      target: "panel-chapter11-group-1",
     },
     {
       number: "08-II",
@@ -71,6 +80,7 @@
       summary: "ラクレールを発った一行は、身分も姿も魔法で偽り、河港から水上審問都市クラン＝ベルへ。白い石造りの街と青い水路、ゴンドラの舟歌に迎えられるが、平穏な水面の下には王女失踪と国王裁判の影が漂う。観光のような街歩きは、やがて水都の秩序を揺るがす審問へつながっていく。",
       first: "img/cinematic-scenes/lv1_2nd/ch08-act2-clanbell-water-city-start.webp",
       last: "img/cinematic-scenes/lv1_2nd/ch08-act2-clanbell-water-city-end.webp",
+      target: "panel-chapter11-group-2",
     },
   ];
 
@@ -81,6 +91,7 @@
   const chapterNumber = document.getElementById("lv1-journey-chapter-number");
   const chapterTitle = document.getElementById("lv1-journey-chapter-title");
   const chapterSummary = document.getElementById("lv1-journey-summary");
+  const chapterLink = document.getElementById("lv1-journey-chapter-link");
   const campaignCard = section ? section.querySelector(".campaign-card") : null;
   const motionToggle = section ? section.querySelector("[data-cinematic-motion-toggle]") : null;
   const scrollLabel = section ? section.querySelector(".lv1-journey-scroll span") : null;
@@ -180,6 +191,11 @@
     chapterNumber.textContent = scene.number;
     chapterTitle.textContent = scene.title;
     chapterSummary.textContent = scene.summary;
+    if (chapterLink) {
+      chapterLink.href = `#${scene.target}`;
+      chapterLink.dataset.lv1Target = scene.target;
+      chapterLink.setAttribute("aria-label", `${scene.title}のシーン一覧を見る`);
+    }
     frameNumber.textContent = scene.number;
     section.dataset.activeChapter = String(chapterIndex + 1);
 
@@ -378,6 +394,54 @@
       jumpToChapter(Number(button.dataset.lv1Chapter));
     });
   });
+
+  const revealReplayTarget = (targetId) => {
+    const target = document.getElementById(targetId);
+    if (!target) return false;
+
+    const chapterPanel = target.classList.contains("scene-panel")
+      ? target
+      : target.closest(".scene-panel");
+    if (chapterPanel) {
+      chapterPanel.classList.add("open");
+      const chapterToggle = document.querySelector(`.scene-toggle[data-target="${chapterPanel.id}"]`);
+      if (chapterToggle) chapterToggle.setAttribute("aria-expanded", "true");
+    }
+
+    const groupPanel = target.classList.contains("scene-group-panel")
+      ? target
+      : target.closest(".scene-group-panel");
+    if (groupPanel) {
+      groupPanel.hidden = false;
+      const groupToggle = document.querySelector(`.scene-group-toggle[data-target="${groupPanel.id}"]`);
+      if (groupToggle) groupToggle.setAttribute("aria-expanded", "true");
+    }
+
+    const scrollTarget = groupPanel ? groupPanel.closest(".scene-group") : chapterPanel || target;
+    scrollTarget.scrollIntoView({
+      behavior: motionEnabled ? "smooth" : "auto",
+      block: "start",
+    });
+    if (window.history && typeof window.history.pushState === "function") {
+      try {
+        window.history.pushState(null, "", `#${targetId}`);
+      } catch (_error) {
+        window.location.hash = targetId;
+      }
+    }
+    return true;
+  };
+
+  if (chapterLink) {
+    chapterLink.addEventListener("click", (event) => {
+      const targetId = chapterLink.dataset.lv1Target;
+      if (!targetId) return;
+      event.preventDefault();
+      if (!revealReplayTarget(targetId)) {
+        window.location.hash = targetId;
+      }
+    });
+  }
 
   videoState.forEach((state) => {
     if (!state.video) return;

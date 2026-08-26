@@ -308,6 +308,52 @@ body.lv1-scroll-page #replay-header.lv1-journey.is-enhanced {
   line-height: inherit;
 }
 
+.lv1-journey-chapter-link {
+  display: inline-flex;
+  min-height: 42px;
+  margin-top: 24px;
+  padding: 10px 16px;
+  align-items: center;
+  gap: 18px;
+  color: #fff;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
+  font-size: 0.82rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.48);
+  border-radius: 999px;
+  background: rgba(7, 11, 17, 0.28);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+  transition: color 180ms ease, border-color 180ms ease, background 180ms ease, transform 180ms ease;
+}
+
+.lv1-journey-chapter-link span[aria-hidden="true"] {
+  color: var(--lv1-gold);
+  font-family: Arial, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1;
+  transition: transform 180ms ease;
+}
+
+.lv1-journey-chapter-link:hover,
+.lv1-journey-chapter-link:focus-visible {
+  color: #fff;
+  border-color: var(--lv1-gold);
+  background: rgba(7, 11, 17, 0.62);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.lv1-journey-chapter-link:hover span[aria-hidden="true"],
+.lv1-journey-chapter-link:focus-visible span[aria-hidden="true"] {
+  transform: translateX(3px);
+}
+
+.lv1-journey-chapter-link:focus-visible {
+  box-shadow: 0 0 0 3px rgba(217, 185, 110, 0.28), 0 10px 24px rgba(0, 0, 0, 0.2);
+}
+
 .lv1-journey .campaign-card.is-updating .lv1-journey-kicker,
 .lv1-journey .campaign-card.is-updating .lv1-journey-title,
 .lv1-journey .campaign-card.is-updating .campaign-desc {
@@ -697,6 +743,14 @@ body.lv1-scroll-page > .replay-container {
     margin-top: 18px;
     font-size: 0.76rem;
     line-height: 1.62;
+  }
+
+  .lv1-journey-chapter-link {
+    min-height: 38px;
+    margin-top: 17px;
+    padding: 8px 13px;
+    gap: 13px;
+    font-size: 0.72rem;
   }
 
   .lv1-journey-rail {

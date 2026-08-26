@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="replay.css?v=7">
   <link rel="preload" as="image" href="img/scroll-lv1-2nd/01-mountain.webp" fetchpriority="high">
-  <link rel="stylesheet" href="lv1-scroll.css?v=6">
+  <link rel="stylesheet" href="lv1-scroll.css?v=7">
   <script>
     // ★追加: このページ（キャンペーン）専用のIDを設定します。
     // 別のリプレイを作る時は、ここを "lv2_replay" など別の名前に変更してください。
@@ -55,8 +55,8 @@
           poster="img/cinematic-scenes/lv1_2nd/ch07-01-star-splitting-sword.webp"
           src="video/cinematic-scenes/lv1_2nd/ch07-star-sword-to-homecoming-720p.mp4"></video>
         <video class="lv1-journey-clip" data-lv1-clip="8" muted playsinline preload="metadata"
-          poster="img/cinematic-scenes/lv1_2nd/ch08-v3/shot01-start.webp"
-          src="video/cinematic-scenes/lv1_2nd/ch08-act1-laclaire-action-v3-15s-720p.mp4"></video>
+          poster="img/cinematic-scenes/lv1_2nd/ch08-stable-v5/shot01-start.webp"
+          src="video/cinematic-scenes/lv1_2nd/ch08-act1-laclaire-stable-v5-10s-720p.mp4"></video>
         <video class="lv1-journey-clip" data-lv1-clip="9" muted playsinline preload="metadata"
           poster="img/cinematic-scenes/lv1_2nd/ch08-act2-clanbell-water-city-start.webp"
           src="video/cinematic-scenes/lv1_2nd/ch08-act2-clanbell-water-city-arrival-14s-720p.mp4"></video>
@@ -86,6 +86,10 @@
           <div class="campaign-desc">
             <p id="lv1-journey-summary">全てを奪われ故郷を失った剣士クラウドと、あてどない好奇心で旅に出たエルフの魔法使いフリーレンが、秘薬の霊峰エルツ山で運命の出会いを果たす。ここから二人の旅——そして世界の歯車——が静かに廻り始める。</p>
           </div>
+          <a id="lv1-journey-chapter-link" class="lv1-journey-chapter-link" href="#panel-chapter1"
+            data-lv1-target="panel-chapter1" aria-label="エルツ山のゴブリン退治のシーン一覧を見る">
+            <span>この章を見る</span><span aria-hidden="true">→</span>
+          </a>
         </article>
       </div>
 
@@ -171,7 +175,7 @@
   <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore-compat.js"></script>
 
   <!-- キャンペーン用のシーンデータJSを読み込むべし。 -->
-  <script src="lv1-scroll.js?v=9"></script>
+  <script src="lv1-scroll.js?v=10"></script>
   <script src="scenes_data_lv1_2nd.js?v=6"></script>
   <script src="replay-enhance.js?v=7"></script>
 
