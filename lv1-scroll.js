@@ -65,6 +65,13 @@
       first: "img/cinematic-scenes/lv1_2nd/ch08-v3/shot01-start.webp",
       last: "img/cinematic-scenes/lv1_2nd/ch08-v3/shot08-end.webp",
     },
+    {
+      number: "08-II",
+      title: "葬送歌 ～冒涜の旅路～　第二幕『水上の審問者』",
+      summary: "ラクレールを発った一行は、身分も姿も魔法で偽り、河港から水上審問都市クラン＝ベルへ。白い石造りの街と青い水路、ゴンドラの舟歌に迎えられるが、平穏な水面の下には王女失踪と国王裁判の影が漂う。観光のような街歩きは、やがて水都の秩序を揺るがす審問へつながっていく。",
+      first: "img/cinematic-scenes/lv1_2nd/ch08-act2-clanbell-water-city-start.webp",
+      last: "img/cinematic-scenes/lv1_2nd/ch08-act2-clanbell-water-city-end.webp",
+    },
   ];
 
   const section = document.getElementById("replay-header");
