@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "source_root": "F:/ＴＲＰＧ/アリアンロッド2E/lebel1_2nd/4_AI/シーンCG化/CG_Lv1_2nd/8章",
+  "jobs": [
+    {
+      "id": "lv1-ch08-forward-v6-shot01-convoy",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第一幕 短尺前進版 v6",
+      "title": "魔導車と二台のバイクが画面手前へ実走する",
+      "priority": 160,
+      "source_frames": [
+        "動画プレビュー_第一幕ラクレール編/短尺前進版_v6/補助構図/01_コンボイ_開始.png",
+        "動画プレビュー_第一幕ラクレール編/短尺前進版_v6/補助構図/02_コンボイ_前進終点.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08-forward-v6/shot01-start.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-forward-v6/shot01-end.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-forward-v6/shot01-convoy-forward-720p.mp4",
+      "transitions": [
+        {
+          "duration": 3.0,
+          "seed": 928601,
+          "prompt": "One continuous real-time cinematic tracking shot, no cuts. Begin exactly on Picture 1 and end exactly on Picture 2. The same black magic jeep and the same two black motorcycles travel physically FORWARD TOWARD THE CAMERA across the grassland at an ordinary fast cruising speed. The low stabilized camera tracks backward in front of them but the convoy gains several metres, producing clear perspective parallax rather than a digital zoom. The foreground grass and stones stream backward beneath the tires; all six wheels rotate in the correct forward direction and throw restrained dust behind them. Exactly six heroes and exactly three vehicles keep the same left-right formation, seats, lanes, faces, hair, clothing and hand positions. Hair and loose cloth trail backward in the wind while torsos remain stable. Preserve every wheel, fork, handlebar, chassis panel, door, windshield, headlight and blue magic detail. No reverse travel, stationary tableau, time-lapse, sudden acceleration, whip pan, overtaking, collision, sliding tires, duplicate wheel, vehicle deformation, passenger swapping, body or face morph, new object, cut, wipe, page, portal, flash, text, subtitle, logo or watermark."
+        }
+      ]
+    },
+    {
+      "id": "lv1-ch08-forward-v6-shot02-plaza",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第一幕 短尺前進版 v6",
+      "title": "六人を追って遺跡都市の中央広場へ入り全景を開く",
+      "priority": 160,
+      "source_frames": [
+        "動画プレビュー_第一幕ラクレール編/短尺前進版_v6/補助構図/03_広場入口_開始.png",
+        "動画プレビュー_第一幕ラクレール編/短尺前進版_v6/補助構図/04_広場_中間視点.png",
+        "動画プレビュー_第一幕ラクレール編/短尺前進版_v6/補助構図/05_広場_全景終点.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08-forward-v6/shot02-start.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-forward-v6/shot02-mid.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-forward-v6/shot02-end.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-forward-v6/shot02-plaza-dolly-reveal-720p.mp4",
+      "transitions": [
+        {
+          "duration": 3.2,
+          "seed": 928602,
+          "prompt": "One continuous physically grounded real-time shot, no cuts. Begin exactly on Picture 1 at the shadowed arch and end exactly on Picture 2 several metres inside the same plaza. The same six armoured adventurers walk AWAY FROM THE CAMERA straight into Laclaire's central ruins plaza. Each completes several natural alternating steps: heels lift, knees bend modestly, boots plant on the stone, weight transfers and trailing feet follow. Their spacing, left-to-right order, height differences, armour, robes, weapons and silhouettes remain constant. The stabilized camera dollies forward behind them at walking speed and gently rises, creating obvious three-dimensional parallax: the dark entrance edges slide outward and leave the frame, nearby stalls and townspeople pass slowly at the sides, and the central statue and stairs open ahead. This is real camera translation, never a crop or zoom. Merchants, miners and adventurers perform small grounded motions without entering the party's lane. Architecture, scaffolding and carts remain rigid. Preserve exactly six protagonists: giant silver knight with red scarf, short hooded silver-haired mage, smaller silver sword knight, dark chainmail warrior, silver fighter with teal cloth, white-tabarded crusader with red cape and dark great helm. No foot sliding, moonwalk, backward travel, frozen tableau, running, lane crossing, extra or missing hero, fused limbs, armour morph, bent weapon, crowd collision, rubber building, collapsing scaffold, speed ramp, time-lapse, teleport, scene replacement, cut, wipe, page, portal, text, logo or watermark."
+        },
+        {
+          "duration": 4.2,
+          "seed": 928603,
+          "prompt": "Continue the exact same unbroken real-time camera move from Picture 1 and finish exactly on Picture 2. The same six adventurers keep walking naturally away from the camera toward the central statue and monumental stairs while maintaining their exact formation and identity. The stabilized camera now advances through the plaza and performs a slow gentle crane upward, moving slightly faster than before so the viewer enters the square and the protagonists settle into the lower quarter rather than filling the image. Reveal the immense archaeological city in depth: grounded market traffic on both sides, broad stone paving, statue, ascending stairs, arches, towers, cranes and scaffolds expand into a majestic coherent vista. Use true forward translation, vertical parallax and a level 24mm wide-angle perspective; do not simulate this with a digital zoom. Feet maintain contact and complete calm alternating steps; armour and hanging cloth respond subtly. Background merchants and miners walk or carry goods at believable speeds in their own lanes. All stone architecture and wooden structures remain rigid, and the bright daylight stays constant. Exactly six protagonists remain visible in the same left-to-right order with unchanged armour, robes, weapons and height differences. No frozen figures, sliding feet, moonwalk, sudden acceleration, aerial launch, character swap, duplicate or missing hero, fused body, changing costume, warped weapon, crowd collision, rubber masonry, collapsing scaffold, speed blur, time-lapse, cut, wipe, page, portal, flash, text, logo or watermark."
+        }
+      ]
+    }
+  ]
+}
