@@ -1,2 +1,6 @@
 ﻿# >100MB GitHub rejects; orphan, no scene references it
-bgm/Tea Time in Kingdom - World Fantasia.mp3
+# 公開素材はCloudflareの公開ミラーで管理する。
+# GitにはHTML・CSS・JSなどの更新履歴だけを残す。
+/img/
+/bgm/
+/video/
