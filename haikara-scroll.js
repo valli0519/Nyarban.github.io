@@ -73,14 +73,14 @@
   const motionQuery = typeof window.matchMedia === "function"
     ? window.matchMedia("(prefers-reduced-motion: reduce)")
     : null;
-  const videoState = videos.map((video, index) => ({
+  const videoState = videos.map((video) => ({
     video,
     duration: 10.333,
     current: 0,
     target: 0,
     ready: false,
     failed: !video,
-    promoted: Boolean(video && index === 0),
+    promoted: false,
   }));
 
   let storedMotionPreference = null;
@@ -100,7 +100,6 @@
   let scrollDistance = 1;
   let renderQueued = false;
   let labelTransitionTimer = 0;
-  let preloadScheduled = false;
 
   const setFallback = (from, to, blend, local) => {
     const key = `${from}|${to}`;
@@ -166,7 +165,13 @@
     state.promoted = true;
     state.video.preload = "auto";
     try {
-      state.video.load();
+      const preparation = window.ReplayCinematicMedia
+        ? window.ReplayCinematicMedia.prepare(state.video)
+        : Promise.resolve(state.video.load());
+      preparation.catch(() => {
+        state.failed = true;
+        updateMotionUI();
+      });
     } catch (_error) {
       state.failed = true;
       updateMotionUI();
@@ -275,17 +280,6 @@
     updateLabels(0);
   };
 
-  const schedulePreloadAll = () => {
-    if (preloadScheduled || !motionEnabled) return;
-    preloadScheduled = true;
-    const preloadAll = () => videoState.forEach((_state, index) => promoteVideo(index));
-    if ("requestIdleCallback" in window) {
-      window.requestIdleCallback(preloadAll, { timeout: 2800 });
-    } else {
-      window.setTimeout(preloadAll, 1200);
-    }
-  };
-
   const setMotionEnabled = (enabled, persistPreference) => {
     measure();
     const wasEnabled = motionEnabled;
@@ -315,7 +309,6 @@
       measure();
       promoteVideo(0);
       render();
-      schedulePreloadAll();
     } else {
       resetToStaticView();
       measure();
