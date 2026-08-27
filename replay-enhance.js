@@ -60,9 +60,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function getFilenameFromPath(path) {
     if (!path) return "No Track";
-    const parts = path.split(/[\/\\]/);
-    const filename = parts[parts.length - 1];
-    return filename.replace(".mp3", "").replace("DOVA", "").replace(".ogg", "").trim() || "Unknown Track";
+    let filename = "";
+    try {
+      const url = new URL(path, document.baseURI);
+      filename = url.pathname.split("/").pop() || "";
+    } catch {
+      const parts = String(path).split(/[\/\\]/);
+      filename = parts[parts.length - 1];
+    }
+    try {
+      filename = decodeURIComponent(filename);
+    } catch {
+      // 壊れた%表記はそのまま表示し、BGM再生まで止めない。
+    }
+    return filename.replace(/\.(?:mp3|ogg)$/i, "").replace("DOVA", "").trim() || "Unknown Track";
   }
 
   function convertDriveUrl(url) {
@@ -74,6 +85,18 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
     return url;
+  }
+
+  function resolveMediaUrl(url) {
+    const converted = convertDriveUrl(url);
+    if (!converted) return "";
+    try {
+      // URLコンストラクタなら、日本語の相対パスは一度だけ符号化し、
+      // Cloudflare用の既存%表記は二重符号化せず保持できる。
+      return new URL(converted, document.baseURI).href;
+    } catch {
+      return converted;
+    }
   }
 
   window.SCENES_MAP = {};
@@ -483,12 +506,12 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
     const rawBgm = data.bgm || "";
-    currentBgmUrl = convertDriveUrl(rawBgm);
+    currentBgmUrl = resolveMediaUrl(rawBgm);
     
     if (bgmBtn) bgmBtn.textContent = "▶ BGM";
 
     if (globalBgmUi && currentBgmUrl) {
-      const safeUrl = encodeURI(currentBgmUrl);
+      const safeUrl = currentBgmUrl;
       if (player.getAttribute("src") !== safeUrl) {
         player.setAttribute("src", safeUrl);
         player.load();
@@ -562,7 +585,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 100);
         return;
       }
-      const safeUrl = encodeURI(currentBgmUrl);
+      const safeUrl = currentBgmUrl;
       if (!player.paused && player.getAttribute("src") === safeUrl) {
         player.pause();
         bgmBtn.textContent = "▶ BGM";
