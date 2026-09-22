@@ -1,133 +1,264 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ウマ娘世界編 リプレイ — ニャルラトホテプ万歳</title>
-    <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
 
-    <!-- シンプルナビ：上部へ戻る -->
-    <nav>
-        <div class="logo">
-          <a href="#">
-            <img src="img/nyar_logo_header.png" alt="ニャルラトホテプ万歳">
-          </a>
-          
-        </div>
-    </nav>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ページタイトルを記入 -->
+  <title>ウマ娘世界編 リプレイ — ニャルラトホテプ万歳</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="replay.css?v=7">
+  <link rel="stylesheet" href="lv1-scroll.css?v=7">
+  <script>
+    // ★追加: このページ（キャンペーン）専用のIDを設定します。
+    window.CAMPAIGN_ID = "umamusume"; 
+  </script>
+<style>
+html{background:#050908;}
+@media(max-width:640px){#modal-scene-title{font-size:1.15rem;line-height:1.5;text-wrap:balance;}}
+</style>
+</head>
 
-
-    <!-- パンくず -->
-    <nav class="breadcrumb">
-        <a href="index.html">ホーム</a> / <span>ウマ娘世界編 リプレイログ</span>
-    </nav>
-
-  <section id="replay-content">
-    <div class="container-replay">
-      <div class="campaign-card">
-        <h2>ウマ娘世界編 - Replay Log</h2>
-        <p>「此処同好会」の後この世界に落ち、衝撃で記憶を失ってしまった「幻月」は日本ウマ娘トレーニングセンターで拾われ、恩には弱い悪魔である幻月はトレーナーとして働き始める。<br>
-          やがて「アーサー」や「オルガ・イツカ」も新人トレーナーとしてトレセン学園のトレーナーに就職し、やがてこの３人のトレーナーが競馬界の黄金期を作り上げる。<br>
-          カオス至上主義を掲げて始まった湿度MAXのドロドロ卓は、果たしてどんな軌跡を描くのか。</p>
-            <!-- 目次（章リンク） -->
-            <ul class="replay-nav">
-                <li><a href="#chapter1">Title 1</a></li>
-                <li><a href="#chapter2">Title 2</a></li>
-                <li><a href="#chapter3">Title 3</a></li>
-                <li><a href="#chapter4">Title 4</a></li>
-                <li><a href="#chapter5">Title 5</a></li>
-                <li><a href="#chapter6">Title 6</a></li>
-                <li><a href="#chapter7">Title 7</a></li>
-                <li><a href="#chapter8">Title 8</a></li>
-                <li><a href="#chapter9">Title 9</a></li>
-                <li><a href="#chapter10">Title 10</a></li>
-            </ul>
+<body class="lv1-scroll-page">
+  <nav>
+    <div class="logo">
+      <a href="index.html"><img src="img/nyar_logo_header.png" alt="ニャルラトホテプ万歳"></a>
+    </div>
+  </nav>
+  <section id="replay-header" class="lv1-journey" aria-labelledby="lv1-journey-title">
+    <div class="lv1-journey-shell">
+      <div id="lv1-journey-stage" class="lv1-journey-stage" aria-hidden="true">
+        <img id="lv1-journey-current" class="lv1-journey-frame is-current"
+          src="img/cinematic-scenes/umamusume/scroll/opening-01.webp" alt="" fetchpriority="high" decoding="async">
+        <img id="lv1-journey-next" class="lv1-journey-frame is-next"
+          src="img/cinematic-scenes/umamusume/scroll/opening-03.webp" alt="" decoding="async">
+        <video class="lv1-journey-clip" data-lv1-clip="0" muted playsinline preload="none"
+          poster="img/cinematic-scenes/umamusume/scroll/opening-01.webp"
+          src="video/cinematic-scenes/umamusume/opening/scroll-v1-720p.mp4"></video>
+        <video class="lv1-journey-clip" data-lv1-clip="1" muted playsinline preload="none"
+          poster="img/cinematic-scenes/umamusume/scroll/ura_publicity-01.webp"
+          src="video/cinematic-scenes/umamusume/ura_publicity/scroll-v1-720p.mp4"></video>
+        <video class="lv1-journey-clip" data-lv1-clip="2" muted playsinline preload="none"
+          poster="img/cinematic-scenes/umamusume/scroll/arthur_arrival-01.webp"
+          src="video/cinematic-scenes/umamusume/arthur_arrival/scroll-v1-720p.mp4"></video>
+        <video class="lv1-journey-clip" data-lv1-clip="3" muted playsinline preload="none"
+          poster="img/cinematic-scenes/umamusume/scroll/idol-01.webp"
+          src="video/cinematic-scenes/umamusume/idol/scroll-v1-720p.mp4"></video>
+        <video class="lv1-journey-clip" data-lv1-clip="4" muted playsinline preload="none"
+          poster="img/cinematic-scenes/umamusume/scroll/france_visit-01.webp"
+          src="video/cinematic-scenes/umamusume/france_visit/scroll-v1-720p.mp4"></video>
+        <video class="lv1-journey-clip" data-lv1-clip="5" muted playsinline preload="none"
+          poster="img/cinematic-scenes/umamusume/scroll/onsen_survival-01.webp"
+          src="video/cinematic-scenes/umamusume/onsen_survival/scroll-v1-720p.mp4"></video>
+        <video class="lv1-journey-clip" data-lv1-clip="6" muted playsinline preload="none"
+          poster="img/cinematic-scenes/umamusume/scroll/ballgame-01.webp"
+          src="video/cinematic-scenes/umamusume/ballgame/scroll-v1-720p.mp4"></video>
+        <video class="lv1-journey-clip" data-lv1-clip="7" muted playsinline preload="none"
+          poster="img/cinematic-scenes/umamusume/scroll/sao-01.webp"
+          src="video/cinematic-scenes/umamusume/sao/scroll-v1-720p.mp4"></video>
+        <video class="lv1-journey-clip" data-lv1-clip="8" muted playsinline preload="none"
+          poster="img/cinematic-scenes/umamusume/scroll/protcomplex-01.webp"
+          src="video/cinematic-scenes/umamusume/protcomplex/scroll-v1-720p.mp4"></video>
+        <video class="lv1-journey-clip" data-lv1-clip="9" muted playsinline preload="none"
+          poster="img/cinematic-scenes/umamusume/scroll/meanwhile_home-01.webp"
+          src="video/cinematic-scenes/umamusume/meanwhile_home/scroll-v1-720p.mp4"></video>
+        <video class="lv1-journey-clip" data-lv1-clip="10" muted playsinline preload="none"
+          poster="img/cinematic-scenes/umamusume/scroll/band-01.webp"
+          src="video/cinematic-scenes/umamusume/band/scroll-v1-720p.mp4"></video>
+        <video class="lv1-journey-clip" data-lv1-clip="11" muted playsinline preload="none"
+          poster="img/cinematic-scenes/umamusume/scroll/summer_camp-01.webp"
+          src="video/cinematic-scenes/umamusume/summer_camp/scroll-v1-720p.mp4"></video>
+        <video class="lv1-journey-clip" data-lv1-clip="12" muted playsinline preload="none"
+          poster="img/cinematic-scenes/umamusume/scroll/new_life-01.webp"
+          src="video/cinematic-scenes/umamusume/new_life/scroll-v1-720p.mp4"></video>
+        <video class="lv1-journey-clip" data-lv1-clip="13" muted playsinline preload="none"
+          poster="img/cinematic-scenes/umamusume/scroll/casual_runway-01.webp"
+          src="video/cinematic-scenes/umamusume/casual_runway/scroll-v1-720p.mp4"></video>
+        <video class="lv1-journey-clip" data-lv1-clip="14" muted playsinline preload="none"
+          poster="img/cinematic-scenes/umamusume/scroll/silver_week_date-01.webp"
+          src="video/cinematic-scenes/umamusume/silver_week_date/scroll-v1-720p.mp4"></video>
+        <video class="lv1-journey-clip" data-lv1-clip="15" muted playsinline preload="none"
+          poster="img/cinematic-scenes/umamusume/scroll/ultraman_z_if-01.webp"
+          src="video/cinematic-scenes/umamusume/ultraman_z_if/scroll-v1-720p.mp4"></video>
+        <video class="lv1-journey-clip" data-lv1-clip="16" muted playsinline preload="none"
+          poster="img/cinematic-scenes/umamusume/scroll/new_member_welcome-01.webp"
+          src="video/cinematic-scenes/umamusume/new_member_welcome/scroll-v1-720p.mp4"></video>
+        <video class="lv1-journey-clip" data-lv1-clip="17" muted playsinline preload="none"
+          poster="img/cinematic-scenes/umamusume/scroll/leblanc_day-01.webp"
+          src="video/cinematic-scenes/umamusume/leblanc_day/scroll-v1-720p.mp4"></video>
+        <video class="lv1-journey-clip" data-lv1-clip="18" muted playsinline preload="none"
+          poster="img/cinematic-scenes/umamusume/scroll/cafe_afternoon-01.webp"
+          src="video/cinematic-scenes/umamusume/cafe_afternoon/scroll-v1-720p.mp4"></video>
+        <video class="lv1-journey-clip" data-lv1-clip="19" muted playsinline preload="none"
+          poster="img/cinematic-scenes/umamusume/scroll/university_exam-01.webp"
+          src="video/cinematic-scenes/umamusume/university_exam/scroll-v1-720p.mp4"></video>
+        <video class="lv1-journey-clip" data-lv1-clip="20" muted playsinline preload="none"
+          poster="img/cinematic-scenes/umamusume/scroll/uk_debutant-01.webp"
+          src="video/cinematic-scenes/umamusume/uk_debutant/scroll-v1-720p.mp4"></video>
+        <video class="lv1-journey-clip" data-lv1-clip="21" muted playsinline preload="none"
+          poster="img/cinematic-scenes/umamusume/scroll/orga_birth-01.webp"
+          src="video/cinematic-scenes/umamusume/orga_birth/scroll-v1-720p.mp4"></video>
+        <video class="lv1-journey-clip" data-lv1-clip="22" muted playsinline preload="none"
+          poster="img/cinematic-scenes/umamusume/scroll/magic_ring-01.webp"
+          src="video/cinematic-scenes/umamusume/magic_ring/scroll-v1-720p.mp4"></video>
+        <video class="lv1-journey-clip" data-lv1-clip="23" muted playsinline preload="none"
+          poster="img/cinematic-scenes/umamusume/scroll/underworld-01.webp"
+          src="video/cinematic-scenes/umamusume/underworld/scroll-v1-720p.mp4"></video>
+        <video class="lv1-journey-clip" data-lv1-clip="24" muted playsinline preload="none"
+          poster="img/cinematic-scenes/umamusume/scroll/island_survival-01.webp"
+          src="video/cinematic-scenes/umamusume/island_survival/scroll-v1-720p.mp4"></video>
       </div>
-</section>
-  
+      <div class="lv1-journey-shade" aria-hidden="true"></div>
+      <div class="lv1-journey-grain" aria-hidden="true"></div>
 
-<section id="replay-content">
-    <div class="container-replay-textbox">
-      <!-- 各章本文（<pre>でテキスト表示） -->
-      <article id="chapter1" class="campaign-card">
-        <h3>章タイトル</h3>
-        <pre>
-            （ここにログを貼り付け）
-        </pre>
-      </article>
+      <div class="lv1-journey-topbar">
+        <span>NYARLATHOTEP BANZAI · REPLAY ARCHIVE</span>
+        <div class="lv1-journey-actions">
+          <button type="button" class="lv1-motion-toggle" data-cinematic-motion-toggle hidden>映像演出をON</button>
+          <a href="#chapter-index">目次へスキップ</a>
+        </div>
+      </div>
 
-      <article id="chapter2" class="campaign-card">
-        <h3>章タイトル</h3>
-        <pre>
-            （ここにログを貼り付け）
-        </pre>
-      </article>
+      <div class="lv1-journey-copy">
+        <article class="campaign-card">
+          <div class="lv1-journey-kicker">
+            <span>CHAPTER</span>
+            <i aria-hidden="true"></i>
+            <span id="lv1-journey-chapter-number">01</span>
+          </div>
+          <h1 id="lv1-journey-title" class="lv1-journey-title">
+            <span id="lv1-journey-chapter-title">序幕：しっとりテイオー事変</span>
+            <small>ウマ娘世界編 · Replay Log</small>
+          </h1>
+          <div class="campaign-desc">
+            <p id="lv1-journey-summary">温泉旅行のあと、アーサーはオルガのもとへ。ひとりでは抱えきれない相談があるらしい。</p>
+          </div>
+          <a id="lv1-journey-chapter-link" class="lv1-journey-chapter-link" href="#panel-uma-opening"
+            data-lv1-target="panel-uma-opening" aria-label="序幕：しっとりテイオー事変のシーン一覧を見る">
+            <span>この章を見る</span><span aria-hidden="true">→</span>
+          </a>
+        </article>
+      </div>
 
-      <article id="chapter3" class="campaign-card">
-        <h3>章タイトル</h3>
-        <pre>
-            （ここにログを貼り付け）
-        </pre>
-      </article>
+      <div class="lv1-journey-rail" role="navigation" aria-label="CGで辿る25編">
+        <button type="button" class="is-active" data-lv1-chapter="0" aria-label="序幕：しっとりテイオー事変" aria-current="step"><span>01</span><b>序幕しっとり</b></button>
+        <button type="button" data-lv1-chapter="1" aria-label="URAうまぴょい伝説宣伝編"><span>02</span><b>URAうまぴ</b></button>
+        <button type="button" data-lv1-chapter="2" aria-label="アーサー初来校編（前日譚）"><span>03</span><b>アーサー初来</b></button>
+        <button type="button" data-lv1-chapter="3" aria-label="アイドルウマ娘編"><span>04</span><b>アイドルウマ</b></button>
+        <button type="button" data-lv1-chapter="4" aria-label="アリーヌ来日編"><span>05</span><b>アリーヌ来日</b></button>
+        <button type="button" data-lv1-chapter="5" aria-label="温泉サバイバル編"><span>06</span><b>温泉サバイバ</b></button>
+        <button type="button" data-lv1-chapter="6" aria-label="球技大会編"><span>07</span><b>球技大会</b></button>
+        <button type="button" data-lv1-chapter="7" aria-label="SAO編"><span>08</span><b>SAO</b></button>
+        <button type="button" data-lv1-chapter="8" aria-label="プロトコンプレックス編"><span>09</span><b>プロトコンプ</b></button>
+        <button type="button" data-lv1-chapter="9" aria-label="一方その頃編"><span>10</span><b>一方その頃</b></button>
+        <button type="button" data-lv1-chapter="10" aria-label="一週間バンド編"><span>11</span><b>一週間バンド</b></button>
+        <button type="button" data-lv1-chapter="11" aria-label="夏合宿編"><span>12</span><b>夏合宿</b></button>
+        <button type="button" data-lv1-chapter="12" aria-label="ニトリ・新生活編"><span>13</span><b>ニトリ・新生</b></button>
+        <button type="button" data-lv1-chapter="13" aria-label="私服ランウェイ編"><span>14</span><b>私服ランウェ</b></button>
+        <button type="button" data-lv1-chapter="14" aria-label="シルバーウィークのデート編"><span>15</span><b>シルバーウィ</b></button>
+        <button type="button" data-lv1-chapter="15" aria-label="ウルトラマンZ IF編"><span>16</span><b>ウルトラマン</b></button>
+        <button type="button" data-lv1-chapter="16" aria-label="新メンバー歓迎編"><span>17</span><b>新メンバー歓</b></button>
+        <button type="button" data-lv1-chapter="17" aria-label="ある日のルブラン編"><span>18</span><b>ある日のルブ</b></button>
+        <button type="button" data-lv1-chapter="18" aria-label="昼下がりの相席編"><span>19</span><b>昼下がりの相</b></button>
+        <button type="button" data-lv1-chapter="19" aria-label="大学受験編"><span>20</span><b>大学受験</b></button>
+        <button type="button" data-lv1-chapter="20" aria-label="英国デビュタント編"><span>21</span><b>英国デビュタ</b></button>
+        <button type="button" data-lv1-chapter="21" aria-label="オルガ出産編"><span>22</span><b>オルガ出産</b></button>
+        <button type="button" data-lv1-chapter="22" aria-label="魔法指輪編"><span>23</span><b>魔法指輪</b></button>
+        <button type="button" data-lv1-chapter="23" aria-label="アンダーワールド編"><span>24</span><b>アンダーワー</b></button>
+        <button type="button" data-lv1-chapter="24" aria-label="無人島編"><span>25</span><b>無人島</b></button>
+      </div>
 
-      <article id="chapter4" class="campaign-card">
-        <h3>章タイトル</h3>
-        <pre>
-            （ここにログを貼り付け）
-        </pre>
-      </article>
-
-      <article id="chapter5" class="campaign-card">
-        <h3>章タイトル</h3>
-        <pre>
-            （ここにログを貼り付け）
-        </pre>
-      </article>
-
-      <article id="chapter6" class="campaign-card">
-        <h3>章タイトル</h3>
-        <pre>
-            （ここにログを貼り付け）
-        </pre>
-      </article>
-
-      <article id="chapter7" class="campaign-card">
-        <h3>章タイトル</h3>
-        <pre>
-            （ここにログを貼り付け）
-        </pre>
-      </article>
-
-      <article id="chapter8" class="campaign-card">
-        <h3>章タイトル</h3>
-        <pre>
-            （ここにログを貼り付け）
-        </pre>
-      </article>
-
-      <article id="chapter9" class="campaign-card">
-        <h3>章タイトル</h3>
-        <pre>
-            （ここにログを貼り付け）
-        </pre>
-      </article>
-
-      <article id="chapter10" class="campaign-card">
-        <h3>章タイトル</h3>
-        <pre>
-            （ここにログを貼り付け）
-        </pre>
-      </article>
+      <div class="lv1-journey-footer">
+        <div class="lv1-journey-scroll"><i aria-hidden="true"></i><span>SCROLL TO JOURNEY</span></div>
+        <div class="lv1-journey-progress" aria-hidden="true"><i></i></div>
+        <span class="lv1-journey-count"><span id="lv1-journey-frame-number">01</span> / 25</span>
+      </div>
     </div>
   </section>
 
-  <a href="#" class="scroll-top">▲ TOP</a>
+  <section id="chapter-index" class="lv1-chapter-index" aria-labelledby="chapter-index-title">
+    <div class="container-replay">
+      <div class="lv1-index-heading">
+        <span>CHAPTER INDEX</span>
+        <h2 id="chapter-index-title">物語を選ぶ</h2>
+        <p>章を選ぶと、その章のシーン一覧へ移動します。</p>
+      </div>
+      <div class="campaign-desc">
+          <p>「此処同好会」の後この世界に落ち、衝撃で記憶を失ってしまった「幻月」は日本ウマ娘トレーニングセンターで拾われ、恩には弱い悪魔である幻月はトレーナーとして働き始める。<br>
+          やがて「アーサー」や「オルガ・イツカ」も新人トレーナーとしてトレセン学園のトレーナーに就職し、やがてこの３人のトレーナーが競馬界の黄金期を作り上げる。<br>
+          カオス至上主義を掲げて始まった湿度MAXのドロドロ卓は、果たしてどんな軌跡を描くのか。</p>
+        </div>
+      <p class="replay-progress-note">制作中：25編・1847シーンを収録しています。採用済みCGは174点です。</p>
+      <p class="replay-progress-note">セッションの最新部分はUnderWorld編と無人島編で、どちらも途中で保留中です。</p>
+      <ul class="replay-nav" id="dynamic-nav"></ul>
+    </div>
+  </section>
 
-  <!-- フッター -->
-  <footer>
-    <p>&copy; 2025 ニャルラトホテプ万歳</p>
-  </footer>
+  <div class="replay-container">
+    <!-- 【目的】: メインの「章の開閉ボタン」と「シーン一覧」をすべて格納するための巨大な空箱です。
+        【JSの動き】: HTML側に章ごとの枠を手書きする必要はありません。JSがここに、章のボタン・概要テキスト・検索窓・シーンのリストを全て自動で組み立てて流し込みます。 -->
+    <ul id="scene-accordion" class="accordion"></ul>
+
+    <div class="info-bar" style="margin-top: 40px; text-align: center;">
+      <span class="info-title" id="info-title">シーンを選択してください</span>
+    </div>
+  </div>
+
+  <!-- 【目的】: シーンをクリックした時に全画面に広がる、ポップアップ画面の「骨組み（型）」です。
+      【JSの動き】: id="modal-scene-title" にタイトルが入り、id="scene-popup-body" にセリフなどの本文が入り、さらにその背景として設定した画像が自動で敷かれます。 -->
+  <div id="scene-popup" class="scene-popup">
+    <div class="popup-content">
+      <span id="close-scene-popup" class="close-btn">&times;</span>
+      <div class="modal-header">
+        <h2 id="modal-scene-title">シーンタイトル</h2>
+        <div class="modal-controls">
+          <button id="modal-bgm-btn" class="bgm-btn">▶ BGM</button>
+        </div>
+      </div>
+      <div id="scene-popup-body" class="scene-body">
+        </div>
+    </div>
+  </div>
+
+  <!-- 【目的】: 画面下部などに常駐する「BGM操作パネル（再生・停止・音量）」のUIです。
+       【JSの動き】: JSがファイル名を読み取って <span id="global-track-name"> に曲名を表示し、音量スライダーの変更をブラウザに記憶させます。 -->
+  <div id="global-bgm-ui">
+    <div id="bgm-toggle-tab"></div>
+
+    <button id="global-play-pause">▶</button>
+    <div class="bgm-track-info">
+      <span id="global-track-name" title="現在のBGMファイル名">No Track</span>
+      <div class="volume-slider-container">
+        <span>🔈</span>
+        <input type="range" id="global-bgm-volume" min="0" max="1" step="0.01" value="0.5">
+      </div>
+    </div>
+  </div>
+
+  <!-- 【目的】: 実際に音を鳴らすための、画面には見えない「裏方」のタグです。JSがこのタグを直接操作して音楽を流します。 -->
+  <audio id="bgm-player" loop></audio>
+
+  <!-- コメント欄用DBアクセス -->
+  <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore-compat.js"></script>
+
+  <!-- キャンペーン用のシーンデータJSを読み込むべし。 -->
+  <script src="replay-cinematic-media.js?v=1"></script>
+  <script src="umamusume-scroll.js?v=1"></script>
+  <script src="scenes_data_umamusume.js?v=b58001c186ff"></script>
+  <script src="replay-enhance.js?v=7"></script>
+
+  <!-- コメント欄 -->
+  <section id="comments-section">
+    <h3>感想・コメント</h3>
+    <div class="comment-form">
+      <input type="text" id="comment-name" placeholder="お名前 (省略可、名無しになります)">
+      <textarea id="comment-text" placeholder="ここにコメントを入力してください..." rows="4"></textarea>
+      <button id="submit-comment">コメントを送信</button>
+    </div>
+    <div id="comments-list">
+      <div style="text-align:center; color:#64748b; padding:20px;">コメント待ってます</div>
+    </div>
+  </section>
 </body>
 </html>

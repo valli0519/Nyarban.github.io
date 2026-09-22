@@ -217,7 +217,12 @@ def prepare_graph(base: dict, job: dict, transition_index: int, first: str, last
         megapixels=0.4,
         multiple=32,
     )
-    duration["inputs"]["value"] = 5
+    transition_duration = float(transition.get("duration", job.get("duration", 5)))
+    if not 1 <= transition_duration <= 15:
+        raise RuntimeError(
+            f"Transition duration must be between 1 and 15 seconds: {transition_duration}"
+        )
+    duration["inputs"]["value"] = transition_duration
     prefix = f"cinematic-{job['id']}-p{transition_index + 1:02d}"
     save["inputs"]["filename_prefix"] = f"video/{prefix}"
     return graph, prefix
@@ -485,7 +490,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
     parser.add_argument("--server", default="http://127.0.0.1:8188")
     parser.add_argument("--job", action="append")
-    parser.add_argument("--campaign", action="append", choices=["lv1_2nd", "haikara"])
+    parser.add_argument("--campaign", action="append", choices=["lv1_2nd", "haikara", "umamusume"])
     parser.add_argument("--timeout", type=int, default=5400)
     parser.add_argument("--force", action="store_true")
     parser.add_argument("--keep-parts", action="store_true")

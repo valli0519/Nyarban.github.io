@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "source_root": "F:/ＴＲＰＧ/アリアンロッド2E/lebel1_2nd/4_AI/シーンCG化/CG_ウマ娘世界",
+  "jobs": [
+    {
+      "id": "uma-idol-scroll-v1",
+      "campaign": "umamusume",
+      "chapter": "3 アイドルウマ娘編 スクロール v1",
+      "title": "四人のウマドルが夕暮れの並木道をカメラへ歩き、カメラが後退して学園の全景を見せる",
+      "priority": 100,
+      "scenarioId": "idol",
+      "panelId": "panel-uma-idol",
+      "source_frames": [
+        "アイドルウマ娘編/動画プレビュー_アイドルウマ娘編_v1/補助構図/01_開始.png",
+        "アイドルウマ娘編/動画プレビュー_アイドルウマ娘編_v1/補助構図/02_中間.png",
+        "アイドルウマ娘編/動画プレビュー_アイドルウマ娘編_v1/補助構図/03_終了.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/umamusume/scroll/idol-01.webp",
+        "img/cinematic-scenes/umamusume/scroll/idol-02.webp",
+        "img/cinematic-scenes/umamusume/scroll/idol-03.webp"
+      ],
+      "output": "video/cinematic-scenes/umamusume/idol/scroll-v1-720p.mp4",
+      "transitions": [
+        {
+          "duration": 4.0,
+          "seed": 481207,
+          "prompt": "One continuous real-time shot, no cuts. Begin exactly on Picture 1 and end exactly on Picture 2 in the same dusk campus avenue. The same four horse-eared idol trainees in identical red and white tracksuits walk steadily FORWARD TOWARD THE CAMERA along the paved path, taking alternating natural steps with planted feet and unchanged spacing. The stabilized camera dollies backward in front of them so the lamp posts, hedges and trees at the sides stream past and the lit wooden pavilion behind them stays coherent, producing real perspective parallax rather than a digital zoom. Long hair, ears, tails and the folded white towels sway gently with the walk while torsos stay stable. Keep exactly four figures, their left-to-right order, faces, hair colours, ear and tail shapes, zipped tracksuits and hand positions unchanged; the raised fist of the small purple-haired one stays raised. Warm lamp light and the orange sunset sky keep the same direction. No reverse walking, frozen figures, foot sliding, digital zoom, whip pan, body or face morphing, extra or vanishing character, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
+        },
+        {
+          "duration": 4.0,
+          "seed": 693418,
+          "prompt": "One continuous real-time shot, no cuts. Begin exactly on Picture 1 and end exactly on Picture 2 in the same dusk campus avenue. The same four horse-eared idol trainees keep walking FORWARD TOWARD THE CAMERA at the same pace while the stabilized camera continues to retreat and rises slightly, revealing the full tree-lined avenue, the rows of ground lanterns and the illuminated wooden pavilion at the far end. Near hedges and lanterns pass quickly at the frame edges while the distant buildings and the sunset sky move slowly, giving clear depth. Keep exactly four figures, their left-to-right order, faces, hair colours, horse ears, tails, red and white tracksuits, white shoes and carried towels unchanged; feet stay planted on the pavement with correct forward stride. No reverse walking, frozen figures, foot sliding, digital zoom, camera shake, body or face morphing, extra or vanishing character, duplicated limb, warping trees or buildings, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
+        }
+      ],
+      "scrollSummary": "売れっ子ウマドル四人を一週間で鍛え、テレビの無茶ぶりごと舞台へ送り出す。夕暮れの並木道を歩く四人から、アイドルウマ娘編は始まる。"
+    }
+  ]
+}

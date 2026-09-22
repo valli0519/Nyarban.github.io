@@ -1,0 +1,710 @@
+{
+  "version": 1,
+  "source_root": "F:/ＴＲＰＧ/アリアンロッド2E/lebel1_2nd/4_AI/シーンCG化/CG_ウマ娘世界",
+  "jobs": [
+    {
+      "id": "uma-ballgame-scroll-v1",
+      "campaign": "umamusume",
+      "chapter": "球技大会編",
+      "title": "1枚の採用CGからカメラだけを進める",
+      "priority": 100,
+      "scenarioId": "ballgame",
+      "panelId": "panel-uma-ballgame-afterword",
+      "mode": "still",
+      "sourceScenes": [
+        12,
+        12
+      ],
+      "colorDistance": 51.36,
+      "source_frames": [
+        "球技大会編/ch-7__sc-012__uid-sc_uma_a_337__v01__五条コールは鳴りやまない.png",
+        "球技大会編/ch-7__sc-012__uid-sc_uma_a_337__v01__五条コールは鳴りやまない.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/umamusume/scroll/ballgame-01.webp",
+        "img/cinematic-scenes/umamusume/scroll/ballgame-03.webp"
+      ],
+      "output": "video/cinematic-scenes/umamusume/ballgame/scroll-v1-720p.mp4",
+      "transitions": [
+        {
+          "duration": 6.0,
+          "seed": 478671,
+          "prompt": "One continuous real-time shot, no cuts. Hold the same scene and the same characters throughout. The camera drifts slowly forward and rises a little, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth rather than a digital zoom. Hair, cloth and foliage move gently in the air; the characters keep their poses and stay in place. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. No digital zoom, frozen tableau, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
+        }
+      ],
+      "scrollSummary": "チームの予算を懸け、トレーナーたちが球技大会で競い合う。大会後の別日には、新人を交えて仕事や暮らしを語り合う。"
+    },
+    {
+      "id": "uma-band-scroll-v1",
+      "campaign": "umamusume",
+      "chapter": "一週間バンド編",
+      "title": "同じ場所の2カットをつないでカメラを進める",
+      "priority": 100,
+      "scenarioId": "band",
+      "panelId": "panel-uma-a-band",
+      "mode": "pair",
+      "sourceScenes": [
+        19,
+        22
+      ],
+      "colorDistance": 33.71,
+      "source_frames": [
+        "バンド編/ch-外1-2__sc-019__uid-sc_uma_a_030__v02__枕ドラムの夜.png",
+        "バンド編/ch-外1-2__sc-022__uid-sc_uma_a_033__v02__耳で拾って、三日目へ.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/umamusume/scroll/band-01.webp",
+        "img/cinematic-scenes/umamusume/scroll/band-03.webp"
+      ],
+      "output": "video/cinematic-scenes/umamusume/band/scroll-v1-720p.mp4",
+      "transitions": [
+        {
+          "duration": 6.0,
+          "seed": 636431,
+          "prompt": "One continuous real-time shot, no cuts. Begin exactly on Picture 1 and end exactly on Picture 2 in the same location. The camera moves slowly and steadily through the space with a gentle dolly, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. Cloth, hair and foliage move gently. No digital zoom, frozen tableau, foot sliding, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
+        }
+      ],
+      "scrollSummary": "一週間後のライブへ向け、四人のトレーナーがバンドを組む。名前を決めたら楽器選び、そして初めての合奏へ。音が重なる楽しさに、練習の夜も短くなる。"
+    },
+    {
+      "id": "uma-cafe_afternoon-scroll-v1",
+      "campaign": "umamusume",
+      "chapter": "昼下がりの相席編",
+      "title": "同じ場所の2カットをつないでカメラを進める",
+      "priority": 100,
+      "scenarioId": "cafe_afternoon",
+      "panelId": "panel-uma-cafe-afternoon",
+      "mode": "pair",
+      "sourceScenes": [
+        10,
+        11
+      ],
+      "colorDistance": 25.72,
+      "source_frames": [
+        "昼下がりの相席編/ch-外1-11__sc-010__uid-sc_uma_a_401_j__v01__余生の家族計画.png",
+        "昼下がりの相席編/ch-外1-11__sc-011__uid-sc_uma_a_401_k__v01__電光石火の初手.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/umamusume/scroll/cafe_afternoon-01.webp",
+        "img/cinematic-scenes/umamusume/scroll/cafe_afternoon-03.webp"
+      ],
+      "output": "video/cinematic-scenes/umamusume/cafe_afternoon/scroll-v1-720p.mp4",
+      "transitions": [
+        {
+          "duration": 6.0,
+          "seed": 867228,
+          "prompt": "One continuous real-time shot, no cuts. Begin exactly on Picture 1 and end exactly on Picture 2 in the same location. The camera moves slowly and steadily through the space with a gentle dolly, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. Cloth, hair and foliage move gently. No digital zoom, frozen tableau, foot sliding, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
+        }
+      ],
+      "scrollSummary": "満席の喫茶店で、カフェ、ブルボン、マヤノ、V2が相席になる。競走の夢を語るはずが、恋の悩みも止まらなくなった。"
+    },
+    {
+      "id": "uma-casual_runway-scroll-v1",
+      "campaign": "umamusume",
+      "chapter": "私服ランウェイ編",
+      "title": "同じ場所の2カットをつないでカメラを進める",
+      "priority": 100,
+      "scenarioId": "casual_runway",
+      "panelId": "panel-uma-casual-runway",
+      "mode": "pair",
+      "sourceScenes": [
+        9,
+        10
+      ],
+      "colorDistance": 30.31,
+      "source_frames": [
+        "私服ランウェイ編/ch-外1-6__sc-009__uid-sc_uma_a_298__v01__団長、マイクも任される.png",
+        "私服ランウェイ編/ch-外1-6__sc-010__uid-sc_uma_a_298_flag__v01__旗より先にシャツが飛んだ.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/umamusume/scroll/casual_runway-01.webp",
+        "img/cinematic-scenes/umamusume/scroll/casual_runway-03.webp"
+      ],
+      "output": "video/cinematic-scenes/umamusume/casual_runway/scroll-v1-720p.mp4",
+      "transitions": [
+        {
+          "duration": 6.0,
+          "seed": 776263,
+          "prompt": "One continuous real-time shot, no cuts. Begin exactly on Picture 1 and end exactly on Picture 2 in the same location. The camera moves slowly and steadily through the space with a gentle dolly, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. Cloth, hair and foliage move gently. No digital zoom, frozen tableau, foot sliding, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
+        }
+      ],
+      "scrollSummary": "ライブの最終打ち合わせと聞いて、青星の庭の四人が番組の会場へ来る。待っていたのは、芸能人たちとの私服ファッション対決だった。"
+    },
+    {
+      "id": "uma-france_visit-scroll-v1",
+      "campaign": "umamusume",
+      "chapter": "アリーヌ来日編",
+      "title": "1枚の採用CGからカメラだけを進める",
+      "priority": 100,
+      "scenarioId": "france_visit",
+      "panelId": "panel-uma-france",
+      "mode": "still",
+      "sourceScenes": [
+        6,
+        6
+      ],
+      "colorDistance": 39.24,
+      "source_frames": [
+        "アリーヌ来日編/ch-4__sc-006__uid-sc_uma_france_006__v01__帝王と団長、同盟を結ぶ.png",
+        "アリーヌ来日編/ch-4__sc-006__uid-sc_uma_france_006__v01__帝王と団長、同盟を結ぶ.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/umamusume/scroll/france_visit-01.webp",
+        "img/cinematic-scenes/umamusume/scroll/france_visit-03.webp"
+      ],
+      "output": "video/cinematic-scenes/umamusume/france_visit/scroll-v1-720p.mp4",
+      "transitions": [
+        {
+          "duration": 6.0,
+          "seed": 805221,
+          "prompt": "One continuous real-time shot, no cuts. Hold the same scene and the same characters throughout. The camera drifts slowly forward and rises a little, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth rather than a digital zoom. Hair, cloth and foliage move gently in the air; the characters keep their poses and stay in place. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. No digital zoom, frozen tableau, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
+        }
+      ],
+      "scrollSummary": "府中で出会った迷子は、ブロワイエのトレーナー。アーサーが求めた答えは、凱旋門賞の先へ預けられる。"
+    },
+    {
+      "id": "uma-idol-scroll-v1",
+      "campaign": "umamusume",
+      "chapter": "アイドルウマ娘編",
+      "title": "同じ場所の2カットをつないでカメラを進める",
+      "priority": 100,
+      "scenarioId": "idol",
+      "panelId": "panel-uma-idol",
+      "mode": "pair",
+      "sourceScenes": [
+        173,
+        174
+      ],
+      "colorDistance": 16.3,
+      "source_frames": [
+        "アイドルウマ娘編/ch-3__sc-173__uid-sc_uma_idol_173__v01__その夢に声を添えよう.png",
+        "アイドルウマ娘編/ch-3__sc-174__uid-sc_uma_idol_174__v01__ユメヲカケル、その足で.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/umamusume/scroll/idol-01.webp",
+        "img/cinematic-scenes/umamusume/scroll/idol-03.webp"
+      ],
+      "output": "video/cinematic-scenes/umamusume/idol/scroll-v1-720p.mp4",
+      "transitions": [
+        {
+          "duration": 6.0,
+          "seed": 854414,
+          "prompt": "One continuous real-time shot, no cuts. Begin exactly on Picture 1 and end exactly on Picture 2 in the same location. The camera moves slowly and steadily through the space with a gentle dolly, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. Cloth, hair and foliage move gently. No digital zoom, frozen tableau, foot sliding, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
+        }
+      ],
+      "scrollSummary": "売れっ子ウマドル四人を、一週間で鍛えて舞台へ送り出す。テレビの無茶ぶりに、幻月とアーサーが向き合う。"
+    },
+    {
+      "id": "uma-island_survival-scroll-v1",
+      "campaign": "umamusume",
+      "chapter": "無人島編",
+      "title": "1枚の採用CGからカメラだけを進める",
+      "priority": 100,
+      "scenarioId": "island_survival",
+      "panelId": "panel-uma-island",
+      "mode": "still",
+      "sourceScenes": [
+        14,
+        14
+      ],
+      "colorDistance": 38.79,
+      "source_frames": [
+        "無人島編/ch-外1-16__sc-014__uid-sc_uma_island_014__v01__ハンモックは一分でできた.png",
+        "無人島編/ch-外1-16__sc-014__uid-sc_uma_island_014__v01__ハンモックは一分でできた.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/umamusume/scroll/island_survival-01.webp",
+        "img/cinematic-scenes/umamusume/scroll/island_survival-03.webp"
+      ],
+      "output": "video/cinematic-scenes/umamusume/island_survival/scroll-v1-720p.mp4",
+      "transitions": [
+        {
+          "duration": 6.0,
+          "seed": 993963,
+          "prompt": "One continuous real-time shot, no cuts. Hold the same scene and the same characters throughout. The camera drifts slowly forward and rises a little, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth rather than a digital zoom. Hair, cloth and foliage move gently in the air; the characters keep their poses and stay in place. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. No digital zoom, frozen tableau, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
+        }
+      ],
+      "scrollSummary": "休暇の命令は、一週間の無人島生活だった。撮影機材だけを持った一行が、海で魚を捕り、島の材料で住まいを作る。頼れる先輩たちといても、初日は驚くことばかり。"
+    },
+    {
+      "id": "uma-leblanc_day-scroll-v1",
+      "campaign": "umamusume",
+      "chapter": "ある日のルブラン編",
+      "title": "1枚の採用CGからカメラだけを進める",
+      "priority": 100,
+      "scenarioId": "leblanc_day",
+      "panelId": "panel-uma-leblanc-day",
+      "mode": "still",
+      "sourceScenes": [
+        1,
+        1
+      ],
+      "colorDistance": 44.58,
+      "source_frames": [
+        "ある日のルブラン編/ch-外1-10__sc-001__uid-sc_uma_a_398__v01__ルブランの繁盛日.png",
+        "ある日のルブラン編/ch-外1-10__sc-001__uid-sc_uma_a_398__v01__ルブランの繁盛日.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/umamusume/scroll/leblanc_day-01.webp",
+        "img/cinematic-scenes/umamusume/scroll/leblanc_day-03.webp"
+      ],
+      "output": "video/cinematic-scenes/umamusume/leblanc_day/scroll-v1-720p.mp4",
+      "transitions": [
+        {
+          "duration": 6.0,
+          "seed": 168472,
+          "prompt": "One continuous real-time shot, no cuts. Hold the same scene and the same characters throughout. The camera drifts slowly forward and rises a little, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth rather than a digital zoom. Hair, cloth and foliage move gently in the air; the characters keep their poses and stay in place. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. No digital zoom, frozen tableau, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
+        }
+      ],
+      "scrollSummary": "十一月下旬のルブランに、常連も意外な客も顔を出す。働くアーサーの一日は、珈琲と世間話で過ぎていく。"
+    },
+    {
+      "id": "uma-magic_ring-scroll-v1",
+      "campaign": "umamusume",
+      "chapter": "魔法指輪編",
+      "title": "1枚の採用CGからカメラだけを進める",
+      "priority": 100,
+      "scenarioId": "magic_ring",
+      "panelId": "panel-uma-magic-ring",
+      "mode": "still",
+      "sourceScenes": [
+        7,
+        7
+      ],
+      "colorDistance": 35.84,
+      "source_frames": [
+        "魔法指輪編/ch-外1-15__sc-007__uid-sc_uma_a_475__v01__知られた秘密、返る魔法.png",
+        "魔法指輪編/ch-外1-15__sc-007__uid-sc_uma_a_475__v01__知られた秘密、返る魔法.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/umamusume/scroll/magic_ring-01.webp",
+        "img/cinematic-scenes/umamusume/scroll/magic_ring-03.webp"
+      ],
+      "output": "video/cinematic-scenes/umamusume/magic_ring/scroll-v1-720p.mp4",
+      "transitions": [
+        {
+          "duration": 6.0,
+          "seed": 802708,
+          "prompt": "One continuous real-time shot, no cuts. Hold the same scene and the same characters throughout. The camera drifts slowly forward and rises a little, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth rather than a digital zoom. Hair, cloth and foliage move gently in the air; the characters keep their poses and stay in place. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. No digital zoom, frozen tableau, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
+        }
+      ],
+      "scrollSummary": "科学で指輪を調べたいUVと、早く魔法を試したいマーリン。実験の先には、何でも知っている本棚と、知られたくなかった秘密が待っていた。"
+    },
+    {
+      "id": "uma-meanwhile_home-scroll-v1",
+      "campaign": "umamusume",
+      "chapter": "一方その頃編",
+      "title": "同じ場所の2カットをつないでカメラを進める",
+      "priority": 100,
+      "scenarioId": "meanwhile_home",
+      "panelId": "panel-uma-c-meanwhile",
+      "mode": "pair",
+      "sourceScenes": [
+        12,
+        14
+      ],
+      "colorDistance": 17.11,
+      "source_frames": [
+        "一方その頃編/ch-外3-1__sc-012__uid-sc_uma_c_012__v01__弄りの過去最速記録.png",
+        "一方その頃編/ch-外3-1__sc-014__uid-sc_uma_c_014__v01__あの結婚発表で学園は荒れた.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/umamusume/scroll/meanwhile_home-01.webp",
+        "img/cinematic-scenes/umamusume/scroll/meanwhile_home-03.webp"
+      ],
+      "output": "video/cinematic-scenes/umamusume/meanwhile_home/scroll-v1-720p.mp4",
+      "transitions": [
+        {
+          "duration": 6.0,
+          "seed": 108075,
+          "prompt": "One continuous real-time shot, no cuts. Begin exactly on Picture 1 and end exactly on Picture 2 in the same location. The camera moves slowly and steadily through the space with a gentle dolly, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. Cloth, hair and foliage move gently. No digital zoom, frozen tableau, foot sliding, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
+        }
+      ],
+      "scrollSummary": "三人が何も告げずに渡米した日の夕方。日本に残されたV2は、引き出しの奥に遺書を見つける。学園にはオルガと同じジャケットの中尉が現れ、トレーナーたちの夜は掃除と身の上話で更けていく。"
+    },
+    {
+      "id": "uma-new_life-scroll-v1",
+      "campaign": "umamusume",
+      "chapter": "ニトリ・新生活編",
+      "title": "1枚の採用CGからカメラだけを進める",
+      "priority": 100,
+      "scenarioId": "new_life",
+      "panelId": "panel-uma-new-life",
+      "mode": "still",
+      "sourceScenes": [
+        17,
+        17
+      ],
+      "colorDistance": 44.98,
+      "source_frames": [
+        "ニトリ・新生活編/ch-外1-5__sc-017__uid-sc_uma_a_276__v01__祝うという字が読めなくて.png",
+        "ニトリ・新生活編/ch-外1-5__sc-017__uid-sc_uma_a_276__v01__祝うという字が読めなくて.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/umamusume/scroll/new_life-01.webp",
+        "img/cinematic-scenes/umamusume/scroll/new_life-03.webp"
+      ],
+      "output": "video/cinematic-scenes/umamusume/new_life/scroll-v1-720p.mp4",
+      "transitions": [
+        {
+          "duration": 6.0,
+          "seed": 679173,
+          "prompt": "One continuous real-time shot, no cuts. Hold the same scene and the same characters throughout. The camera drifts slowly forward and rises a little, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth rather than a digital zoom. Hair, cloth and foliage move gently in the air; the characters keep their poses and stay in place. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. No digital zoom, frozen tableau, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
+        }
+      ],
+      "scrollSummary": "クイーンを迎えた一行は、ニトリで新居の家具を選ぶ。引っ越しを終えた家に仲間が集まり、姉妹との暮らしや、それぞれの家族について話す。"
+    },
+    {
+      "id": "uma-new_member_welcome-scroll-v1",
+      "campaign": "umamusume",
+      "chapter": "新メンバー歓迎編",
+      "title": "同じ場所の2カットをつないでカメラを進める",
+      "priority": 100,
+      "scenarioId": "new_member_welcome",
+      "panelId": "panel-uma-new-member-welcome",
+      "mode": "pair",
+      "sourceScenes": [
+        5,
+        8
+      ],
+      "colorDistance": 31.68,
+      "source_frames": [
+        "新メンバー歓迎編/ch-外1-9__sc-005__uid-sc_uma_a_394_d__v01__シービー、湿度を上げる.png",
+        "新メンバー歓迎編/ch-外1-9__sc-008__uid-sc_uma_a_394_g__v01__ファイターの持ち歌.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/umamusume/scroll/new_member_welcome-01.webp",
+        "img/cinematic-scenes/umamusume/scroll/new_member_welcome-03.webp"
+      ],
+      "output": "video/cinematic-scenes/umamusume/new_member_welcome/scroll-v1-720p.mp4",
+      "transitions": [
+        {
+          "duration": 6.0,
+          "seed": 140718,
+          "prompt": "One continuous real-time shot, no cuts. Begin exactly on Picture 1 and end exactly on Picture 2 in the same location. The camera moves slowly and steadily through the space with a gentle dolly, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. Cloth, hair and foliage move gently. No digital zoom, frozen tableau, foot sliding, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
+        }
+      ],
+      "scrollSummary": "鉄華団の新人タイシンと、アーサーのチームに加わったシービー。顔合わせはカラオケへ、さらに自宅のゲームと鍋へと広がる。"
+    },
+    {
+      "id": "uma-onsen_survival-scroll-v1",
+      "campaign": "umamusume",
+      "chapter": "温泉サバイバル編",
+      "title": "同じ場所の2カットをつないでカメラを進める",
+      "priority": 100,
+      "scenarioId": "onsen_survival",
+      "panelId": "panel-uma-onsen",
+      "mode": "pair",
+      "sourceScenes": [
+        42,
+        43
+      ],
+      "colorDistance": 10.18,
+      "source_frames": [
+        "温泉サバイバル編/ch-6__sc-042__uid-sc_uma_onsen_044__v01__撫でるだけなら、平和だった.png",
+        "温泉サバイバル編/ch-6__sc-043__uid-sc_uma_onsen_047__v01__初恋は、団長の方へ.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/umamusume/scroll/onsen_survival-01.webp",
+        "img/cinematic-scenes/umamusume/scroll/onsen_survival-03.webp"
+      ],
+      "output": "video/cinematic-scenes/umamusume/onsen_survival/scroll-v1-720p.mp4",
+      "transitions": [
+        {
+          "duration": 6.0,
+          "seed": 862443,
+          "prompt": "One continuous real-time shot, no cuts. Begin exactly on Picture 1 and end exactly on Picture 2 in the same location. The camera moves slowly and steadily through the space with a gentle dolly, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. Cloth, hair and foliage move gently. No digital zoom, frozen tableau, foot sliding, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
+        }
+      ],
+      "scrollSummary": "ご褒美の旅は千尋温泉へ。偶然の合流は重なり、部屋割りから卓球まで、休暇にも負けられない勝負が待っている。"
+    },
+    {
+      "id": "uma-orga_birth-scroll-v1",
+      "campaign": "umamusume",
+      "chapter": "オルガ出産編",
+      "title": "同じ場所の2カットをつないでカメラを進める",
+      "priority": 100,
+      "scenarioId": "orga_birth",
+      "panelId": "panel-uma-orga-birth",
+      "mode": "pair",
+      "sourceScenes": [
+        9,
+        10
+      ],
+      "colorDistance": 26.1,
+      "source_frames": [
+        "オルガ出産編/ch-外1-14__sc-009__uid-sc_uma_a_466_b__v01__伸ばした手を、離さない.png",
+        "オルガ出産編/ch-外1-14__sc-010__uid-sc_uma_a_467__v01__エクシア、はじめまして.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/umamusume/scroll/orga_birth-01.webp",
+        "img/cinematic-scenes/umamusume/scroll/orga_birth-03.webp"
+      ],
+      "output": "video/cinematic-scenes/umamusume/orga_birth/scroll-v1-720p.mp4",
+      "transitions": [
+        {
+          "duration": 6.0,
+          "seed": 580833,
+          "prompt": "One continuous real-time shot, no cuts. Begin exactly on Picture 1 and end exactly on Picture 2 in the same location. The camera moves slowly and steadily through the space with a gentle dolly, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. Cloth, hair and foliage move gently. No digital zoom, frozen tableau, foot sliding, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
+        }
+      ],
+      "scrollSummary": "V2の陣痛に、仲間たちが病院へ駆けつける。長い待ち時間を越え、オルガは父親として最初の言葉を娘へ贈る。"
+    },
+    {
+      "id": "uma-protcomplex-scroll-v1",
+      "campaign": "umamusume",
+      "chapter": "プロトコンプレックス編",
+      "title": "同じ場所の2カットをつないでカメラを進める",
+      "priority": 100,
+      "scenarioId": "protcomplex",
+      "panelId": "panel-uma-protcomplex",
+      "mode": "pair",
+      "sourceScenes": [
+        210,
+        211
+      ],
+      "colorDistance": 30.47,
+      "source_frames": [
+        "プロトコンプレックス編/ch-9__sc-210__uid-sc_uma_protcomplex_uv_065_d__v01__ごめんなさい、が先です.png",
+        "プロトコンプレックス編/ch-9__sc-211__uid-sc_uma_protcomplex_uv_065_e__v01__一口で、話が変わる.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/umamusume/scroll/protcomplex-01.webp",
+        "img/cinematic-scenes/umamusume/scroll/protcomplex-03.webp"
+      ],
+      "output": "video/cinematic-scenes/umamusume/protcomplex/scroll-v1-720p.mp4",
+      "transitions": [
+        {
+          "duration": 6.0,
+          "seed": 630712,
+          "prompt": "One continuous real-time shot, no cuts. Begin exactly on Picture 1 and end exactly on Picture 2 in the same location. The camera moves slowly and steadily through the space with a gentle dolly, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. Cloth, hair and foliage move gently. No digital zoom, frozen tableau, foot sliding, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
+        }
+      ],
+      "scrollSummary": "連休前の依頼が、白い地下都市へ三人を招く。幸福を義務づける国で社員証を手にした彼らは、仕事も身分も命がけの日々へ踏み込んでいく。"
+    },
+    {
+      "id": "uma-sao-scroll-v1",
+      "campaign": "umamusume",
+      "chapter": "SAO編",
+      "title": "同じ場所の2カットをつないでカメラを進める",
+      "priority": 100,
+      "scenarioId": "sao",
+      "panelId": "panel-uma-sao",
+      "mode": "pair",
+      "sourceScenes": [
+        15,
+        17
+      ],
+      "colorDistance": 34.36,
+      "source_frames": [
+        "SAO編/ch-8__sc-015__uid-sc_uma_sao_006__v01__七十五階からご飯へ.png",
+        "SAO編/ch-8__sc-017__uid-sc_uma_sao_007__v01__よその攻略も大騒ぎ.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/umamusume/scroll/sao-01.webp",
+        "img/cinematic-scenes/umamusume/scroll/sao-03.webp"
+      ],
+      "output": "video/cinematic-scenes/umamusume/sao/scroll-v1-720p.mp4",
+      "transitions": [
+        {
+          "duration": 6.0,
+          "seed": 207288,
+          "prompt": "One continuous real-time shot, no cuts. Begin exactly on Picture 1 and end exactly on Picture 2 in the same location. The camera moves slowly and steadily through the space with a gentle dolly, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. Cloth, hair and foliage move gently. No digital zoom, frozen tableau, foot sliding, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
+        }
+      ],
+      "scrollSummary": "新しいゲームの安全確認が、百層を踏破する脱出行へ変わる。帰りを待つ仲間と街を守る人々のため、攻略の足は止まらない。"
+    },
+    {
+      "id": "uma-silver_week_date-scroll-v1",
+      "campaign": "umamusume",
+      "chapter": "シルバーウィークのデート編",
+      "title": "1枚の採用CGからカメラだけを進める",
+      "priority": 100,
+      "scenarioId": "silver_week_date",
+      "panelId": "panel-uma-silver-week-date",
+      "mode": "still",
+      "sourceScenes": [
+        13,
+        13
+      ],
+      "colorDistance": 36.33,
+      "source_frames": [
+        "シルバーウィークのデート編/ch-外1-7__sc-013__uid-sc_uma_a_361__v01__バブルの一曲.png",
+        "シルバーウィークのデート編/ch-外1-7__sc-013__uid-sc_uma_a_361__v01__バブルの一曲.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/umamusume/scroll/silver_week_date-01.webp",
+        "img/cinematic-scenes/umamusume/scroll/silver_week_date-03.webp"
+      ],
+      "output": "video/cinematic-scenes/umamusume/silver_week_date/scroll-v1-720p.mp4",
+      "transitions": [
+        {
+          "duration": 6.0,
+          "seed": 862449,
+          "prompt": "One continuous real-time shot, no cuts. Hold the same scene and the same characters throughout. The camera drifts slowly forward and rises a little, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth rather than a digital zoom. Hair, cloth and foliage move gently in the air; the characters keep their poses and stay in place. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. No digital zoom, frozen tableau, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
+        }
+      ],
+      "scrollSummary": "シルバーウィークに、アリーヌが幻月を訪ねて来る。二人は仲間と街を歩き、食べ歩きや遊びを楽しむ。"
+    },
+    {
+      "id": "uma-summer_camp-scroll-v1",
+      "campaign": "umamusume",
+      "chapter": "夏合宿編",
+      "title": "同じ場所の2カットをつないでカメラを進める",
+      "priority": 100,
+      "scenarioId": "summer_camp",
+      "panelId": "panel-uma-a-summer-camp",
+      "mode": "pair",
+      "sourceScenes": [
+        167,
+        169
+      ],
+      "colorDistance": 26.45,
+      "source_frames": [
+        "夏合宿編/ch-外1-4__sc-167__uid-sc_uma_a_222_training__v01__砂の城にも、訓練日和.png",
+        "夏合宿編/ch-外1-4__sc-169__uid-sc_uma_a_223__v01__お城の次は屋台制覇.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/umamusume/scroll/summer_camp-01.webp",
+        "img/cinematic-scenes/umamusume/scroll/summer_camp-03.webp"
+      ],
+      "output": "video/cinematic-scenes/umamusume/summer_camp/scroll-v1-720p.mp4",
+      "transitions": [
+        {
+          "duration": 6.0,
+          "seed": 179117,
+          "prompt": "One continuous real-time shot, no cuts. Begin exactly on Picture 1 and end exactly on Picture 2 in the same location. The camera moves slowly and steadily through the space with a gentle dolly, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. Cloth, hair and foliage move gently. No digital zoom, frozen tableau, foot sliding, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
+        }
+      ],
+      "scrollSummary": "ライブ翌朝から始まる夏合宿。賑やかな道中の先で幻月が姿を消し、アーサーとオルガは救出へ向かう。残った仲間たちも、それぞれの場所で帰還を待つ。"
+    },
+    {
+      "id": "uma-uk_debutant-scroll-v1",
+      "campaign": "umamusume",
+      "chapter": "英国デビュタント編",
+      "title": "1枚の採用CGからカメラだけを進める",
+      "priority": 100,
+      "scenarioId": "uk_debutant",
+      "panelId": "panel-uma-uk-debutant",
+      "mode": "still",
+      "sourceScenes": [
+        55,
+        55
+      ],
+      "colorDistance": 37.25,
+      "source_frames": [
+        "英国デビュタント編/ch-外1-13__sc-055__uid-sc_uma_a_442_e__v01__虫を待つ女王.png",
+        "英国デビュタント編/ch-外1-13__sc-055__uid-sc_uma_a_442_e__v01__虫を待つ女王.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/umamusume/scroll/uk_debutant-01.webp",
+        "img/cinematic-scenes/umamusume/scroll/uk_debutant-03.webp"
+      ],
+      "output": "video/cinematic-scenes/umamusume/uk_debutant/scroll-v1-720p.mp4",
+      "transitions": [
+        {
+          "duration": 6.0,
+          "seed": 734735,
+          "prompt": "One continuous real-time shot, no cuts. Hold the same scene and the same characters throughout. The camera drifts slowly forward and rises a little, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth rather than a digital zoom. Hair, cloth and foliage move gently in the air; the characters keep their poses and stay in place. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. No digital zoom, frozen tableau, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
+        }
+      ],
+      "scrollSummary": "UVの社交界デビューを祝いに、舞台はキャメロットへ。華やかな衣装と笑顔の裏で、王族と騎士たちは迫る襲撃に備えていた。"
+    },
+    {
+      "id": "uma-ultraman_z_if-scroll-v1",
+      "campaign": "umamusume",
+      "chapter": "ウルトラマンZ IF編",
+      "title": "1枚の採用CGからカメラだけを進める",
+      "priority": 100,
+      "scenarioId": "ultraman_z_if",
+      "panelId": "panel-uma-ultraman-z-if",
+      "mode": "still",
+      "sourceScenes": [
+        9,
+        9
+      ],
+      "colorDistance": 63.2,
+      "source_frames": [
+        "ウルトラマンZ IF編/ch-外1-8__sc-009__uid-sc_uma_a_390__v01__ライザー返して、話はそれから.png",
+        "ウルトラマンZ IF編/ch-外1-8__sc-009__uid-sc_uma_a_390__v01__ライザー返して、話はそれから.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/umamusume/scroll/ultraman_z_if-01.webp",
+        "img/cinematic-scenes/umamusume/scroll/ultraman_z_if-03.webp"
+      ],
+      "output": "video/cinematic-scenes/umamusume/ultraman_z_if/scroll-v1-720p.mp4",
+      "transitions": [
+        {
+          "duration": 6.0,
+          "seed": 644601,
+          "prompt": "One continuous real-time shot, no cuts. Hold the same scene and the same characters throughout. The camera drifts slowly forward and rises a little, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth rather than a digital zoom. Hair, cloth and foliage move gently in the air; the characters keep their poses and stay in place. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. No digital zoom, frozen tableau, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
+        }
+      ],
+      "scrollSummary": "甘い休日を裂いて、渋谷に怪獣が現れる。オルガはウルトラマンZと命をつなぎ、街を守る巨人になる。"
+    },
+    {
+      "id": "uma-underworld-scroll-v1",
+      "campaign": "umamusume",
+      "chapter": "アンダーワールド編",
+      "title": "同じ場所の2カットをつないでカメラを進める",
+      "priority": 100,
+      "scenarioId": "underworld",
+      "panelId": "panel-uma-b-uw-lily",
+      "mode": "pair",
+      "sourceScenes": [
+        59,
+        60
+      ],
+      "colorDistance": 25.35,
+      "source_frames": [
+        "アンダーワールド編/ch-外2-1__sc-059__uid-sc_uma_protcomplex_underworld_014_c__v01__黄金のナイト、長期戦.png",
+        "アンダーワールド編/ch-外2-1__sc-060__uid-sc_uma_protcomplex_underworld_014_d__v01__降参は、ちゃんと降参.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/umamusume/scroll/underworld-01.webp",
+        "img/cinematic-scenes/umamusume/scroll/underworld-03.webp"
+      ],
+      "output": "video/cinematic-scenes/umamusume/underworld/scroll-v1-720p.mp4",
+      "transitions": [
+        {
+          "duration": 6.0,
+          "seed": 534809,
+          "prompt": "One continuous real-time shot, no cuts. Begin exactly on Picture 1 and end exactly on Picture 2 in the same location. The camera moves slowly and steadily through the space with a gentle dolly, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. Cloth, hair and foliage move gently. No digital zoom, frozen tableau, foot sliding, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
+        }
+      ],
+      "scrollSummary": "リリィたちが戦争を生き抜いた前日譚から、仲間の消失を追う救助行へ。アーサーたちは、知っている世界によく似た異世界へ足を踏み入れる。"
+    },
+    {
+      "id": "uma-university_exam-scroll-v1",
+      "campaign": "umamusume",
+      "chapter": "大学受験編",
+      "title": "同じ場所の2カットをつないでカメラを進める",
+      "priority": 100,
+      "scenarioId": "university_exam",
+      "panelId": "panel-uma-university-exam",
+      "mode": "pair",
+      "sourceScenes": [
+        27,
+        28
+      ],
+      "colorDistance": 30.24,
+      "source_frames": [
+        "大学受験編/ch-外1-12__sc-027__uid-sc_uma_a_414__v01__満点報告、百九十八万席.png",
+        "大学受験編/ch-外1-12__sc-028__uid-sc_uma_a_415__v01__理系の日には迷いなし.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/umamusume/scroll/university_exam-01.webp",
+        "img/cinematic-scenes/umamusume/scroll/university_exam-03.webp"
+      ],
+      "output": "video/cinematic-scenes/umamusume/university_exam/scroll-v1-720p.mp4",
+      "transitions": [
+        {
+          "duration": 6.0,
+          "seed": 820425,
+          "prompt": "One continuous real-time shot, no cuts. Begin exactly on Picture 1 and end exactly on Picture 2 in the same location. The camera moves slowly and steadily through the space with a gentle dolly, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. Cloth, hair and foliage move gently. No digital zoom, frozen tableau, foot sliding, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
+        }
+      ],
+      "scrollSummary": "午前四時の思いつきから、二人の東大受験が始まった。見学、勉強、試験を越えて迎える春も、祝杯だけでは終わらない。"
+    }
+  ]
+}
