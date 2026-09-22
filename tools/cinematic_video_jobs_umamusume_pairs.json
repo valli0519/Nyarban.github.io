@@ -27,7 +27,7 @@
       "output": "video/cinematic-scenes/umamusume/ballgame/scroll-v1-720p.mp4",
       "transitions": [
         {
-          "duration": 6.0,
+          "duration": 4.0,
           "seed": 478671,
           "prompt": "One continuous real-time shot, no cuts. Hold the same scene and the same characters throughout. The camera drifts slowly forward and rises a little, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth rather than a digital zoom. Hair, cloth and foliage move gently in the air; the characters keep their poses and stay in place. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. No digital zoom, frozen tableau, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
         }
@@ -59,7 +59,7 @@
       "output": "video/cinematic-scenes/umamusume/band/scroll-v1-720p.mp4",
       "transitions": [
         {
-          "duration": 6.0,
+          "duration": 4.0,
           "seed": 636431,
           "prompt": "One continuous real-time shot, no cuts. Begin exactly on Picture 1 and end exactly on Picture 2 in the same location. The camera moves slowly and steadily through the space with a gentle dolly, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. Cloth, hair and foliage move gently. No digital zoom, frozen tableau, foot sliding, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
         }
@@ -91,7 +91,7 @@
       "output": "video/cinematic-scenes/umamusume/cafe_afternoon/scroll-v1-720p.mp4",
       "transitions": [
         {
-          "duration": 6.0,
+          "duration": 4.0,
           "seed": 867228,
           "prompt": "One continuous real-time shot, no cuts. Begin exactly on Picture 1 and end exactly on Picture 2 in the same location. The camera moves slowly and steadily through the space with a gentle dolly, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. Cloth, hair and foliage move gently. No digital zoom, frozen tableau, foot sliding, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
         }
@@ -123,7 +123,7 @@
       "output": "video/cinematic-scenes/umamusume/casual_runway/scroll-v1-720p.mp4",
       "transitions": [
         {
-          "duration": 6.0,
+          "duration": 4.0,
           "seed": 776263,
           "prompt": "One continuous real-time shot, no cuts. Begin exactly on Picture 1 and end exactly on Picture 2 in the same location. The camera moves slowly and steadily through the space with a gentle dolly, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. Cloth, hair and foliage move gently. No digital zoom, frozen tableau, foot sliding, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
         }
@@ -155,7 +155,7 @@
       "output": "video/cinematic-scenes/umamusume/france_visit/scroll-v1-720p.mp4",
       "transitions": [
         {
-          "duration": 6.0,
+          "duration": 4.0,
           "seed": 805221,
           "prompt": "One continuous real-time shot, no cuts. Hold the same scene and the same characters throughout. The camera drifts slowly forward and rises a little, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth rather than a digital zoom. Hair, cloth and foliage move gently in the air; the characters keep their poses and stay in place. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. No digital zoom, frozen tableau, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
         }
@@ -187,7 +187,7 @@
       "output": "video/cinematic-scenes/umamusume/idol/scroll-v1-720p.mp4",
       "transitions": [
         {
-          "duration": 6.0,
+          "duration": 4.0,
           "seed": 854414,
           "prompt": "One continuous real-time shot, no cuts. Begin exactly on Picture 1 and end exactly on Picture 2 in the same location. The camera moves slowly and steadily through the space with a gentle dolly, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. Cloth, hair and foliage move gently. No digital zoom, frozen tableau, foot sliding, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
         }
@@ -219,7 +219,7 @@
       "output": "video/cinematic-scenes/umamusume/island_survival/scroll-v1-720p.mp4",
       "transitions": [
         {
-          "duration": 6.0,
+          "duration": 4.0,
           "seed": 993963,
           "prompt": "One continuous real-time shot, no cuts. Hold the same scene and the same characters throughout. The camera drifts slowly forward and rises a little, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth rather than a digital zoom. Hair, cloth and foliage move gently in the air; the characters keep their poses and stay in place. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. No digital zoom, frozen tableau, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
         }
@@ -251,7 +251,7 @@
       "output": "video/cinematic-scenes/umamusume/leblanc_day/scroll-v1-720p.mp4",
       "transitions": [
         {
-          "duration": 6.0,
+          "duration": 4.0,
           "seed": 168472,
           "prompt": "One continuous real-time shot, no cuts. Hold the same scene and the same characters throughout. The camera drifts slowly forward and rises a little, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth rather than a digital zoom. Hair, cloth and foliage move gently in the air; the characters keep their poses and stay in place. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. No digital zoom, frozen tableau, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
         }
@@ -283,7 +283,7 @@
       "output": "video/cinematic-scenes/umamusume/magic_ring/scroll-v1-720p.mp4",
       "transitions": [
         {
-          "duration": 6.0,
+          "duration": 4.0,
           "seed": 802708,
           "prompt": "One continuous real-time shot, no cuts. Hold the same scene and the same characters throughout. The camera drifts slowly forward and rises a little, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth rather than a digital zoom. Hair, cloth and foliage move gently in the air; the characters keep their poses and stay in place. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. No digital zoom, frozen tableau, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
         }
@@ -315,7 +315,7 @@
       "output": "video/cinematic-scenes/umamusume/meanwhile_home/scroll-v1-720p.mp4",
       "transitions": [
         {
-          "duration": 6.0,
+          "duration": 4.0,
           "seed": 108075,
           "prompt": "One continuous real-time shot, no cuts. Begin exactly on Picture 1 and end exactly on Picture 2 in the same location. The camera moves slowly and steadily through the space with a gentle dolly, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. Cloth, hair and foliage move gently. No digital zoom, frozen tableau, foot sliding, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
         }
@@ -347,7 +347,7 @@
       "output": "video/cinematic-scenes/umamusume/new_life/scroll-v1-720p.mp4",
       "transitions": [
         {
-          "duration": 6.0,
+          "duration": 4.0,
           "seed": 679173,
           "prompt": "One continuous real-time shot, no cuts. Hold the same scene and the same characters throughout. The camera drifts slowly forward and rises a little, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth rather than a digital zoom. Hair, cloth and foliage move gently in the air; the characters keep their poses and stay in place. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. No digital zoom, frozen tableau, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
         }
@@ -379,7 +379,7 @@
       "output": "video/cinematic-scenes/umamusume/new_member_welcome/scroll-v1-720p.mp4",
       "transitions": [
         {
-          "duration": 6.0,
+          "duration": 4.0,
           "seed": 140718,
           "prompt": "One continuous real-time shot, no cuts. Begin exactly on Picture 1 and end exactly on Picture 2 in the same location. The camera moves slowly and steadily through the space with a gentle dolly, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. Cloth, hair and foliage move gently. No digital zoom, frozen tableau, foot sliding, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
         }
@@ -411,7 +411,7 @@
       "output": "video/cinematic-scenes/umamusume/onsen_survival/scroll-v1-720p.mp4",
       "transitions": [
         {
-          "duration": 6.0,
+          "duration": 4.0,
           "seed": 862443,
           "prompt": "One continuous real-time shot, no cuts. Begin exactly on Picture 1 and end exactly on Picture 2 in the same location. The camera moves slowly and steadily through the space with a gentle dolly, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. Cloth, hair and foliage move gently. No digital zoom, frozen tableau, foot sliding, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
         }
@@ -443,7 +443,7 @@
       "output": "video/cinematic-scenes/umamusume/orga_birth/scroll-v1-720p.mp4",
       "transitions": [
         {
-          "duration": 6.0,
+          "duration": 4.0,
           "seed": 580833,
           "prompt": "One continuous real-time shot, no cuts. Begin exactly on Picture 1 and end exactly on Picture 2 in the same location. The camera moves slowly and steadily through the space with a gentle dolly, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. Cloth, hair and foliage move gently. No digital zoom, frozen tableau, foot sliding, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
         }
@@ -475,7 +475,7 @@
       "output": "video/cinematic-scenes/umamusume/protcomplex/scroll-v1-720p.mp4",
       "transitions": [
         {
-          "duration": 6.0,
+          "duration": 4.0,
           "seed": 630712,
           "prompt": "One continuous real-time shot, no cuts. Begin exactly on Picture 1 and end exactly on Picture 2 in the same location. The camera moves slowly and steadily through the space with a gentle dolly, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. Cloth, hair and foliage move gently. No digital zoom, frozen tableau, foot sliding, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
         }
@@ -507,7 +507,7 @@
       "output": "video/cinematic-scenes/umamusume/sao/scroll-v1-720p.mp4",
       "transitions": [
         {
-          "duration": 6.0,
+          "duration": 4.0,
           "seed": 207288,
           "prompt": "One continuous real-time shot, no cuts. Begin exactly on Picture 1 and end exactly on Picture 2 in the same location. The camera moves slowly and steadily through the space with a gentle dolly, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. Cloth, hair and foliage move gently. No digital zoom, frozen tableau, foot sliding, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
         }
@@ -539,7 +539,7 @@
       "output": "video/cinematic-scenes/umamusume/silver_week_date/scroll-v1-720p.mp4",
       "transitions": [
         {
-          "duration": 6.0,
+          "duration": 4.0,
           "seed": 862449,
           "prompt": "One continuous real-time shot, no cuts. Hold the same scene and the same characters throughout. The camera drifts slowly forward and rises a little, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth rather than a digital zoom. Hair, cloth and foliage move gently in the air; the characters keep their poses and stay in place. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. No digital zoom, frozen tableau, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
         }
@@ -571,7 +571,7 @@
       "output": "video/cinematic-scenes/umamusume/summer_camp/scroll-v1-720p.mp4",
       "transitions": [
         {
-          "duration": 6.0,
+          "duration": 4.0,
           "seed": 179117,
           "prompt": "One continuous real-time shot, no cuts. Begin exactly on Picture 1 and end exactly on Picture 2 in the same location. The camera moves slowly and steadily through the space with a gentle dolly, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. Cloth, hair and foliage move gently. No digital zoom, frozen tableau, foot sliding, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
         }
@@ -603,7 +603,7 @@
       "output": "video/cinematic-scenes/umamusume/uk_debutant/scroll-v1-720p.mp4",
       "transitions": [
         {
-          "duration": 6.0,
+          "duration": 4.0,
           "seed": 734735,
           "prompt": "One continuous real-time shot, no cuts. Hold the same scene and the same characters throughout. The camera drifts slowly forward and rises a little, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth rather than a digital zoom. Hair, cloth and foliage move gently in the air; the characters keep their poses and stay in place. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. No digital zoom, frozen tableau, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
         }
@@ -635,7 +635,7 @@
       "output": "video/cinematic-scenes/umamusume/ultraman_z_if/scroll-v1-720p.mp4",
       "transitions": [
         {
-          "duration": 6.0,
+          "duration": 4.0,
           "seed": 644601,
           "prompt": "One continuous real-time shot, no cuts. Hold the same scene and the same characters throughout. The camera drifts slowly forward and rises a little, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth rather than a digital zoom. Hair, cloth and foliage move gently in the air; the characters keep their poses and stay in place. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. No digital zoom, frozen tableau, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
         }
@@ -667,7 +667,7 @@
       "output": "video/cinematic-scenes/umamusume/underworld/scroll-v1-720p.mp4",
       "transitions": [
         {
-          "duration": 6.0,
+          "duration": 4.0,
           "seed": 534809,
           "prompt": "One continuous real-time shot, no cuts. Begin exactly on Picture 1 and end exactly on Picture 2 in the same location. The camera moves slowly and steadily through the space with a gentle dolly, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. Cloth, hair and foliage move gently. No digital zoom, frozen tableau, foot sliding, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
         }
@@ -699,7 +699,7 @@
       "output": "video/cinematic-scenes/umamusume/university_exam/scroll-v1-720p.mp4",
       "transitions": [
         {
-          "duration": 6.0,
+          "duration": 4.0,
           "seed": 820425,
           "prompt": "One continuous real-time shot, no cuts. Begin exactly on Picture 1 and end exactly on Picture 2 in the same location. The camera moves slowly and steadily through the space with a gentle dolly, so near objects sweep past the frame edges while distant structures shift slowly, giving real depth. Keep every visible character's face, hair colour and length, eye colour, costume, accessories and left-to-right order unchanged; do not add or remove a character. Cloth, hair and foliage move gently. No digital zoom, frozen tableau, foot sliding, body or face morphing, duplicated limb, rubber architecture, teleportation, sudden speed ramp, cut, wipe, page turn, flash, text, subtitle, logo or watermark."
         }
