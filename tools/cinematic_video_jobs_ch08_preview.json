@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "source_root": "F:/ＴＲＰＧ/アリアンロッド2E/lebel1_2nd/4_AI/シーンCG化",
+  "jobs": [
+    {
+      "id": "lv1-ch08-act1-laclaire-preview",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第一幕",
+      "title": "ラクレールへの旅路、Lv1装備の潜入から平原の夕食へ",
+      "priority": 100,
+      "source_frames": [
+        "CG_Lv1_2nd/8章/8-08_sc_ch8_a1_008_2d25e0386d_歩け歩け、朝が来るまでラクレールへ-v5.png",
+        "CG_Lv1_2nd/8章/8-12_sc_ch8_a1_012_04f3868648_宝具を置いて、Lv1装備で再潜入-v3.png",
+        "CG_Lv1_2nd/8章/8-75_sc_ch8_a1_075_6d5d84a99b_平原ケバブ、英雄にも夕飯はいる-v2.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08a1-01-road-to-laclaire.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08a1-02-level-one-infiltration.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08a1-03-kebab-camp.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-act1-laclaire-journey-720p.mp4",
+      "transitions": [
+        {
+          "seed": 913801,
+          "prompt": "One continuous premium cinematic tracking shot, no cuts. Begin exactly on Picture 1 at golden sunset: an open black magical utility vehicle races north across the grassland, with the same six adventurers enjoying travel rations. Preserve all six identities and their exact arrangement: the short-haired blonde female knight in white-and-red armor drives; the small silver-haired pointed-ear elf in white-and-gold robes sits beside her; the long dark-blue-haired woman in a fitted navy outfit and the tall long-blonde-haired woman in ornate white-and-teal attire sit behind; the spiky blond swordsman and the pale-blonde female warrior follow on two separate black motorcycles. Track low beside the convoy, then rise in a graceful half orbit. Wheels and motorcycles move naturally, warm dust streams backward, hair, cloth, wrappers, wheat, and suspension respond to speed. Ahead, intricate blue teleport runes assemble into a tall translucent gateway whose rippling surface reflects the sunset. The convoy enters without slowing. Let the blue magical membrane and sun flare fully cover the lens as a motivated in-camera transition, with layered refraction, floating geometric light, and fine particles rather than a simple dissolve. Continue through the same gateway and reveal exactly Picture 2 at dusk outside the stone fortress city: the same group of six now stands in deliberately anonymous low-level equipment, arranged exactly as shown from left to right as a huge silver plate knight giving a thumbs-up, a small hooded white-haired figure, a slim silver knight holding a plain sword, a central dark chainmail fighter, a curvy silver-armored knight, and a white-surcoat crusader. Blue teleport sparks settle behind them. Preserve the endpoint armor geometry, helmets, swords, body proportions, road, castle, sky, and polished detailed fantasy-anime illustration style. Never show a malformed costume morph: use the opaque magical gateway to conceal the change. Exactly six heroes at all times; no merging, duplication, missing people, extra limbs, extra motorcycles, altered faces, text, subtitles, logos, watermarks, dialogue, or graphic injury. End exactly on Picture 2."
+        },
+        {
+          "seed": 913802,
+          "prompt": "One continuous premium cinematic shot, no cuts. Begin exactly on Picture 1 at dusk outside the fortress city: the same six disguised adventurers stand in plain low-level armor, arranged exactly as shown with the giant silver knight at far left, the small hooded white-haired figure, the slim silver knight, the dark chainmail fighter, the curvy silver knight, and the white-surcoat crusader at far right. Preserve all six silhouettes, armor plates, helmets, simple swords, anatomy, road, castle, and blue teleport residue. Start with a slow heroic lateral dolly while subtle wind moves cloaks and grass and the last blue particles drift around their boots. One bright blue mote escapes toward the camera; follow it in a smooth accelerating arc along the road as hundreds of blue motes spiral into a layered magical tunnel. The fortress remains a recognizable distant anchor while the sky performs a controlled time-lapse from dusk to a deep starry blue. The magical tunnel fills the entire lens and its cool particles gradually become warm orange campfire embers, creating an elaborate continuous color-and-particle transition rather than a crossfade. Emerge past the embers and reveal exactly Picture 2 later that evening on the nearby hill: the same six heroes are back in their familiar outfits, relaxed around a small campfire beside one black utility vehicle and one blue-lit black motorcycle, with the fortress on the horizon. Preserve the exact endpoint arrangement: the spiky blond man in sleeveless black at left, the small silver-haired pointed-ear elf in white-and-gold below him, the long-blonde-haired woman in white-and-teal at center, the long dark-blue-haired woman beside the vehicle, the pale-blonde woman in a black coat in the foreground, and the blonde female knight in white-and-red armor at far right. Each holds a wrapped kebab; flames, smoke, hair, cloth, and grass move gently while expressions remain natural. Do not visibly morph armor into bodies: let the fully opaque magical particle tunnel conceal the passage of time and costume restoration. Exactly six heroes; no merging, duplication, missing people, extra limbs, extra vehicles, altered faces, warped hands, text, subtitles, logos, watermarks, dialogue, or graphic injury. End exactly on Picture 2 in the same highly detailed cinematic fantasy-anime illustration style."
+        }
+      ]
+    }
+  ]
+}

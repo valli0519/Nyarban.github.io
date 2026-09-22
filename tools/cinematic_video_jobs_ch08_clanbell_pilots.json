@@ -1,0 +1,374 @@
+{
+  "version": 1,
+  "source_root": "F:/ＴＲＰＧ/アリアンロッド2E/lebel1_2nd/4_AI/シーンCG化/CG_Lv1_2nd/8章",
+  "jobs": [
+    {
+      "id": "lv1-ch08-clanbell-arrival-01-hill",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第二幕 クランベル編",
+      "title": "丘から水都へ歩き出す",
+      "priority": 120,
+      "source_frames": [
+        "8-79_sc_ch8_a2_002_f0d20895e7_停車して変装、偽名までが旅支度-v2.png",
+        "動画プレビュー_第二幕クランベル編/01_水都到着/補助構図/01_8-79_水都へ歩き出す.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/arrival-01-start.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/arrival-01-end.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/shots/arrival-01-hill-720p.mp4",
+      "transitions": [
+        {
+          "duration": 3.0,
+          "seed": 926001,
+          "prompt": "A decisive travel-opening shot with major camera displacement, not a living still. Begin exactly on Picture 1 with the six disguised adventurers facing the viewer above the water city. The cyan-haired woman lifts the ornate mirror; one blue-white reflection flashes across the lens. During that mirror flare the camera drives forward through the lineup and performs a controlled turn, emerging exactly into Picture 2 behind the same six heroes. They immediately take clear full steps downhill TOWARD THE CITY and away from the camera, never walking backward and never toward the viewer after the turn. The camera follows low behind them while the mirror remains close in the right foreground, the companions separate in depth, and the city expands below. The mirror wipe, camera pass-through, turn, and completed first walking strides are mandatory. Preserve exactly six identities, faces, hair, clothing, staff, fairy wings, mirror, anatomy, hillside, vehicle and city. No static pose, duplicated or missing people, merged limbs, text, captions, logos, watermark, dialogue, or graphic injury."
+        }
+      ]
+    },
+    {
+      "id": "lv1-ch08-clanbell-arrival-02-arch",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第二幕 クランベル編",
+      "title": "水門アーチを突破する舟",
+      "priority": 120,
+      "source_frames": [
+        "8-84_sc_ch8_a2_007_c9bf45832c_河港ダッシュ、駆け込み乗船から水都へ-v2.png",
+        "動画プレビュー_第二幕クランベル編/01_水都到着/補助構図/02_8-84_アーチ突破.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/arrival-02-start.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/arrival-02-end.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/shots/arrival-02-arch-720p.mp4",
+      "transitions": [
+        {
+          "duration": 3.0,
+          "seed": 926002,
+          "prompt": "A fast water-city arrival with a complete camera overtake. Begin exactly on Picture 1 from the rear deck as the wooden boat and the same six adventurers move FORWARD through the monumental white arch. Waterfalls rush down both sides, the bow cuts a visible wake, and the passengers brace or point toward the city. The camera accelerates along the centerline, passes between the group and over the bow, skims the water, then turns smoothly to face the oncoming boat. Finish exactly on Picture 2 as the bow charges toward the backward-tracking lens and the arch recedes behind it. Strong spray, wake direction, statue, arch, boat and city parallax are mandatory; the boat must never reverse. Preserve exactly six heroes, identities, costumes, staff, fairy wings, boat construction, arch, statues, rainbow, hands and anatomy. No static tableau, extra people, duplicate characters, text, captions, logos, watermark, dialogue, or malformed limbs."
+        }
+      ]
+    },
+    {
+      "id": "lv1-ch08-clanbell-arrival-03-stairs",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第二幕 クランベル編",
+      "title": "港階段を一気に下る",
+      "priority": 120,
+      "source_frames": [
+        "8-86_sc_ch8_a2_009_c16cc69e68_セントラルポート、腹ぺこは階段に弱い-v2.png",
+        "動画プレビュー_第二幕クランベル編/01_水都到着/補助構図/03_8-86_階段下降.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/arrival-03-start.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/arrival-03-end.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/shots/arrival-03-stairs-720p.mp4",
+      "transitions": [
+        {
+          "duration": 3.0,
+          "seed": 926003,
+          "prompt": "A purposeful descending action shot with real steps and a low retreating camera. Begin exactly on Picture 1 on the white marble stairway. The cyan-haired woman leads with two clear downhill steps, the black-haired woman descends inside a controlled pale-blue wind spiral, and the other four companions follow in staggered full walking cycles. The camera rapidly retreats down the staircase and drops from chest height to near knee height; a marble balustrade sweeps close across the left side as a natural opaque wipe. End exactly on Picture 2 with the leaders close to the lens and the harbor deeper behind them. Feet must plant on successive lower steps without sliding, the travel direction is DOWN TOWARD THE PORT, and camera/stair/column parallax must dominate over hair or cape flutter. Preserve exactly six identities, costumes, staff, fairy wings, faces, hands, anatomy, arches, marble and harbor boats. No duplicates, missing heroes, text, captions, logos, watermark, dialogue, or malformed limbs."
+        }
+      ]
+    },
+    {
+      "id": "lv1-ch08-clanbell-arrival-04-gondola",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第二幕 クランベル編",
+      "title": "夕暮れの運河を水面追走",
+      "priority": 120,
+      "source_frames": [
+        "8-89_sc_ch8_a2_012_2a7fb8d3e7_ゴンドラ舟歌、平和はよく響く-v2.png",
+        "動画プレビュー_第二幕クランベル編/01_水都到着/補助構図/04_8-89_水面追走.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/arrival-04-start.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/arrival-04-end.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/shots/arrival-04-gondola-720p.mp4",
+      "transitions": [
+        {
+          "duration": 3.0,
+          "seed": 926004,
+          "prompt": "A warm but fast canal tracking shot with a full camera relocation. Begin exactly on Picture 1 beside the ornate black-and-gold gondola carrying the same six seated adventurers and the same dark-haired gondolier. The gondolier completes one strong oar stroke, the boat gains speed FORWARD along the canal, wake and petals stream backward, and nearby rose-covered walls slide past. The camera descends to water level, races ahead around the prow, then tracks backward as the boat enters the shadow of the approaching stone bridge. End exactly on Picture 2 in the dynamic front three-quarter view. A bridge pier briefly fills one edge to form a natural wipe. Preserve exactly six passengers plus one gondolier, identities, faces, costumes, hands, boat ornament, red seats, sunset city and water reflections. No static hair-only motion, reversed boat, extra or missing people, duplicate passengers, text, captions, logos, watermark, dialogue, or malformed anatomy."
+        }
+      ]
+    },
+    {
+      "id": "lv1-ch08-clanbell-arrival-05-window",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第二幕 クランベル編",
+      "title": "庭園の窓を越える再会",
+      "priority": 120,
+      "source_frames": [
+        "8-94_sc_ch8_a2_017_9646900cd4_庭園の窓越し再会、偽名は六人で台無し.png",
+        "動画プレビュー_第二幕クランベル編/01_水都到着/補助構図/05_8-94_窓を越えた再会.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/arrival-05-start.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/arrival-05-end.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/shots/arrival-05-window-720p.mp4",
+      "transitions": [
+        {
+          "duration": 3.0,
+          "seed": 926005,
+          "prompt": "A completed reunion action built around a physical window crossing. Begin exactly on Picture 1 inside the room with the red-haired young woman in the foreground and the same six adventurers outside. The red-haired woman lowers her surprised hand and steps toward the sill as the cyan-haired visitor reaches forward in greeting. The camera follows that reach, passes through the open window while the dark wooden frame completely wipes the lens, and rotates about 150 degrees into the garden. End exactly on Picture 2 behind the visitors, looking back as the red-haired woman extends her hand through the window and the group gathers in staggered depth. The window crossing, frame wipe, approach and completed reaching gesture are mandatory; do not rely on hair flutter. Preserve one red-haired woman and exactly six visitors, identities, faces, costumes, hands, anatomy, ivy, roses, window and room. No duplicates, extra people, text, captions, logos, watermark, dialogue, or malformed limbs."
+        }
+      ]
+    },
+    {
+      "id": "lv1-ch08-clanbell-grave-01-trail",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第二幕 クランベル編",
+      "title": "雨の血痕を追って橋へ",
+      "priority": 120,
+      "source_frames": [
+        "8-197_sc_ch8_a2_120_eb58c15197_雨のホテル、血の涙を追うリネット役-v2.png",
+        "動画プレビュー_第二幕クランベル編/02_雨夜の共同墓地/補助構図/01_8-197_血痕を追って橋へ.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/grave-01-start.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/grave-01-end.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/shots/grave-01-trail-720p.mp4",
+      "transitions": [
+        {
+          "duration": 3.0,
+          "seed": 926101,
+          "prompt": "A dark investigative pursuit with a completed rise and forward run. Begin exactly on Picture 1 in heavy rain: the silver-haired top-hatted investigator kneels over the red trail while the cat-eared woman hides beside the tree. He seals the sample vial, rises fully, points toward the bridge and breaks into a run; she leaves the tree and follows immediately. The camera drops to the wet ground, locks onto the red trail, advances past them, then turns into a low rear follow as a lamp post or tree trunk wipes the lens. End exactly on Picture 2 with both investigators running AWAY FROM THE CAMERA toward the bridge, never backward. The trail, splashes, complete standing motion, running strides and strong wet-ground parallax are mandatory. Preserve exactly the same two identities, costumes, vial, bridge, lamps, rain and anatomy. No extra people, duplicated characters, gore detail, text, captions, logos, watermark, dialogue, or malformed limbs."
+        }
+      ]
+    },
+    {
+      "id": "lv1-ch08-clanbell-grave-02-pursuit",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第二幕 クランベル編",
+      "title": "月下の墓地へ突入",
+      "priority": 120,
+      "source_frames": [
+        "8-201_sc_ch8_a2_124_1e86a4d6ff_共同墓地の月光、屋根のMJと王女の影.png",
+        "動画プレビュー_第二幕クランベル編/02_雨夜の共同墓地/補助構図/02_8-201_墓地へ突入.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/grave-02-start.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/grave-02-end.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/shots/grave-02-pursuit-720p.mp4",
+      "transitions": [
+        {
+          "duration": 3.0,
+          "seed": 926102,
+          "prompt": "A rain-soaked cemetery chase with clear running cycles, landing and camera travel. Begin exactly on Picture 1 with the blonde woman and top-hatted investigator in front of the ruined chapel, the white-suited man on the roof, and the small black princess-like silhouette fleeing to the right. The blonde woman and investigator pivot and sprint after the silhouette. The white-suited man pushes off the roof, completes a controlled drop and lands on a stone ledge. The camera dives from the original wide view, threads between wet tombstones, and follows behind the runners; a large grave marker crosses close to the lens as an opaque wipe. End exactly on Picture 2 deeper in the cemetery with the silhouette still ahead. Preserve exactly four principal figures, identities, clothing, moon, chapel, rain, graves and anatomy. No sliding feet, static pose, extra people, duplicates, text, captions, logos, watermark, dialogue, or malformed limbs."
+        }
+      ]
+    },
+    {
+      "id": "lv1-ch08-clanbell-grave-03-priest",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第二幕 クランベル編",
+      "title": "神官長の遺骸が立ち上がる",
+      "priority": 120,
+      "source_frames": [
+        "8-203_sc_ch8_a2_126_d048fffce3_踊る死者の中に、神官長の遺骸.png",
+        "動画プレビュー_第二幕クランベル編/02_雨夜の共同墓地/補助構図/03_8-203_神官長接近.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/grave-03-start.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/grave-03-end.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/shots/grave-03-priest-720p.mp4",
+      "transitions": [
+        {
+          "duration": 3.0,
+          "seed": 926103,
+          "prompt": "A threatening but non-graphic undead activation with a large dolly move. Begin exactly on Picture 1 as the tall long-haired undead priest climbs from the open grave and the blonde heroine points while holding blue light. He completes one heavy full step toward the viewer, mud and rain falling behind, while successive background undead turn toward the movement. The blonde heroine advances from the left and brings her glowing palm forward to intercept him. The camera rushes between headstones toward the priest, passes a tombstone edge close to the lens, and ends exactly on Picture 2 in the low close three-quarter confrontation. The step, arm reach, heroine advance and depth change are mandatory; do not animate only cloth or rain. Preserve the same heroine, priest, clothing, graveyard, moon, church ruins, anatomy and all non-graphic details. No added living heroes, duplicate principal characters, excessive gore, text, captions, logos, watermark, dialogue, or malformed limbs."
+        }
+      ]
+    },
+    {
+      "id": "lv1-ch08-clanbell-grave-04-dispersal",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第二幕 クランベル編",
+      "title": "青い浄化波で舞踏会を散会",
+      "priority": 120,
+      "source_frames": [
+        "8-204_sc_ch8_a2_127_9e5e30ff8b_マティアスの墓前、アンデッド舞踏会は散会.png",
+        "動画プレビュー_第二幕クランベル編/02_雨夜の共同墓地/補助構図/04_8-204_青い散会.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/grave-04-start.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/grave-04-end.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/shots/grave-04-dispersal-720p.mp4",
+      "transitions": [
+        {
+          "duration": 3.0,
+          "seed": 926104,
+          "prompt": "A complete magical dispersal action with a strong half-orbit. Begin exactly on Picture 1 with the black princess-like silhouette between the white-suited man, blonde heroine and undead priest. The silhouette plants her staff, blue-black energy gathers at the jewel, and one coherent circular cleansing pulse expands across the cemetery. As it passes, the silhouette dissolves from the feet upward into blue motes, the priest lowers his arms and breaks into mist, and background undead stagger or fade in ordered near-to-far waves. The camera circles behind the silhouette, drops toward the grave edge, and a cloak or stone marker briefly wipes the lens. End exactly on Picture 2 with the expanding ring visible and the two living allies bracing. Preserve the same principals, identities, costumes, rain, moon, graves and anatomy. No idle-only animation, graphic gore, extra people, duplicates, text, captions, logos, watermark, dialogue, or malformed limbs."
+        }
+      ]
+    },
+    {
+      "id": "lv1-ch08-clanbell-grave-05-oath",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第二幕 クランベル編",
+      "title": "朝露の庭で三人の誓い",
+      "priority": 120,
+      "source_frames": [
+        "8-214_sc_ch8_a2_137_07c68a18ae_裏庭の再合流、三人の誓いは朝露より重い.png",
+        "動画プレビュー_第二幕クランベル編/02_雨夜の共同墓地/補助構図/05_8-214_三人の誓い.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/grave-05-start.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/grave-05-end.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/shots/grave-05-oath-720p.mp4",
+      "transitions": [
+        {
+          "duration": 3.0,
+          "seed": 926105,
+          "prompt": "A warm dawn resolution with a completed three-person oath and decisive camera push. Begin exactly on Picture 1 with the purple-haired swordswoman, muscular black-haired man and blonde armored knight separated in the palace garden. The central man turns to both companions and reaches out; each woman steps in and their three hands meet firmly in the center above a small golden circle. The camera glides quickly through the foreground roses, rises from waist height and closes around their joined hands while keeping all three recognizable faces visible. Petals and one rose cross close to the lens as a natural wipe. End exactly on Picture 2 with the hand-clasp complete and expressions of relief and resolve. Preserve exactly three identities, costumes, armor, weapons, faces, hands, anatomy, garden, palace and sunrise. No static pose, duplicate fingers or arms, extra people, text, captions, logos, watermark, dialogue, or malformed limbs."
+        }
+      ]
+    },
+    {
+      "id": "lv1-ch08-clanbell-god-01-chalice",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第二幕 クランベル編",
+      "title": "聖杯とともに水神へ上昇",
+      "priority": 120,
+      "source_frames": [
+        "8-296_sc_ch8_a2_219_5a8442df0a_聖杯はヒカリを選び、水神は命を代価に目覚める-v2.png",
+        "動画プレビュー_第二幕クランベル編/03_水神覚醒/補助構図/01_8-296_聖杯へ上昇.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/god-01-start.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/god-01-end.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/shots/god-01-chalice-720p.mp4",
+      "transitions": [
+        {
+          "duration": 3.1,
+          "seed": 926201,
+          "prompt": "An epic awakening shot with mandatory vertical camera flight. Begin exactly on Picture 1 with the black-haired warrior and blonde knight kneeling, the central blonde divine woman beneath the silver chalice, and the immense luminous water goddess forming behind them. The chalice lifts under its own power, releases a spiraling blue-white water ribbon, and the goddess reaches gently toward it. The camera launches upward beside the chalice, leaving the three heroes smaller below while crystals, bubbles and liquid hair rush past at different depths. End exactly on Picture 2 with the chalice dominating the near foreground beside the more fully formed goddess. The chalice ascent, goddess formation and large vertical translation are mandatory; not just flowing hair. Preserve exactly the same three heroes plus one goddess, identities, costumes, armor, chalice, flowers, crystals, faces, hands and anatomy. No duplicates, extra people, text, captions, logos, watermark, dialogue, or malformed limbs."
+        }
+      ]
+    },
+    {
+      "id": "lv1-ch08-clanbell-god-02-ascent",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第二幕 クランベル編",
+      "title": "都市から水神の手元へ飛翔",
+      "priority": 120,
+      "source_frames": [
+        "8-300_sc_ch8_a2_223_8e30b3f2e4_祭りの夜、水神はボートレースより大きい-v2.png",
+        "動画プレビュー_第二幕クランベル編/03_水神覚醒/補助構図/02_8-300_水神の手元へ飛翔.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/god-02-start.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/god-02-end.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/shots/god-02-ascent-720p.mp4",
+      "transitions": [
+        {
+          "duration": 3.1,
+          "seed": 926202,
+          "prompt": "A city-scale ascending camera flight, not a static goddess portrait. Begin exactly on Picture 1 at canal level with the colossal luminous water goddess above the same ornate night city and the heroes' small gondola in the lower left. The camera catches one flowing river of light and rockets upward along it. Bridges, domes, lamps, clouds and water ribbons shrink and pass at multiple depths while the goddess calmly extends one hand. Finish exactly on Picture 2 high beside that open hand and face, with the same city and tiny gondola far below. The large upward translation and change of scale must be unmistakable; her hand cups flowing light and never attacks the city. Preserve one goddess only, coherent face and anatomy, city layout, gondola and gold-white rendering with controlled highlights. No duplicate goddess, extra limbs, new heroes, text, captions, logos, watermark, dialogue, or malformed architecture."
+        }
+      ]
+    },
+    {
+      "id": "lv1-ch08-clanbell-god-03-eye",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第二幕 クランベル編",
+      "title": "水神の視座へ突入",
+      "priority": 120,
+      "source_frames": [
+        "8-302_sc_ch8_a2_225_ffc3146e26_水神の視座、祈りはティーガを越えて心へ届く-v2.png",
+        "動画プレビュー_第二幕クランベル編/03_水神覚醒/補助構図/03_8-302_水神の瞳.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/god-03-start.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/god-03-end.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/shots/god-03-eye-720p.mp4",
+      "transitions": [
+        {
+          "duration": 3.1,
+          "seed": 926203,
+          "prompt": "A controlled penetrating push into the water goddess's point of view. Begin exactly on Picture 1 with her colossal luminous face over the city and the small gondola of heroes below. Her open radiant eye focuses on the heroes and one tear-like stream falls gently. The camera accelerates forward through several coherent strands of liquid hair; each strand sweeps close across the lens as a luminous natural wipe while the eye grows rapidly. End exactly on Picture 2 with the same single eye filling the frame and a crisp reflection of the same gondola, heroes and city lights inside the iris. The forward travel, focus change, hair occlusion and eye reflection are mandatory; do not simply brighten the image. Preserve one goddess, one eye, coherent facial anatomy, gondola and controlled gold-white exposure. No duplicate face or eye, extra people, text, captions, logos, watermark, dialogue, or horror deformation."
+        }
+      ]
+    },
+    {
+      "id": "lv1-ch08-clanbell-god-04-tower",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第二幕 クランベル編",
+      "title": "水の守護者が尖塔を止める",
+      "priority": 120,
+      "source_frames": [
+        "8-305_sc_ch8_a2_228_b0b1a1860d_尖塔は45度で止まり、丘には祝福が降る-v3.png",
+        "動画プレビュー_第二幕クランベル編/03_水神覚醒/補助構図/04_8-305_尖塔を止める祝福.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/god-04-start.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/god-04-end.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/shots/god-04-tower-720p.mp4",
+      "transitions": [
+        {
+          "duration": 3.1,
+          "seed": 926204,
+          "prompt": "A complete rescue beat with a low sweeping camera and a tower visibly arrested, not destroyed. Begin exactly on Picture 1 with the cylindrical stone spire already leaning, the blue water guardian behind it, the floating swordwoman under the golden beam, the white-suited man, blonde girl and black-haired swordsman on the quay. The guardian plants both liquid arms against the masonry and STOPs the spire at the same 45-degree angle. The swordwoman drives her glowing blade into the beam and one concentric golden blessing wave expands across the wet stones. The camera races across the quay to the tower base, drops low, and ends exactly on Picture 2 looking steeply upward as the wave passes the lens. Preserve exactly the same five principals, identities, costumes, guardian, tower structure, city, hands and anatomy. The tower must not fall, reverse upright, explode or crush anyone. No extra people, duplicate limbs, text, captions, logos, watermark, dialogue, or graphic injury."
+        }
+      ]
+    },
+    {
+      "id": "lv1-ch08-clanbell-god-05-race",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第二幕 クランベル編",
+      "title": "夜のボートレースを水面追走",
+      "priority": 120,
+      "source_frames": [
+        "8-307_sc_ch8_a2_230_cee1ee978d_神々の歌劇のあと、夜のボートレースは走り出す-v2.png",
+        "動画プレビュー_第二幕クランベル編/03_水神覚醒/補助構図/05_8-307_水面追走.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/god-05-start.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/god-05-end.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/shots/god-05-race-720p.mp4",
+      "transitions": [
+        {
+          "duration": 3.1,
+          "seed": 926205,
+          "prompt": "A fast competitive boat race with true forward travel and complete rowing strokes. Begin exactly on Picture 1 with four ornate gondolas, the muscular black-haired racer in front, blonde divine woman at right, black-haired and blonde women in the middle boat, pink-haired rower behind, and the small blue water spirit at left. Every rower plants the oar, pulls one powerful full stroke and drives the boats TOWARD THE VIEWER, never backward. The camera drops to inches above the water ahead of the black-haired man's bow and tracks backward as his boat gains on the lens; the neighboring blonde woman's bow draws level, the rear boats pass beneath the bridge, and the spirit leaps across the wake. End exactly on Picture 2 amid diagonal spray. Preserve exactly four gondolas, all recognizable racers, costumes, flowers, lanterns, bridge, crowd, hands and anatomy. No static boats, reversed motion, duplicate people or boats, collisions, text, captions, logos, watermark, dialogue, or malformed limbs."
+        }
+      ]
+    },
+    {
+      "id": "lv1-ch08-clanbell-god-06-feast",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第二幕 クランベル編",
+      "title": "吟遊詩人から水都の宴へ大引き",
+      "priority": 120,
+      "source_frames": [
+        "8-308_sc_ch8_a2_231_92069b0fee_表彰式のあと、吟遊詩人ロゴスと終わらない宴.png",
+        "動画プレビュー_第二幕クランベル編/03_水神覚醒/補助構図/06_8-308_宴の大引き.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/god-06-start.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/god-06-end.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-clanbell-pilots/shots/god-06-feast-720p.mp4",
+      "transitions": [
+        {
+          "duration": 3.1,
+          "seed": 926206,
+          "prompt": "A graceful celebratory reveal with a very large backward crane, not a static performance. Begin exactly on Picture 1 beside the same pink-haired woman, blonde divine woman and gray-haired dark-elf bard playing the ornate harp. The bard completes one visible sweep across the strings, both women turn and present the glowing banquet beyond, and petals rise past the lens. The camera pulls backward through the flower garland and cranes high above the terrace, progressively revealing the trophy, moored gondolas, long feast tables, canal, guests, trees, lamps and domed night city at many depths. End exactly on Picture 2 in the wide citywide celebration with the same three principals still identifiable together below. Preserve exactly those three foreground identities, costumes, harp, trophy, architecture and warm lighting. No hair-only motion, duplicate principals, malformed instrument, text, captions, logos, watermark, dialogue, or graphic injury."
+        }
+      ]
+    }
+  ]
+}

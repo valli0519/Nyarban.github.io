@@ -1,0 +1,213 @@
+{
+  "version": 1,
+  "source_root": "F:/ＴＲＰＧ/アリアンロッド2E/lebel1_2nd/4_AI/シーンCG化/CG_Lv1_2nd/8章",
+  "jobs": [
+    {
+      "id": "lv1-ch08-v3-shot01-convoy",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第一幕 v3",
+      "title": "車列へ迫る前進撮影",
+      "priority": 100,
+      "source_frames": [
+        "8-08_sc_ch8_a1_008_2d25e0386d_歩け歩け、朝が来るまでラクレールへ-v5.png",
+        "動画プレビュー_第一幕ラクレール編/修正版_v3_補助構図/01_8-08_車内へ前進.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08-v3/shot01-start.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-v3/shot01-end.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-v3-shots/shot01-convoy-720p.mp4",
+      "transitions": [
+        {
+          "duration": 2.2,
+          "seed": 915801,
+          "prompt": "A decisive cinematic action shot with major camera travel, not a living still image. Begin exactly on Picture 1. The black open vehicle and both motorcycles move rapidly TOWARD THE VIEWER and toward the lower foreground, never toward the horizon and never in reverse. Put the camera low on the road directly ahead of the convoy and track backward while the lead vehicle visibly gains ground and becomes larger. The wheels rotate forward, suspension works over the grass, dust streams backward, the driver actively corrects the steering wheel, and the passengers brace against acceleration. Halfway through, the camera rises over the front corner of the hood and advances aggressively toward the open cab, producing strong parallax between the vehicle frame, passengers, motorcycles, and landscape. Finish exactly on Picture 2 as a tight moving view into the cab. Preserve the six identities, vehicle construction, motorcycles, anatomy, and fantasy-anime rendering, but prioritize real forward travel and camera displacement over hair flutter. No static pose, no driving away, no extra people or vehicles, malformed limbs, text, captions, logos, watermarks, dialogue, or graphic injury."
+        }
+      ]
+    },
+    {
+      "id": "lv1-ch08-v3-shot02-infiltration",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第一幕 v3",
+      "title": "潜入隊の間を抜けて城門へ",
+      "priority": 100,
+      "source_frames": [
+        "8-12_sc_ch8_a1_012_04f3868648_宝具を置いて、Lv1装備で再潜入-v3.png",
+        "動画プレビュー_第一幕ラクレール編/修正版_v3_補助構図/02_8-12_城門へ突入.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08-v3/shot02-start.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-v3/shot02-end.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-v3-shots/shot02-infiltration-720p.mp4",
+      "transitions": [
+        {
+          "duration": 1.6,
+          "seed": 915802,
+          "prompt": "A short purposeful infiltration shot with a strong forward dolly, not a static group portrait. Begin exactly on Picture 1 with the six disguised adventurers outside the fortress. The enormous silver knight lowers the thumbs-up, turns toward the gate, and takes one heavy leading step. The other five immediately pivot and begin following with distinct natural strides. At the same moment, the camera moves quickly forward at shoulder height, threading through the opening between the adventurers as their armor and cloaks sweep past both sides of the lens. Continue driving deeper toward the fortress entrance with pronounced foreground-to-background parallax and end exactly on Picture 2, centered on the castle and gate through the moving party. Preserve the six silhouettes, simple equipment, armor, faces, road, and fortress. The meaningful action is the whole party starting the infiltration and the camera physically entering the city; do not merely wave hair or hold the lineup. No duplicated people, collisions, malformed limbs, text, captions, logos, watermarks, dialogue, or graphic injury."
+        }
+      ]
+    },
+    {
+      "id": "lv1-ch08-v3-shot03-water-boy",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第一幕 v3",
+      "title": "少年が水瓶を手渡す瞬間",
+      "priority": 100,
+      "source_frames": [
+        "8-35_sc_ch8_a1_035_37dcb61349_水売り少年、噂の証人になる.png",
+        "動画プレビュー_第一幕ラクレール編/修正版_v3_補助構図/03_8-35_水瓶クローズアップ.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08-v3/shot03-start.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-v3/shot03-end.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-v3-shots/shot03-water-boy-720p.mp4",
+      "transitions": [
+        {
+          "duration": 1.8,
+          "seed": 915803,
+          "prompt": "A clear character-action shot with a moving camera and a completed exchange. Begin exactly on Picture 1 in the bright crowded plaza. The smiling water-selling boy takes two quick final steps and deliberately extends the clear bottle. Water visibly sloshes inside. The enormous silver knight lowers to the boy's height, opens the articulated gauntlet, then securely receives the bottle in one clean handoff. The camera starts wide, arcs alongside the boy at waist height, then accelerates with the bottle so the handoff and the boy's expression pass close to the lens. End exactly on Picture 2 in a tight composition around the boy, bottle, and knight's gauntlet. Crowd members cross at different depths and sunlight glints through the water to create real parallax. Do not settle for cloth or hair flutter; the handoff must visibly begin and complete. Preserve faces, armor, hands, bottle, crowd, architecture, and anatomy. No duplicated fingers, extra objects, text, captions, logos, watermarks, dialogue, or graphic injury."
+        }
+      ]
+    },
+    {
+      "id": "lv1-ch08-v3-shot04-distraction",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第一幕 v3",
+      "title": "指差しと大声に乗ってアーチへ",
+      "priority": 100,
+      "source_frames": [
+        "8-47_sc_ch8_a1_047_6640573091_陽動の中央街、ハートの大声が勝つ.png",
+        "動画プレビュー_第一幕ラクレール編/修正版_v3_補助構図/04_8-47_アーチへ突入.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08-v3/shot04-start.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-v3/shot04-end.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-v3-shots/shot04-distraction-720p.mp4",
+      "transitions": [
+        {
+          "duration": 1.9,
+          "seed": 915804,
+          "prompt": "A kinetic street action shot with a dramatic camera path. Begin exactly on Picture 1. The hooded white-haired figure steps through the crowd and snaps one arm forward to point toward the stone arch. The enormous bald muscular man plants both feet, draws a deep breath with his chest and shoulders, then unleashes one forceful shout. A visible pressure ring expands from him: loose cloth, dust, banners, and nearby bystanders react in sequence from near to far. The camera first curves behind the pointing figure, whips around the shouting man, then catches the expanding ring and rides it rapidly forward through the crowd toward the archway. Foreground bodies sweep past the lens and the arch grows quickly, creating unmistakable depth. End exactly on Picture 2 aimed into the arch. The point, breath, shout, crowd reaction, and camera rush must all read as purposeful actions rather than idle animation. Preserve the key characters and city architecture. No duplicated people, malformed anatomy, text, captions, logos, watermarks, dialogue, or graphic injury."
+        }
+      ]
+    },
+    {
+      "id": "lv1-ch08-v3-shot05-rescue",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第一幕 v3",
+      "title": "地下通路を駆ける救出隊",
+      "priority": 100,
+      "source_frames": [
+        "8-67_sc_ch8_a1_067_01e757cf4c_上流へ、魔法使いは途中乗車-v3.png",
+        "動画プレビュー_第一幕ラクレール編/修正版_v3_補助構図/05_8-67_救出隊接近.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08-v3/shot05-start.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-v3/shot05-end.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-v3-shots/shot05-rescue-720p.mp4",
+      "transitions": [
+        {
+          "duration": 2.1,
+          "seed": 915805,
+          "prompt": "A fast rescue chase with substantial camera rotation and real running cycles. Begin exactly on Picture 1 in the torchlit vaulted tunnel. The rescue party runs TOWARD THE VIEWER and never away from it. The enormous silver knight takes powerful full strides while securely carrying both children; the slim silver knight and hooded mage sprint beside him, their feet contacting and pushing from the floor rather than sliding. The camera briefly rockets deeper along the tunnel axis past one stone rib, then performs a rapid controlled 180-degree whip and becomes a backward-tracking camera directly ahead of the party. From then on the heroes continuously gain on the lens and grow larger, while torches and arches streak past at different depths. The giant knight adjusts the children protectively and the mage's blue aura trails through space. End exactly on Picture 2 as the rescue party closes in. Camera translation, the turn, and complete running strides are mandatory; do not merely flutter capes. Preserve all characters, children, armor, tunnel geometry, and anatomy. No reversed running, extra limbs or people, text, captions, logos, watermarks, dialogue, or graphic injury."
+        }
+      ]
+    },
+    {
+      "id": "lv1-ch08-v3-shot06-bomb",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第一幕 v3",
+      "title": "爆弾を追って空へ",
+      "priority": 100,
+      "source_frames": [
+        "8-69_sc_ch8_a1_069_01cf5c7621_爆弾を抱いて、空へ投げる-v3.png",
+        "動画プレビュー_第一幕ラクレール編/修正版_v3_補助構図/06_8-69_爆弾追尾.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08-v3/shot06-start.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-v3/shot06-end.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-v3-shots/shot06-bomb-720p.mp4",
+      "transitions": [
+        {
+          "duration": 2.2,
+          "seed": 915806,
+          "prompt": "A complete explosive action beat with a vertical crane move. Begin exactly on Picture 1 at the bright canal. The enormous silver knight plants one foot in the water, winds the dark bomb crate back, and completes a powerful two-handed upward throw. The crate clearly leaves the gauntlets and accelerates into the sky, shedding droplets and small sparks. Simultaneously the slim silver knight sweeps one arm through a complete arc that draws the blue circular magic seal and launches a controlled bolt after the crate. The camera starts near water level, surges past the throwing arms, then tilts and cranes sharply upward to chase the crate. Buildings fall away below with strong parallax; the bomb becomes the visual center and the magical detonation blooms above it. End exactly on Picture 2 looking high into the sky at the airborne crate and explosion. The throw, spell gesture, object release, and camera climb must be obvious, not idle pose animation. Preserve armor, hands, canal, city, bomb geometry, and anatomy. No extra characters, malformed limbs, text, captions, logos, watermarks, dialogue, or graphic injury."
+        }
+      ]
+    },
+    {
+      "id": "lv1-ch08-v3-shot07-aftermath",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第一幕 v3",
+      "title": "結末を巡って保音機へ",
+      "priority": 100,
+      "source_frames": [
+        "8-74_sc_ch8_a1_074_ba4364051a_保音機が告げる、悪事の閉幕.png",
+        "動画プレビュー_第一幕ラクレール編/修正版_v3_補助構図/07b_8-74_保音機極寄り.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08-v3/shot07-start.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-v3/shot07-end.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-v3-shots/shot07-aftermath-720p.mp4",
+      "transitions": [
+        {
+          "duration": 1.5,
+          "seed": 915807,
+          "prompt": "A compact aftermath shot with a meaningful orbit, focus change, and decisive descent. Begin exactly on Picture 1 at sunset. The red-haired blue-armored hero tightens his grip and helps the kneeling man rise slightly; the bearded man shifts forward to assist and the two young witnesses take one concerned step closer. The camera descends in a fast low half-orbit around the red-haired hero, passes the witnesses, then changes focus from the rescued man to the small golden recording cylinder on the foreground stone block. Commit to a steep accelerating push downward until the recorder dominates the frame. It emits two clean concentric golden pulses across the stones. End exactly on Picture 2 in an extreme close view of the recorder, with surrounding knees and resting figures framing it. The orbit, assisted lift, witnesses' step, focus pull, and downward camera travel must read clearly; do not rely on hair flutter. Preserve every person, pose continuity, clothing, recorder, plaza, and anatomy. No graphic harm, duplicated limbs, text, captions, logos, watermarks, or dialogue."
+        }
+      ]
+    },
+    {
+      "id": "lv1-ch08-v3-shot08-campfire",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第一幕 v3",
+      "title": "焚き火から仲間と城を見渡す",
+      "priority": 100,
+      "source_frames": [
+        "動画プレビュー_第一幕ラクレール編/修正版_v3_補助構図/08_8-75_焚き火クローズアップ.png",
+        "8-75_sc_ch8_a1_075_6d5d84a99b_平原ケバブ、英雄にも夕飯はいる-v2.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08-v3/shot08-start.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-v3/shot08-end.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-v3-shots/shot08-campfire-720p.mp4",
+      "transitions": [
+        {
+          "duration": 2.1,
+          "seed": 915808,
+          "prompt": "A warm cinematic reveal with a large backward orbit and crane, not a static campfire portrait. Begin exactly on Picture 1 close to the flames and kebabs. The camera pulls backward through a burst of embers while orbiting counterclockwise around the fire, progressively revealing the entire group at different depths, then cranes upward enough to include the vehicle, motorcycle, grassland, and distant fortress. The six heroes perform small but meaningful coordinated actions: one turns toward the arriving camera, another laughs, and by the end they raise or present their wrapped kebabs in a relaxed shared toast. The campfire flares once, smoke curls past the lens, and the moving camera creates strong parallax between flames, seated heroes, vehicles, and horizon. End exactly on Picture 2 as the complete peaceful group tableau. The dominant motion must be the reveal, orbit, crane, and group toast, not hair flutter. Preserve exactly six identities, faces, hands, costumes, food, vehicles, and landscape. No extra or missing people, malformed limbs, text, captions, logos, watermarks, dialogue, or graphic injury."
+        }
+      ]
+    },
+    {
+      "id": "lv1-ch08-v3-shot02b-infiltration-action",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第一幕 v3",
+      "title": "潜入隊が振り返って城門へ歩く差し替え版",
+      "priority": 110,
+      "source_frames": [
+        "8-12_sc_ch8_a1_012_04f3868648_宝具を置いて、Lv1装備で再潜入-v3.png",
+        "動画プレビュー_第一幕ラクレール編/修正版_v3_補助構図/02b_8-12_六人で城門へ歩行.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08-v3/shot02b-start.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-v3/shot02b-end.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-v3-shots/shot02b-infiltration-action-720p.mp4",
+      "transitions": [
+        {
+          "duration": 2.0,
+          "seed": 915812,
+          "prompt": "A decisive infiltration action shot that visibly changes both character direction and camera position. Begin exactly on Picture 1 with the six adventurers facing the viewer. The enormous silver knight lowers the thumbs-up, turns toward the fortress, and takes a heavy leading stride. The other five pivot and follow immediately. As they turn, the camera surges forward between them; the giant knight's polished shoulder plate passes extremely close and briefly fills the lens, providing a natural opaque wipe that conceals the hardest part of the turn. During that wipe the camera performs a fast controlled 180-degree whip. Emerge behind the exact same six heroes as they actively walk away toward the gate, each completing a clear full step with planted feet and separated stride positions. Follow them low along the road while the fortress gate grows larger and blue teleport sparks fall behind. End exactly on Picture 2 with all six seen from behind in motion toward the centered gate. The lowered hand, group pivot, shoulder wipe, camera reversal, walking cycles, and forward follow are mandatory. Do not hold the original lineup or merely flutter cloth. Preserve every armor design, body proportion, equipment item, sunset, road, and fortress. Exactly six heroes; no visible body morph, duplicated people, merged limbs, text, captions, logos, watermarks, dialogue, or graphic injury."
+        }
+      ]
+    }
+  ]
+}

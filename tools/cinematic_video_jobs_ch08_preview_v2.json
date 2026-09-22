@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "source_root": "F:/ＴＲＰＧ/アリアンロッド2E/lebel1_2nd/4_AI/シーンCG化",
+  "jobs": [
+    {
+      "id": "lv1-ch08-act1-laclaire-preview-v2",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第一幕",
+      "title": "ラクレール編・進行方向修正版と潜入作戦ダイジェスト",
+      "priority": 100,
+      "source_frames": [
+        "CG_Lv1_2nd/8章/8-08_sc_ch8_a1_008_2d25e0386d_歩け歩け、朝が来るまでラクレールへ-v5.png",
+        "CG_Lv1_2nd/8章/8-12_sc_ch8_a1_012_04f3868648_宝具を置いて、Lv1装備で再潜入-v3.png",
+        "CG_Lv1_2nd/8章/8-35_sc_ch8_a1_035_37dcb61349_水売り少年、噂の証人になる.png",
+        "CG_Lv1_2nd/8章/8-47_sc_ch8_a1_047_6640573091_陽動の中央街、ハートの大声が勝つ.png",
+        "CG_Lv1_2nd/8章/8-67_sc_ch8_a1_067_01e757cf4c_上流へ、魔法使いは途中乗車-v3.png",
+        "CG_Lv1_2nd/8章/8-69_sc_ch8_a1_069_01cf5c7621_爆弾を抱いて、空へ投げる-v3.png",
+        "CG_Lv1_2nd/8章/8-74_sc_ch8_a1_074_ba4364051a_保音機が告げる、悪事の閉幕.png",
+        "CG_Lv1_2nd/8章/8-75_sc_ch8_a1_075_6d5d84a99b_平原ケバブ、英雄にも夕飯はいる-v2.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08a1-v2-01-road-to-laclaire.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08a1-v2-02-level-one-infiltration.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08a1-v2-03-water-boy.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08a1-v2-04-city-distraction.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08a1-v2-05-tunnel-rescue.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08a1-v2-06-bomb-to-sky.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08a1-v2-07-recorded-closure.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08a1-v2-08-kebab-camp.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-act1-laclaire-journey-v2-720p.mp4",
+      "transitions": [
+        {
+          "duration": 2.2,
+          "seed": 914801,
+          "prompt": "A fast premium cinematic in-camera transition. Begin exactly on Picture 1 at golden sunset. The black open vehicle and the two motorcycles are already travelling TOWARD THE VIEWER and toward the lower foreground. This screen direction is mandatory: they must never drive toward the horizon, never recede, and never reverse. Put the camera directly ahead of the convoy and dolly backward smoothly at matching speed while the convoy keeps advancing toward the camera; the lead vehicle remains the same size or grows slightly in frame, never becomes smaller. Wheels rotate forward, suspension responds naturally, dust and grass stream behind the vehicles. Preserve the exact six adventurers, seating, drivers, motorcycles, faces, anatomy, costumes, and vehicle geometry from Picture 1. A blue teleport lattice forms around the CAMERA in the near foreground, not behind the convoy and not as a destination in the distance. The translucent magical membrane sweeps across and fully covers the lens with blue refraction, sunset flare, and geometric particles, hiding the costume and location change. Emerge immediately and end exactly on Picture 2 outside the fortress at dusk, with the exact same six heroes in plain low-level equipment and the exact endpoint arrangement. No visible body or armor morphing, no extra or missing people or vehicles, no malformed limbs, no text, captions, logos, watermarks, dialogue, or graphic injury."
+        },
+        {
+          "duration": 1.5,
+          "seed": 914802,
+          "prompt": "A brisk, elegant cinematic match transition. Begin exactly on Picture 1 with the six disguised adventurers outside the fortress at dusk. Preserve every silhouette and especially the enormous silver knight at far left. The camera makes a short energetic push toward the giant knight's polished gauntlet and helmet; a hard white sun reflection sweeps across the entire lens as a natural armor wipe. Inside the glare, dusk changes to bright day and the silver curve matches into the same giant knight crouching beside the smiling water-selling boy. Reveal the clear bottle in the boy's hand and end exactly on Picture 2 in the crowded ruined plaza. Keep faces, armor, hands, bottle, crowd, architecture, anatomy, and exact endpoint composition stable. No dissolve, visible morphing, extra limbs, text, captions, logos, watermarks, dialogue, or graphic injury."
+        },
+        {
+          "duration": 1.5,
+          "seed": 914803,
+          "prompt": "A rapid premium cinematic match cut concealed in camera. Begin exactly on Picture 1 as the smiling water-selling boy offers the clear bottle to the huge silver knight in the bright plaza. Preserve their faces, hands, armor, bottle, and surrounding crowd. The camera dives toward the water bottle; sunlight refracts through the water and fills the lens with one circular ripple. The liquid ring expands into the visible concentric sound-wave rings of the enormous bald muscular man shouting in the crowded medieval street. Whip out of the refraction to reveal the small hooded white-haired figure pointing amid the commotion, then end exactly on Picture 2. Motion is fast but readable, with no random scene additions, malformed anatomy, text, captions, logos, watermarks, dialogue, or graphic injury."
+        },
+        {
+          "duration": 1.5,
+          "seed": 914804,
+          "prompt": "A fast continuous action transition. Begin exactly on Picture 1 in the crowded street: preserve the hooded white-haired figure pointing and the huge bald man's shout with its circular pressure rings. The camera accelerates along the pointing arm and rides one pressure ring forward through the nearest stone archway. The arch and airborne dust fill the lens; daylight compresses into warm torchlight and the city arch becomes the interior of the long vaulted tunnel. Burst out behind the moving ring and reveal the rescue group running TOWARD THE CAMERA, led by the enormous silver knight carrying two children, with the slim silver knight and hooded mage beside him. The camera backpedals so the runners continue toward the foreground and never reverse or run away. End exactly on Picture 2 with all people, armor, children, blue aura, tunnel, and anatomy intact. No extra limbs or people, text, captions, logos, watermarks, dialogue, or graphic injury."
+        },
+        {
+          "duration": 1.5,
+          "seed": 914805,
+          "prompt": "A kinetic but coherent cinematic transition. Begin exactly on Picture 1 inside the torchlit tunnel. The rescue party runs TOWARD THE VIEWER while the camera moves backward ahead of them; never reverse their travel direction and never make them flee into the background. Preserve the enormous silver knight carrying both children, the slim knight, the hooded mage, faces, armor, limbs, and blue magic. The bright tunnel exit grows in the near foreground and briefly fills the lens. Emerge at the city canal as the giant knight's forward momentum becomes a powerful upward throw of the dark bomb crate, while the slim silver knight's blue aura traces into the round magic ring. Water spray and wind give one clear upward motion. End exactly on Picture 2 with the bomb high in the sky, the explosion, canal, characters, and endpoint composition intact. No malformed hands, extra people, text, captions, logos, watermarks, dialogue, or graphic injury."
+        },
+        {
+          "duration": 1.5,
+          "seed": 914806,
+          "prompt": "A sharp cinematic sky-to-ground transition. Begin exactly on Picture 1 at the canal as the dark bomb rises above the giant knight and the blue magic circle. Follow the bomb upward for a fraction of a second. Its bright controlled explosion fills the entire lens with white-gold light, sparks, and smoke, fully concealing the scene change. The sparks fall in slow arcs as the color shifts to sunset; one circular golden pulse becomes the small recording cylinder on the foreground stone block. The camera descends with the sparks and reveals the aftermath plaza: the red-haired blue-armored hero supports the kneeling man, the bearded man stands behind, the two young witnesses watch at right, and the defeated figures lie safely in the foreground. End exactly on Picture 2, preserving every face, body, costume, object, and composition. No graphic harm, extra limbs, text, captions, logos, watermarks, or dialogue."
+        },
+        {
+          "duration": 1.5,
+          "seed": 914807,
+          "prompt": "A warm premium cinematic epilogue transition. Begin exactly on Picture 1 at sunset in the aftermath plaza. Preserve the red-haired hero, kneeling man, witnesses, resting figures, and especially the small golden recording cylinder on the foreground block. Push rapidly but smoothly toward the cylinder as it emits clean concentric golden rings. The rings fill the lens and transform into floating campfire embers; stone silhouettes become dark grass and the sunset deepens into evening. Pull through the embers and reveal exactly Picture 2: the same six original adventurers relaxing around the small campfire beside the black utility vehicle and motorcycle, each holding a wrapped kebab, with the fortress on the horizon. Keep all six identities, faces, hands, costumes, food, vehicles, fire, and exact endpoint arrangement stable. Gentle flames, smoke, hair, cloth, and grass move naturally. No visible character morphing, extra or missing people, extra limbs, text, captions, logos, watermarks, dialogue, or graphic injury."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "version": 1,
+  "source_root": "F:/ＴＲＰＧ/アリアンロッド2E/lebel1_2nd/4_AI/シーンCG化/CG_Lv1_2nd/8章",
+  "jobs": [
+    {
+      "id": "lv1-ch08-long-shot01-arrival",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第一幕 長尺版",
+      "title": "城門をくぐり遺跡都市の奥へ",
+      "priority": 120,
+      "source_frames": [
+        "8-09_sc_ch8_a1_009_2b9d6c3d00_遺跡都市到着、荷物番は大剣つき-v4.png",
+        "動画プレビュー_第一幕ラクレール編/長尺版_序盤から遺跡都市/補助構図/01_8-09_城門の奥へ.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08-long/shot01-start.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-long/shot01-end.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-long-shots/shot01-arrival-720p.mp4",
+      "transitions": [
+        {
+          "duration": 3.6,
+          "seed": 927001,
+          "prompt": "A decisive forward journey into Laclaire, built for scroll-controlled playback. Begin exactly on Picture 1 at the sunset gate. The six heroes finish securing the bandaged sword, turn as one group, and walk TOWARD THE CENTRAL ARCH with clear planted steps. The camera advances much faster than them, threading between the muscular blond man and the small silver-haired elf, then passing beneath the arch. A dark blue-and-gold banner sweeps very close across the left side of the lens as a natural wipe, but the camera never stops moving forward. Emerge just inside the city and continue downhill behind the exact same six heroes as successive streets, bridges, arcades, merchants and distant pedestrians unfold with strong parallax. End exactly on Picture 2, deep inside the gate, with the party walking away toward the central vanishing point. Preserve six identities, original clothing, bandaged sword, parked vehicles outside the gate, architecture and anatomy. The dominant motion is camera translation through the arch and real walking, not hair flutter. No reverse movement, duplicated people, fused bodies, text, captions, logos, watermarks or injury."
+        }
+      ]
+    },
+    {
+      "id": "lv1-ch08-long-shot02-magic-change",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第一幕 長尺版",
+      "title": "六人の装備を魔法でLv1へ組み替える",
+      "priority": 120,
+      "source_frames": [
+        "動画プレビュー_第一幕ラクレール編/長尺版_序盤から遺跡都市/補助構図/02a_8-12_変装前の六人.png",
+        "動画プレビュー_第一幕ラクレール編/長尺版_序盤から遺跡都市/補助構図/02_8-12_魔法変装中.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08-long/shot02-start.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-long/shot02-end.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-long-shots/shot02-magic-change-720p.mp4",
+      "transitions": [
+        {
+          "duration": 3.0,
+          "seed": 927002,
+          "prompt": "A complete magical disguise transformation with stable anatomy and a controlled forward orbit. Begin exactly on Picture 1 with the six recognizable heroes standing on the dormant road rune. The small silver-haired elf raises one hand and the rune ignites blue, then warm gold. Six concentric rings rise from boots to shoulders in sequence. At torso height a broad opaque band of blue-gold light crosses every body and fully conceals the instant of costume replacement; behind that clean light wipe, ornate high-level clothing becomes deliberately crude Level-1 plate, chainmail, hooded robe, tabard, belts, boots and simple swords. Armor pieces assemble from geometric light rather than melting out of flesh. The camera pushes forward and arcs slightly left around the group, creating parallax while keeping all six in their fixed left-to-right positions. The giant new knight opens one gauntlet as the last plate locks. End exactly on Picture 2 with the transformation active and all six bodies readable. Exactly six people; preserve proportions, road, fortress and sunset. No body morphing visible through the light, exposed skin change, duplicated limbs, floating armor errors, text, captions, logos, watermarks or injury."
+        }
+      ]
+    },
+    {
+      "id": "lv1-ch08-long-shot03-magic-settle",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第一幕 長尺版",
+      "title": "魔法光が収まり変装が完成する",
+      "priority": 120,
+      "source_frames": [
+        "動画プレビュー_第一幕ラクレール編/長尺版_序盤から遺跡都市/補助構図/02_8-12_魔法変装中.png",
+        "8-12_sc_ch8_a1_012_04f3868648_宝具を置いて、Lv1装備で再潜入-v3.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08-long/shot03-start.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-long/shot03-end.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-long-shots/shot03-magic-settle-720p.mp4",
+      "transitions": [
+        {
+          "duration": 2.2,
+          "seed": 927003,
+          "prompt": "A short clean completion beat, not another costume morph. Begin exactly on Picture 1 after the six heroes have already acquired their crude Level-1 disguises. The blue-gold rings rotate upward and dissolve into sparks in orderly layers. Each hero performs one small finished action: the giant knight closes the open gauntlet and gives a confident thumbs-up, the hooded mage settles her hood, the two sword users check their scabbards, the armored woman plants both feet, and the tabarded knight lowers one hand. The camera eases forward only slightly while the road and fortress stay spatially stable. End exactly on Picture 2 as the last sparks fade and the lineup is ready to infiltrate. Preserve the exact six armor silhouettes and anatomy; do not change identities or equipment after the first frame. No extra people, sliding feet, fused gauntlets, text, captions, logos, watermarks or injury."
+        }
+      ]
+    },
+    {
+      "id": "lv1-ch08-long-shot04-plaza-entry",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第一幕 長尺版",
+      "title": "肩口を抜け中央広場へ踏み込む",
+      "priority": 120,
+      "source_frames": [
+        "8-12_sc_ch8_a1_012_04f3868648_宝具を置いて、Lv1装備で再潜入-v3.png",
+        "動画プレビュー_第一幕ラクレール編/長尺版_序盤から遺跡都市/補助構図/03_中央広場_新規到着.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08-long/shot04-start.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-long/shot04-end.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-long-shots/shot04-plaza-entry-720p.mp4",
+      "transitions": [
+        {
+          "duration": 3.2,
+          "seed": 927004,
+          "prompt": "A forward scroll transition that changes viewpoint and time of day through physical occlusion, never by visible body morphing. Begin exactly on Picture 1. The giant knight lowers the thumbs-up and all six disguised adventurers pivot toward the city gate and begin walking with distinct full strides. The camera surges between them; the giant knight's polished shoulder fills the entire lens for a brief silver wipe. During that opaque wipe, perform a controlled 180-degree camera turn and a short time passage from sunset to clear morning. Emerge behind the exact same six Level-1 silhouettes under the shadowed stone arch as they step into the enormous active plaza. A merchant cart rolls across the near foreground and miners, adventurers and traders move at several depths. Keep pushing forward until Picture 2 is reached exactly, with all six walking into the plaza and the distant statue centered. Exactly six heroes; preserve armor designs and proportions. No visible costume change, character duplication, crowd collisions, reversed walking, text, captions, logos, watermarks or injury."
+        }
+      ]
+    },
+    {
+      "id": "lv1-ch08-long-shot05-plaza-to-market",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第一幕 長尺版",
+      "title": "群衆を縫って朝市の露店へ",
+      "priority": 120,
+      "source_frames": [
+        "動画プレビュー_第一幕ラクレール編/長尺版_序盤から遺跡都市/補助構図/03_中央広場_新規到着.png",
+        "8-21_sc_ch8_a1_021_df15240401_中央街の朝市、まずはバザーから-v2.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08-long/shot05-start.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-long/shot05-end.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-long-shots/shot05-plaza-to-market-720p.mp4",
+      "transitions": [
+        {
+          "duration": 3.6,
+          "seed": 927005,
+          "prompt": "A living-city forward tracking shot built around depth and a concealed cast reduction. Begin exactly on Picture 1 behind the six disguised heroes entering the central plaza. They continue walking away into the crowd while the camera advances between them and overtakes the group. Merchants push handcarts across the path, miners carry ore baskets toward the northern stairs, an adventurer checks the quest board, and a water-selling child weaves safely through adults. All background people complete natural steps at different depths. A laden merchant cart crosses close from left to right and its dark canvas plus a hanging red awning completely cover the lens for a moment. Behind that full wipe, the camera enters the bazaar stall where the giant knight, hooded mage and normal silver knight have stopped while the other three continue deeper off camera. End exactly on Picture 2 at the relic table. Preserve the three visible heroes, busy city architecture and anatomy. The camera must travel forward throughout; no idle crowd, clones, collisions, visible person disappearance, text, captions, logos, watermarks or injury."
+        }
+      ]
+    },
+    {
+      "id": "lv1-ch08-long-shot06-market-relic",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第一幕 長尺版",
+      "title": "露店の遺物へ寄り市場の奥を覗く",
+      "priority": 120,
+      "source_frames": [
+        "8-21_sc_ch8_a1_021_df15240401_中央街の朝市、まずはバザーから-v2.png",
+        "動画プレビュー_第一幕ラクレール編/長尺版_序盤から遺跡都市/補助構図/04_8-21_露店メダリオン寄り.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08-long/shot06-start.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-long/shot06-end.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-long-shots/shot06-market-relic-720p.mp4",
+      "transitions": [
+        {
+          "duration": 3.2,
+          "seed": 927006,
+          "prompt": "A completed market interaction with a large forward camera path. Begin exactly on Picture 1. The giant silver knight carefully reaches across the table, closes the articulated gauntlet around the ring of a bronze-and-turquoise compass medallion, and lifts it securely. The hooded silver-haired mage leans in and points once to the blue rune while the third knight turns to scan the avenue. At the same time, the camera moves low over pottery, coins and carved fragments, passes beneath a hanging ornament, then arcs around the rising medallion so it dominates the near foreground. Through it, the crowded sunlit avenue and ruined towers remain visible with strong parallax. End exactly on Picture 2. The lift and pointing gesture must visibly start and finish; do not merely flutter cloth. Preserve hands, armor, relic, stall and architecture. No duplicated fingers, floating artifact, extra heroes, text, captions, logos, watermarks or injury."
+        }
+      ]
+    },
+    {
+      "id": "lv1-ch08-long-shot07-book-avenue",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第一幕 長尺版",
+      "title": "浮遊書の頁を抜け魔導街路の奥へ",
+      "priority": 120,
+      "source_frames": [
+        "8-28_sc_ch8_a1_028_0a434ef008_魔導書店の誘惑、メイヴンの勧誘.png",
+        "動画プレビュー_第一幕ラクレール編/長尺版_序盤から遺跡都市/補助構図/05_8-28_本の頁から大通りへ.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08-long/shot07-start.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-long/shot07-end.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-long-shots/shot07-book-avenue-720p.mp4",
+      "transitions": [
+        {
+          "duration": 3.2,
+          "seed": 927007,
+          "prompt": "A scroll-matched forward move through the magic-book district. Begin exactly on Picture 1. The smiling brown-haired adventurer presents the stamped card; the hooded mage raises one palm to decline, then both turn and start walking toward the deep avenue. The floating open-book sign flips one large page. The camera pushes physically between the two characters, passes beneath the book, and follows the page forward. The parchment sweeps diagonally close across the lens but never cuts to black. Emerge much farther down the arcade with successive arches, bridges, crystals, book stalls and pedestrians shrinking toward the bright central vanishing point. Loose pages spiral forward through real depth. End exactly on Picture 2. Preserve both characters until the camera overtakes them, the wooden storefront and city style. No duplicated characters, random writing on pages, malformed hands, text, captions, logos, watermarks or injury."
+        }
+      ]
+    },
+    {
+      "id": "lv1-ch08-long-shot08-central-arches",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第一幕 長尺版",
+      "title": "中央街の人波から北方のアーチへ",
+      "priority": 120,
+      "source_frames": [
+        "8-30_sc_ch8_a1_030_863a41f8e2_歓楽街から中央街へ、噂はもう走っている.png",
+        "動画プレビュー_第一幕ラクレール編/長尺版_序盤から遺跡都市/補助構図/06_8-30_北方遺跡へのアーチ.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08-long/shot08-start.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-long/shot08-end.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-long-shots/shot08-central-arches-720p.mp4",
+      "transitions": [
+        {
+          "duration": 3.2,
+          "seed": 927008,
+          "prompt": "A purposeful street traversal with forward-only depth. Begin exactly on Picture 1. The disguised party gathers, turns away from camera and begins a brisk coordinated walk toward the stacked central arches. Their feet plant and push through full stride cycles while surrounding pedestrians split naturally around them. The camera accelerates through two foreground bodies and then tracks low behind the group. A dark cloak sweeps across the right edge and a massive stone column passes extremely close on the left, producing strong but partial natural wipes and unmistakable parallax. Successive archways grow and pass overhead as the northern excavation scaffolds become visible in the distance. End exactly on Picture 2 behind the same party on the path to the ruins. No running toward camera, reverse movement, duplicated heroes, sliding feet, crowd collisions, text, captions, logos, watermarks or injury."
+        }
+      ]
+    },
+    {
+      "id": "lv1-ch08-long-shot09-excavation-reveal",
+      "campaign": "lv1_2nd",
+      "chapter": "8 第一幕 長尺版",
+      "title": "炭鉱夫の野営を越え北方遺跡を俯瞰する",
+      "priority": 120,
+      "source_frames": [
+        "8-45_sc_ch8_a1_045_27a327c1f0_北方遺跡群、炭鉱夫も金脈を追う.png",
+        "動画プレビュー_第一幕ラクレール編/長尺版_序盤から遺跡都市/補助構図/07_8-45_採掘場空撮.png"
+      ],
+      "web_frames": [
+        "img/cinematic-scenes/lv1_2nd/ch08-long/shot09-start.webp",
+        "img/cinematic-scenes/lv1_2nd/ch08-long/shot09-end.webp"
+      ],
+      "output": "video/cinematic-scenes/lv1_2nd/ch08-long-shots/shot09-excavation-reveal-720p.mp4",
+      "transitions": [
+        {
+          "duration": 3.6,
+          "seed": 927009,
+          "prompt": "A grand working-ruins reveal driven by forward and upward camera travel. Begin exactly on Picture 1. The black-armored greatsword knight lowers the huge sword safely and follows the bearded foreman, who turns and points down a newly opened ramp. Nearby miners complete meaningful actions: two raise an ore basket on rope, one pushes a small cart, one strikes a marked seam once, and another carries a lantern into a tunnel. The camera surges past the campfire between workers, follows the pointed direction, then cranes strongly upward above a broken arch. A suspended dark ore basket passes extremely close beneath the lens as a natural wipe. Reveal the vast stepped excavation, scaffolds, cranes, statues, mine openings, dozens of tiny workers and distant Laclaire skyline with strong near-mid-far parallax. End exactly on Picture 2, with the knight and foreman still visible below. Preserve tools, safe motions, architecture and anatomy. No clone workers, floating equipment, cave-in, text, captions, logos, watermarks or injury."
+        }
+      ]
+    }
+  ]
+}
