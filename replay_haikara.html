@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="replay.css?v=6">
   <link rel="preload" as="image" href="img/cinematic-scenes/haikara/ch01-01-door.webp" fetchpriority="high">
-  <link rel="stylesheet" href="lv1-scroll.css?v=5">
+  <link rel="stylesheet" href="lv1-scroll.css?v=8">
   <link rel="stylesheet" href="haikara-scroll.css?v=1">
   <script>
     // ★追加: このページ（キャンペーン）専用のIDを設定します。
@@ -44,6 +44,7 @@
         <span>HAIKARA CLUB · PERSONA REPLAY</span>
         <div class="lv1-journey-actions">
           <button type="button" class="lv1-motion-toggle" data-cinematic-motion-toggle hidden>映像演出をON</button>
+          <a href="#lv1-highlight-reel">▶ サーガ・ハイライト</a>
           <a href="#chapter-index">目次へスキップ</a>
         </div>
       </div>
@@ -77,6 +78,24 @@
       </div>
     </div>
   </section>
+
+  <section id="lv1-highlight-reel" class="lv1-highlight-reel" aria-labelledby="haikara-highlight-title">
+    <div class="lv1-highlight-inner">
+      <div class="lv1-index-heading">
+        <span>SAGA HIGHLIGHTS · 4 MIN 43 SEC</span>
+        <h2 id="haikara-highlight-title">ハイカラ卓、夏の果てまで</h2>
+        <p>鳴上、シトナイ、ホシノ、雨宮、結城、紫杏。第1章の覚醒から第3章「人でなしサマードライバー」の夜明けまでを、ペルソナの名曲メドレーと魂のセリフで駆け抜けます。音が出ます。</p>
+      </div>
+      <div class="lv1-highlight-frame">
+        <video controls preload="none" playsinline
+          poster="img/cinematic-scenes/haikara/haikara-saga-highlight-poster.webp"
+          data-hls="video/hls/haikara-saga/master.m3u8"
+          data-mp4="video/cinematic-scenes/haikara/haikara-saga-highlight-1080p.mp4"></video>
+      </div>
+    </div>
+  </section>
+
+  <script src="highlight-player.js?v=1"></script>
 
   <section id="chapter-index" class="lv1-chapter-index" aria-labelledby="chapter-index-title">
     <div class="container-replay">

@@ -543,6 +543,37 @@ body.lv1-scroll-page .lv1-chapter-index {
     linear-gradient(180deg, #090b0f, #101116 80%);
 }
 
+/* 60-second highlight reel */
+body.lv1-scroll-page .lv1-highlight-reel {
+  position: relative;
+  z-index: 2;
+  padding: clamp(72px, 9vw, 128px) 16px 0;
+  scroll-margin-top: 76px;
+  background: linear-gradient(180deg, var(--lv1-night), #090b0f);
+}
+
+.lv1-highlight-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.lv1-highlight-frame {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(217, 185, 110, 0.35);
+  border-radius: 4px;
+  background: #000;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55), 0 0 0 6px rgba(217, 185, 110, 0.06);
+}
+
+.lv1-highlight-frame video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
 .lv1-chapter-index .container-replay {
   max-width: 1180px;
   margin: 0 auto;

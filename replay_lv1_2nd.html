@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="replay.css?v=7">
   <link rel="preload" as="image" href="img/scroll-lv1-2nd/01-mountain.webp" fetchpriority="high">
-  <link rel="stylesheet" href="lv1-scroll.css?v=7">
+  <link rel="stylesheet" href="lv1-scroll.css?v=8">
   <script>
     // ★追加: このページ（キャンペーン）専用のIDを設定します。
     // 別のリプレイを作る時は、ここを "lv2_replay" など別の名前に変更してください。
@@ -68,6 +68,7 @@
         <span>NYARLATHOTEP BANZAI · REPLAY ARCHIVE</span>
         <div class="lv1-journey-actions">
           <button type="button" class="lv1-motion-toggle" data-cinematic-motion-toggle hidden>映像演出をON</button>
+          <a href="#lv1-highlight-reel">▶ サーガ・ハイライト</a>
           <a href="#chapter-index">目次へスキップ</a>
         </div>
       </div>
@@ -113,6 +114,24 @@
       </div>
     </div>
   </section>
+
+  <section id="lv1-highlight-reel" class="lv1-highlight-reel" aria-labelledby="lv1-highlight-title">
+    <div class="lv1-highlight-inner">
+      <div class="lv1-index-heading">
+        <span>THE SAGA OF SOLDIER · 8 MIN 50 SEC</span>
+        <h2 id="lv1-highlight-title">ソルジャーの軌跡</h2>
+        <p>はじまりの朝から、黒い太陽、水の都まで。卓で実際に流れた曲をつなぎ、クラウド、フリーレン、モードレッド、ケオベの魂のセリフで第1章から第8章を描き切ります。音が出ます。</p>
+      </div>
+      <div class="lv1-highlight-frame">
+        <video controls preload="none" playsinline
+          poster="img/cinematic-scenes/lv1_2nd/lv1-2nd-saga-v3-poster.webp"
+          data-hls="video/hls/lv1-2nd-saga-v3/master.m3u8"
+          data-mp4="video/cinematic-scenes/lv1_2nd/lv1-2nd-saga-v3-1080p.mp4"></video>
+      </div>
+    </div>
+  </section>
+
+  <script src="highlight-player.js?v=1"></script>
 
   <section id="chapter-index" class="lv1-chapter-index" aria-labelledby="chapter-index-title">
     <div class="container-replay">
